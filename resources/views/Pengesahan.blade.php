@@ -52,14 +52,14 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/LegalisirIjazah">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Legalisir Ijazah</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/TandaTanganSertifikat">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Tanda Tangan Sertifikat</span>

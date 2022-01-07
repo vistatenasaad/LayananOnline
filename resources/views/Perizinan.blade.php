@@ -63,7 +63,7 @@
                     <h3 class="section-subheading text-muted">Pelayanan Online.</h3>
                 </div> -->
                 <!-- As a heading -->
-                <a href="#">
+                <a href="/IjinPenelitianMadrasah">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Ijin Penelitian Madrasah</span>
@@ -71,7 +71,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/IjopTPQ">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Ijop TPQ</span>
@@ -79,7 +79,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/IjopMadin">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Ijop Madin</span>
@@ -87,7 +87,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/IjopPontren">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Ijop Pontren</span>

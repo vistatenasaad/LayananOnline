@@ -58,7 +58,7 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/ProposalBOS">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Proposal BOS</span>
@@ -66,7 +66,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/PermohonanBlankoKUA">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Permohonan Blanko KUA</span>

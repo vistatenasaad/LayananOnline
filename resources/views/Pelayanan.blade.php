@@ -52,7 +52,7 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/MutasiJamaah">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Mutasi Jamaah</span>

@@ -52,49 +52,49 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/PembatalanHajiReg">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Pembatalan Haji Reg</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PembatalanHajiSakit">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Pembatalan Haji Wft</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PendaftaranHaji">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">Pembatalan Haji</span>
+                    <span class="navbar-brand mb-0 h1">Pendaftaran Haji</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/IkrarMasukIslam">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Ikrar Masuk Islam</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/SertifikasiHalal">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Sertifikasi Halal</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PelimpahanPorsiHajiController">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Pelimpahan Porsi Haji</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PelimpahanPorsiHajiSakitController">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Pelimpahan Porsi Haji Sakit</span>

@@ -58,7 +58,7 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/RekomPendirianRumahIbadah">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Ijin Pendirian Rumah Ibadah</span>
@@ -66,7 +66,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomBantuanMasjid">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Bantuan Majid</span>
@@ -74,7 +74,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomSuratKeteranganMajelisTaklim">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Surat Keterangan Majelis Taklim</span>
@@ -82,7 +82,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/PindahMadrasah">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Pindah Madrasah</span>
@@ -90,7 +90,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomSLN">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Pengantar Rekomendasi Study Luar Negri</span>
@@ -98,7 +98,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomBantuanPonpesMadin">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Bantuan Ponpes/Madin</span>
@@ -106,7 +106,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomBantuanMadrasahFormal">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Bantuan Madrasah Formal</span>
@@ -114,7 +114,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomITAS">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi ITAS</span>
@@ -122,7 +122,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomUmroh">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Paspor Umroh</span>
@@ -130,7 +130,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/RekomHaji">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Paspor Haji</span>
@@ -138,7 +138,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="#">
+                <a href="/PiagamPendirianMasjid">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Piagam Pendirian Masjid</span>

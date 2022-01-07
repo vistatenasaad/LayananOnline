@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PermohonanSlipGajiController extends Controller
 {
     public function PermohonanSlipGaji(){
-		return view('PermohonanSlipGaji');
+		return view('Form.PermohonanSlipGaji');
 	}
 }

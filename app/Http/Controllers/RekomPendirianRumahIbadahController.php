@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RekomPendirianRumahIbadahController extends Controller
 {
     public function RekomPendirianRumahIbadah(){
-		return view('RekomPendirianRumahIbadah');
+		return view('Form.RekomPendirianRumahIbadah');
 	}
 }

@@ -58,7 +58,7 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/KonsulasiSyariahController">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Konsultasi Syariah</span>

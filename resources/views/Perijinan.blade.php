@@ -52,42 +52,42 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="#">
+            <a href="/PengajuanRPTKA">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rencana Penggunaan Tenaga Asing</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="PengajuanIMTA">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Izin Menggunakan Tenaga Kerja Asing</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PengajuanDKP">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Dana Kompensasi Penggunakaan Orang Asing</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="PengajuanVVT">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Visa Tinggal Terbatas</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PengajuanKITAB">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Kartu Izin Tinggal Tetap</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PengajuanNaturalisasi">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Naturalisasi</span>
