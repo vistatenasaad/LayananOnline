@@ -59,14 +59,14 @@
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PermohonanSlipGaji">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Permohonan Slip Gaji</span>
                 </div>
                 </nav>
                 <br>
-                <a href="#">
+                <a href="/PermohonanPajak">
                 <nav class="navbar navbar-light color-nav">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Permohonan Bukti Pajak</span>

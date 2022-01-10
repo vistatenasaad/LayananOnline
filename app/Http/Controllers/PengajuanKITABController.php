@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class PengajuanKITABController extends Controller
 {
     public function PengajuanKITAB(){
-		return view('Form.PengajuanKITAB');
+		return view('Form.PengajuanKITAP');
 	}
 }

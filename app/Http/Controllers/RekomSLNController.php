@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class RekomSLNController extends Controller
 {
     public function RekomSLN(){
-		return view('RekomSLN');
+		return view('Form.RekomSLN');
 	}
 }
