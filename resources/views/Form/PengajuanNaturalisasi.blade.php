@@ -46,7 +46,7 @@
                     <h2 class="title">Form Pengajuan Naturalisasi</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
@@ -172,11 +172,11 @@
                                 <div class="label--desc">Akte kelahiran/ kenal lahir yang menunjukkan bahwa Orang Asing telah berusia 21 (dua puluh satu) tahun; Maksimal file 2 MB</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <button class="bg-button" type="submit">Ajukan</button>
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
-                    <button class="bg-button" type="submit">Ajukan</button>
                 </div>
             </div>
         </div>
