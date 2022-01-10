@@ -46,7 +46,7 @@
                     <h2 class="title">Form Pengajuan Rekomendasi Paspor Haji Kankemenag Kota Batu</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                         <div class="name">Nama</div>
                             <div class="value">
@@ -117,11 +117,11 @@
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf maksimal 2MB pilih data yang sama dengan KTP antara lain Akte Kelahiran/ Ijazah terakhir/ Buku Nikah (bisa salah satunya). Max file size 50 MB</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <button class="bg-button" type="submit">Ajukan</button>
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
-                    <button class="bg-button" type="submit">Ajukan</button>
                 </div>
             </div>
         </div>

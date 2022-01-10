@@ -70,7 +70,7 @@ Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGa
 
 //Perijinan
 Route::get('/PengajuanDKP', 'PengajuanDKPController@PengajuanDKP');
-Route::post('/PengajuanDKP/proses', 'UploadController@proses_upload');
+Route::post('/PengajuanDKP/upload', 'PengajuanDKPController@upload');
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
 Route::get('/PengajuanVVT', 'PengajuanVVTController@PengajuanVVT');
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
