@@ -59,7 +59,7 @@
                         <div class="name">Asal Madrasah/Pondok</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="asal_madrasah" placeholder="Masukkan Nama Anda">
                                 </div>
                             </div>
                         </div>

@@ -165,7 +165,7 @@
                             <div class="name">File Akte kelahiran</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="akte_kelahiran" id="file">
+                                    <input class="input-file" type="file" name="akta_kelahiran" id="file">
                                     <label class="label--file" for="file">Browse</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>

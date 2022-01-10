@@ -165,7 +165,7 @@
                             <div class="name">File SKKB/ SKCK</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <input class="input-file" type="file" name="file_skkb_skck" id="file">
                                     <label class="label--file" for="file">Browse</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
@@ -176,7 +176,7 @@
                             <div class="name">File surat persetujuan sebelumnya</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_cv" id="file">
+                                    <input class="input-file" type="file" name="file_persetujuan_sebelumnya" id="file">
                                     <label class="label--file" for="file">Browse</label>
                                     <span class="input-file__info">No file chosen</span>
                                 </div>
