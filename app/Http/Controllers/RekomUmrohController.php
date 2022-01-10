@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class RekomUmrohController extends Controller
 {
-    public function RekomUmrohController(){
+    public function RekomUmroh(){
 		return view('Form.rekomUmroh');
 	}
 }
