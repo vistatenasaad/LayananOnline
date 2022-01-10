@@ -51,7 +51,7 @@
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nam_lembaga" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama_lembaga" placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
                             </div>
