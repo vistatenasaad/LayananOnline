@@ -46,7 +46,7 @@
                     <h2 class="title">Form Pengajuan Rekomendasi Penerbitan Paspor Ibadah Umroh pada Kankemenag Kota Batu</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                         <div class="name">Nama</div>
                             <div class="value">
@@ -95,11 +95,11 @@
                                 <div class="label--desc">FFile dapat berbentuk jpg, png, ataupun pdf. Max file size 2 MB</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <button class="bg-button" type="submit">Ajukan</button>
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
-                    <button class="bg-button" type="submit">Ajukan</button>
                 </div>
             </div>
         </div>

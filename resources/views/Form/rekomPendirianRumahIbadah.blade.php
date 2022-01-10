@@ -46,7 +46,7 @@
                     <h2 class="title">Rekomendasi Pendirian Rumah Ibadah</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                         <div class="name">Asal Surat</div>
                             <div class="value">
@@ -139,11 +139,11 @@
                                 <div class="label--desc">Dukungan masyarakat setempat paling sedikit 60 orang yang disahkan oleh Lurah atau Kepala Desa. Max file size 2 MB</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <button class="bg-button" type="submit">Ajukan</button>
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
-                    <button class="bg-button" type="submit">Ajukan</button>
                 </div>
             </div>
         </div>

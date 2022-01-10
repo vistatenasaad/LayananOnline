@@ -46,7 +46,7 @@
                     <h2 class="title">Pengukuran Arah Kiblat</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+                    <form method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                         <div class="name">Nama</div>
                             <div class="value">
@@ -102,11 +102,11 @@
                                 <div class="label--desc">Foto lokasi yang dimintakan pengukuran arah kiblat pada Kankemenag Kota Batu dengan ukuran file. Maksimal 2MB dengan jenis file .jpg, .png, .gif, .jpeg</div>
                             </div>
                         </div>
+                        <div class="card-footer">
+                            <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <button class="bg-button" type="submit">Ajukan</button>
+                        </div>
                     </form>
-                </div>
-                <div class="card-footer">
-                    <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
-                    <button class="bg-button" type="submit">Ajukan</button>
                 </div>
             </div>
         </div>
