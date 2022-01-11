@@ -140,6 +140,17 @@
                             </div>
                         </div>
                         <div class="form-row">
+                            <div class="name">Surat Pelepasan</div>
+                            <div class="value">
+                                <div class="input-group js-input-file">
+                                    <input class="input-file" type="file" name="file_pelepasan" id="file">
+                                    <label class="label--file" for="file">Browse</label>
+                                    <span class="input-file__info">No file chosen</span>
+                                </div>
+                                <div class="label--desc">Akte kelahiran/ kenal lahir yang menunjukkan bahwa Orang Asing telah berusia 21 (dua puluh satu) tahun; Maksimal file 2 MB</div>
+                            </div>
+                        </div>
+                        <div class="form-row">
                             <div class="name">File Jaminan</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
@@ -161,17 +172,7 @@
                                 <div class="label--desc">pas foto terbaru ukuran 4 x 6 cm sebanyak 2 (dua) lembar berwarna latar belakang merah Maksimal file 2 MB</div>
                             </div>
                         </div>
-                        <div class="form-row">
-                            <div class="name">File Akte kelahiran</div>
-                            <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="akta_kelahiran" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
-                                </div>
-                                <div class="label--desc">Akte kelahiran/ kenal lahir yang menunjukkan bahwa Orang Asing telah berusia 21 (dua puluh satu) tahun; Maksimal file 2 MB</div>
-                            </div>
-                        </div>
+                        
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
