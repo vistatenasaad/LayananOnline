@@ -81,9 +81,13 @@ Route::get('/PengajuanRPTKA', 'PengajuanRPTKAController@PengajuanRPTKA');
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
 Route::get('/RekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasjid');
 Route::get('/RekomHaji', 'RekomHajiController@RekomHaji');
+Route::post('/RekomHaji/upload', 'RekomHajiController@upload');
 Route::get('/RekomPendirianRumahIbadah', 'RekomPendirianRumahIbadahController@RekomPendirianRumahIbadah');
+Route::post('/RekomPendirianRumahIbadah/upload', 'RekomPendirianRumahIbadahController@upload');
 Route::get('/RekomSLN', 'RekomSLNController@RekomSLN');
+Route::post('/RekomSLN/upload', 'RekomSLNController@upload');
 Route::get('/RekomUmroh', 'RekomUmrohController@RekomUmroh');
+Route::post('/RekomUmroh/upload', 'RekomUmrohController@upload');
 //offline
 Route::get('/RekomSuratKeteranganMajelisTaklim', 'RekomSuratKeteranganMajelisTaklimController@RekomSuratKeteranganMajelisTaklim');
 Route::get('/RekomBantuanPonpesMadin', 'RekomBantuanPonpesMadinController@RekomBantuanPonpesMadin');
