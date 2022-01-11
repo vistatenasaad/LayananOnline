@@ -47,7 +47,7 @@
                     <h2 class="title">Form Pengajuan Surat Persetujuan Dana Kompensasi Penggunaan (DKP) Orang Asing</h2>
                 </div>
                 <div class="card-body">
-                    <form action="/PengajuanDKP/upload" method="POST" enctype="multipart/form-data">
+                    <form enctype="multipart/form-data" action="/PengajuanDKP/upload" method="POST">
                     @csrf
                         <div class="form-row">
                         <div class="name">Nama Lembaga Asal</div>
