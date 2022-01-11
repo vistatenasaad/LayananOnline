@@ -24,6 +24,7 @@ class CreatePengajuanNaturalisasiTable extends Migration
             $table->string('file_skkb_skck', 100);
             $table->string('file_kitab', 100);
             $table->string('file_ijazah', 100);
+            $table->string('file_pelepasan', 100);
             $table->string('file_jaminan', 100);
             $table->string('file_foto', 100);
             $table->string('file_akta_kelahiran', 100);

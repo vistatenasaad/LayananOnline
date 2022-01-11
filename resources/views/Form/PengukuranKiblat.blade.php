@@ -46,7 +46,8 @@
                     <h2 class="title">Pengukuran Arah Kiblat</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" action="/PengukuranKiblat/upload">
+                    @csrf
                         <div class="form-row">
                         <div class="name">Nama</div>
                             <div class="value">
@@ -84,9 +85,7 @@
                             <div class="name">Surat Permohonan</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_permohonan" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_permohonan" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Permohonan Pengukuran arah Kiblat yang ditujukan kepada Kankemenag Kota Batu. Maksimal file 2 MB dengan jenis file .jpg, .png, .pdf, .jpe</div>
                             </div>
@@ -95,9 +94,7 @@
                             <div class="name">Foto Tempat/ Lokasi</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_lokasi" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_lokasi" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto lokasi yang dimintakan pengukuran arah kiblat pada Kankemenag Kota Batu dengan ukuran file. Maksimal 2MB dengan jenis file .jpg, .png, .gif, .jpeg</div>
                             </div>
