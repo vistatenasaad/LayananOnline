@@ -46,7 +46,8 @@
                     <h2 class="title">Rekomendasi Bantuan Masjid</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" action="/RekomBantuanMasjid/upload">
+                    @csrf
                         <div class="form-row">
                         <div class="name">Nama Pemohon</div>
                             <div class="value">
@@ -84,9 +85,7 @@
                             <div class="name">Surat Permohonan Rekomendasi</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_permohonan_rekom" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_permohonan_rekom" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Permohonan Rekomendasi bantuan Masjid dan Mushalla yang ditujukan kepada Kankemenag Kota Batu . Max file size 2 MB</div>
                             </div>
@@ -95,9 +94,7 @@
                             <div class="name">Surat Keterangan Terdaftar dari KUA</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_sk_terdaftar" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_sk_terdaftar" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan terdaftar simwas dari KUA Kecamatan setempat. Max file size 50 MB</div>
                             </div>
@@ -106,9 +103,7 @@
                             <div class="name">Proposal Permohonan Bantuan</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_permohonan_bantuan" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_permohonan_bantuan" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Copy proposal permohoan bantuan pada pihak pemberi bantuan yang dimintakan rekomendasinya pada Kankemenag Kota Batu. Max file size 50 MB</div>
                             </div>
