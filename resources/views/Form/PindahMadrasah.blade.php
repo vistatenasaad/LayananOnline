@@ -46,7 +46,8 @@
                     <h2 class="title">Form Pengajuan Rekomendasi Pindah Madrasah/ Sekolah</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" action="/PindahMadrasah/upload">
+                    @csrf
                         <div class="form-row">
                         <div class="name">Nama Siswa</div>
                             <div class="value">
@@ -92,9 +93,7 @@
                             <div class="name">Surat Permohonan Rekomendasi Pindah Sekolah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_permohonan_rekomendasi" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_permohonan_rekomendasi" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Permohonan Rekomendasi Pindah Sekolah dari Sekolah Asal ditujukan kepada Kepala Kemenag. Kota Batu ukuran maksimal 2 MB jenis file .jpg, .png, .pdf, .jpeg</div>
                             </div>
@@ -103,9 +102,7 @@
                             <div class="name">Surat Keterangan Pindah Sekolah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_sk_pindah" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_sk_pindah" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan Pindah Sekolah dari Sekolah Asal maksimal file 2 MB dengan ekstensi .jpg, .jpeg. .png, dan .pdf</div>
                             </div>
@@ -114,9 +111,7 @@
                             <div class="name">Surat Keterangan Diterima</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_sk_diterima" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_sk_diterima" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan Diterima dari Sekolah tujuan maksimal file 2 MB dengan jenis file .jpg, .png, .pdf, .jpeg</div>
                             </div>
@@ -125,9 +120,7 @@
                             <div class="name">Raport Siswa</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_raport_siswa" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_rapot_siswa" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Copy Raport Siswa dari Madrasah Asal maksimal file 2 MB dengan jenis file .pdf</div>
                             </div>

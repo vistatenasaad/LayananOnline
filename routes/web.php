@@ -65,6 +65,7 @@ Route::get('/tracking', function () {
 
 //Informasi
 Route::get('/PengukuranKiblat', 'PengukuranKiblatController@PengukuranKiblat');
+Route::post('/PengukuranKiblat/upload', 'PengukuranKiblatController@upload');
 Route::get('/PermohonanPajak', 'PermohonanPajakController@PermohonanPajak');
 Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGaji');
 
@@ -72,14 +73,17 @@ Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGa
 Route::get('/PengajuanDKP', 'PengajuanDKPController@PengajuanDKP');
 Route::post('/PengajuanDKP/upload', 'PengajuanDKPController@upload');
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
-Route::get('/PengajuanVVT', 'PengajuanVVTController@PengajuanVVT');
+Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
+Route::post('/PengajuanVVT/upload', 'PengajuanVVTController@upload');
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
 Route::get('/PengajuanKITAB', 'PengajuanKITABController@PengajuanKITAB');
 Route::get('/PengajuanRPTKA', 'PengajuanRPTKAController@PengajuanRPTKA');
 
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
+Route::post('/PindahMadrasah/upload', 'PindahMadrasahController@upload');
 Route::get('/RekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasjid');
+Route::post('/RekomBantuanMasjid/upload', 'RekomBantuanMasjidController@upload');
 Route::get('/RekomHaji', 'RekomHajiController@RekomHaji');
 Route::get('/RekomPendirianRumahIbadah', 'RekomPendirianRumahIbadahController@RekomPendirianRumahIbadah');
 Route::get('/RekomSLN', 'RekomSLNController@RekomSLN');
