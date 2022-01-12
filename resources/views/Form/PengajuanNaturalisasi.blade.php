@@ -46,7 +46,8 @@
                     <h2 class="title">Form Pengajuan Naturalisasi</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form enctype="multipart/form-data" action="/PengajuanNaturalisasi/upload" method="POST">
+                    @csrf
                         <div class="form-row">
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
@@ -76,10 +77,8 @@
                         <div class="form-row">
                             <div class="name">File Persetujuan</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_persetujuan" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_persetujuan" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat persetujuan dari Pengguna Orang Asing; Maksimal file 2 MB</div>
                             </div>
@@ -87,10 +86,8 @@
                         <div class="form-row">
                             <div class="name">File Akte kelahiran</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_akte_kelahiran" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_akte_kelahiran" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Akte kelahiran/ kenal lahir yang menunjukkan bahwa Orang Asing telah berusia 21 (dua puluh satu) tahun; Maksimal file 2 MB</div>
                             </div>
@@ -98,10 +95,8 @@
                         <div class="form-row">
                             <div class="name">File Pernyataan Bahasa</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_pernyataan_bahasa" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_pernyataan_bahasa" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat pernyataan Orang Asing dapat berbahasa Indonesia; Maksimal file 2 MB</div>
                             </div>
@@ -109,10 +104,8 @@
                         <div class="form-row">
                             <div class="name">File SKKB/ SKCK</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_skkb_skck" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_skkb_skck" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">surat keterangan kelakuan baik dari kepolisian; Maksimal file 2 MB</div>
                             </div>
@@ -120,10 +113,8 @@
                         <div class="form-row">
                             <div class="name">File KITAB</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_kitab" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_kitab" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">foto copy KITAP; Maksimal file 2 MB</div>
                             </div>
@@ -131,10 +122,8 @@
                         <div class="form-row">
                             <div class="name">File Ijazah</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_ijazah" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_ijazah" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy ijasah/lisensi pemohon sebagai tenaga ahli di bidang agama/ rohaniwan;Maksimal file 2 MB</div>
                             </div>
@@ -142,10 +131,8 @@
                         <div class="form-row">
                             <div class="name">File Jaminan</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_jaminan" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_jaminan" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat jaminan dari Pemberi Kerja Orang Asing bahwa Orang Asing tidak akan terlantar di Indonesia; Maksimal file 2 MB</div>
                             </div>
@@ -153,23 +140,10 @@
                         <div class="form-row">
                             <div class="name">File Foto</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="foto" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_foto" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">pas foto terbaru ukuran 4 x 6 cm sebanyak 2 (dua) lembar berwarna latar belakang merah Maksimal file 2 MB</div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="name">File Akte kelahiran</div>
-                            <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="akta_kelahiran" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
-                                </div>
-                                <div class="label--desc">Akte kelahiran/ kenal lahir yang menunjukkan bahwa Orang Asing telah berusia 21 (dua puluh satu) tahun; Maksimal file 2 MB</div>
                             </div>
                         </div>
                         <div class="card-footer">

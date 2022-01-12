@@ -46,7 +46,8 @@
                     <h2 class="title">Form Pengajuan Surat Persetujuan Kartu Izin Tinggal Tetap</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form enctype="multipart/form-data" action="/PengajuanKITAB/upload" method="POST">
+                    @csrf
                         <div class="form-row">
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
@@ -76,10 +77,8 @@
                         <div class="form-row">
                             <div class="name">File legalitas</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_legalitas" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_legalitas" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Izin operasional atau tanda daftar lembaga/ yayasan; Maksimal file 2 file masing-masing 2 MB</div>
                             </div>
@@ -87,10 +86,8 @@
                         <div class="form-row">
                             <div class="name">File DRH</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_drh" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_drh" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Daftar riwayat hidup Orang Asing Maksimal file 2 MB</div>
                             </div>
@@ -98,10 +95,8 @@
                         <div class="form-row">
                             <div class="name">File Ijazah</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_ijazah" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_ijazah" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy ijazah Orang Asing Maksimal file 2 MB</div>
                             </div>
@@ -109,10 +104,8 @@
                         <div class="form-row">
                             <div class="name">File RPTKA dan IMTA</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_rptka_imta" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_rptka_imta" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">RPTKA dan IMTA Maksimal 2 file masing-masin file 2 MB</div>
                             </div>
@@ -120,10 +113,8 @@
                         <div class="form-row">
                             <div class="name">File Statistik jamaah/peserta didik</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_statistik" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_statistik" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Data statistik jumlah jamaah/peserta didik yang dilayani;(khusus pengajuan rohaniwan dan tenaga ahli, untuk mahasiswa dan pelajar tidak perlu) Maksimal file 2 MB</div>
                             </div>
@@ -131,10 +122,8 @@
                         <div class="form-row">
                             <div class="name">Paspor dan KITAS</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_paspor_kitas" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_paspor_kitas" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy paspor dan kitas; Maksimal 2 file (paspor dan kitas) masing-masing file 2 MB</div>
                             </div>
@@ -142,10 +131,8 @@
                         <div class="form-row">
                             <div class="name">File Polis Asuransi</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_polis_asuransi" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_polis_asuransi" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy polis asuransi kesehatan Orang Asing untuk jangka waktu masa kunjungan; Maksimal file 2 MB</div>
                             </div>
@@ -153,10 +140,8 @@
                         <div class="form-row">
                             <div class="name">File Foto</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="foto" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_foto" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">pas foto terbaru ukuran 4 x 6 cm sebanyak 2 (dua) lembar berwarna latar belakang merah Maksimal file 2 MB</div>
                             </div>
@@ -164,10 +149,8 @@
                         <div class="form-row">
                             <div class="name">File SKKB/ SKCK</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_skkb_skck" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_skkb_skck" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">surat keterangan kelakuan baik dari kepolisian; Maksimal file 2 MB</div>
                             </div>
@@ -175,10 +158,8 @@
                         <div class="form-row">
                             <div class="name">File surat persetujuan sebelumnya</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_persetujuan_sebelumnya" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_persetujuan_sebelumnya" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy surat persetujuan terdahulu dari Biro Hukum dan Kerja Sama Luar Negeri Kementerian Agama.; Maksimal file 2 MB</div>
                             </div>

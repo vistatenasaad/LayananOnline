@@ -46,7 +46,8 @@
                     <h2 class="title">Form Pengajuan Rencana Penggunaan Tenaga Kerja Asing</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
+                    <form method="POST" enctype="multipart/form-data" action="/PengajuanRPTKA/upload">
+                    @csrf
                         <div class="form-row">
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
@@ -76,10 +77,8 @@
                         <div class="form-row">
                             <div class="name">File Akta</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_akta" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_akta" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">akte notaris pendirian lembaga pendidikan/ lembaga pendidikan keagamaan/ lembaga keagamaan/ lembaga sosial/ badan hukum; Maksimal file 2 MB</div>
                             </div>
@@ -87,10 +86,8 @@
                         <div class="form-row">
                             <div class="name">File Statistik jamaah/peserta didik</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_statistik" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_statistik" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Data statistik jumlah jamaah/peserta didik yang dilayani; Maksimal file 2 MB</div>
                             </div>
@@ -98,10 +95,8 @@
                         <div class="form-row">
                             <div class="name">File Legalitas</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_legalitas" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_legalitas" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Izin operasional atau tanda daftar lembaga/ yayasan dan struktur organisasi lembaga pendidikan/ lembaga pendidikan keagamaan/ lembaga keagamaan/lembaga sosial/ badan hukum; Maksimal file 2 file (leglitas dan struktur) masing-masing 2 MB</div>
                             </div>
@@ -109,10 +104,8 @@
                         <div class="form-row">
                             <div class="name">File nama orang asing dan pendamping</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_orsing_pendamping" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_orsing_pendamping" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Daftar nama Orang Asing dan tenaga pendamping dari Indonesia; dan Maksimal file 2 MB</div>
                             </div>
@@ -120,10 +113,8 @@
                         <div class="form-row">
                             <div class="name">Surat Penunjukan pendamping orang asing</div>
                             <div class="value">
-                                <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_surat_pendamping" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                            <div class="input-group js-input-file">
+                                    <input type="file" name="file_surat_pendamping" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat penunjukan warga negara Indonesia sebagai pendamping Orang Asing; Maksimal file 2 MB</div>
                             </div>
