@@ -69,7 +69,7 @@
                 <a href="/RekomBantuanMasjid">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
-                    <span class="navbar-brand mb-0 h1">Rekomendasi Bantuan Majid</span>
+                    <span class="navbar-brand mb-0 h1">Rekomendasi Bantuan Masjid</span>
                 </div>
                 </nav>
                 </a>

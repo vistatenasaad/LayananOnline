@@ -65,6 +65,7 @@ Route::get('/tracking', function () {
 
 //Informasi
 Route::get('/PengukuranKiblat', 'PengukuranKiblatController@PengukuranKiblat');
+Route::post('/PengukuranKiblat/upload', 'PengukuranKiblatController@upload');
 Route::get('/PermohonanPajak', 'PermohonanPajakController@PermohonanPajak');
 Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGaji');
 
@@ -72,8 +73,13 @@ Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGa
 Route::get('/PengajuanDKP', 'PengajuanDKPController@PengajuanDKP');
 Route::post('/PengajuanDKP/upload', 'PengajuanDKPController@upload');
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
+<<<<<<< HEAD
 Route::post('/PengajuanIMTA/upload', 'PengajuanIMTAController@upload');
 Route::get('/PengajuanVVT', 'PengajuanVVTController@PengajuanVVT');
+=======
+Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
+Route::post('/PengajuanVVT/upload', 'PengajuanVVTController@upload');
+>>>>>>> 1fabfc14690f62bcb0c2a9e5b9fa8854182b1c13
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
 Route::post('/PengajuanNaturalisasi/upload', 'PengajuanNaturalisasiController@upload');
 Route::get('/PengajuanKITAB', 'PengajuanKITABController@PengajuanKITAB');
@@ -83,11 +89,17 @@ Route::post('/PengajuanRPTKA/upload', 'PengajuanRPTKAController@upload');
 
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
+Route::post('/PindahMadrasah/upload', 'PindahMadrasahController@upload');
 Route::get('/RekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasjid');
+Route::post('/RekomBantuanMasjid/upload', 'RekomBantuanMasjidController@upload');
 Route::get('/RekomHaji', 'RekomHajiController@RekomHaji');
+Route::post('/RekomHaji/upload', 'RekomHajiController@upload');
 Route::get('/RekomPendirianRumahIbadah', 'RekomPendirianRumahIbadahController@RekomPendirianRumahIbadah');
+Route::post('/RekomPendirianRumahIbadah/upload', 'RekomPendirianRumahIbadahController@upload');
 Route::get('/RekomSLN', 'RekomSLNController@RekomSLN');
+Route::post('/RekomSLN/upload', 'RekomSLNController@upload');
 Route::get('/RekomUmroh', 'RekomUmrohController@RekomUmroh');
+Route::post('/RekomUmroh/upload', 'RekomUmrohController@upload');
 //offline
 Route::get('/RekomSuratKeteranganMajelisTaklim', 'RekomSuratKeteranganMajelisTaklimController@RekomSuratKeteranganMajelisTaklim');
 Route::get('/RekomBantuanPonpesMadin', 'RekomBantuanPonpesMadinController@RekomBantuanPonpesMadin');

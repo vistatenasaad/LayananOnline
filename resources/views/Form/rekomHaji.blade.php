@@ -11,6 +11,7 @@
 
     <!-- Title Page-->
     <title>Rekomendasi Paspor Haji</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
@@ -46,8 +47,9 @@
                     <h2 class="title">Form Pengajuan Rekomendasi Paspor Haji Kankemenag Kota Batu</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" enctype="multipart/form-data">
-                        <div class="form-row">
+                <form enctype="multipart/form-data" action="/RekomHaji/upload" method="POST">
+                    @csrf
+                    <div class="form-row">
                         <div class="name">Nama</div>
                             <div class="value">
                                 <div class="input-group">
@@ -77,9 +79,7 @@
                             <div class="name">Dokumen Porsi Haji</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_porsi_haji" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_porsi_haji" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf maksimal 2MB untuk pendaftaran sebelum April 2016 menggunakan lembar PPIH, untuk pendaftaran setelah April 2016 menggunakan SPPH. Max file size 2 MB</div>
                             </div>
@@ -88,9 +88,7 @@
                             <div class="name">Scan KTP</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_ktp" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_ktp" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf. Max file size 50 MB</div>
                             </div>
@@ -99,9 +97,7 @@
                             <div class="name">Scan Kartu Keluarga</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_kk" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_kk" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf. Max file size 50 MB</div>
                             </div>
@@ -110,9 +106,7 @@
                             <div class="name">Dokumen Pendukung</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input class="input-file" type="file" name="file_pendukung" id="file">
-                                    <label class="label--file" for="file">Browse</label>
-                                    <span class="input-file__info">No file chosen</span>
+                                    <input type="file" name="file_pendukung" placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf maksimal 2MB pilih data yang sama dengan KTP antara lain Akte Kelahiran/ Ijazah terakhir/ Buku Nikah (bisa salah satunya). Max file size 50 MB</div>
                             </div>
