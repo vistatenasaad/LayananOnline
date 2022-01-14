@@ -77,11 +77,19 @@ Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGa
 Route::get('/PengajuanDKP', 'PengajuanDKPController@PengajuanDKP');
 Route::post('/PengajuanDKP/upload', 'PengajuanDKPController@upload');
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
+<<<<<<< HEAD
+Route::post('/PengajuanIMTA/upload', 'PengajuanIMTAController@upload');
+Route::get('/PengajuanVVT', 'PengajuanVVTController@PengajuanVVT');
+=======
 Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
 Route::post('/PengajuanVVT/upload', 'PengajuanVVTController@upload');
+>>>>>>> 1fabfc14690f62bcb0c2a9e5b9fa8854182b1c13
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
+Route::post('/PengajuanNaturalisasi/upload', 'PengajuanNaturalisasiController@upload');
 Route::get('/PengajuanKITAB', 'PengajuanKITABController@PengajuanKITAB');
+Route::post('/PengajuanKITAB/upload', 'PengajuanKITABController@upload');
 Route::get('/PengajuanRPTKA', 'PengajuanRPTKAController@PengajuanRPTKA');
+Route::post('/PengajuanRPTKA/upload', 'PengajuanRPTKAController@upload');
 
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');

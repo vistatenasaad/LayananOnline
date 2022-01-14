@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\pengukuran_kiblat;
 use Str;
 use DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailNotify;
 
 class PengukuranKiblatController extends Controller
 {
@@ -26,7 +28,14 @@ class PengukuranKiblatController extends Controller
 
 		$file_lokasi = 'file_lokasi' . Str::random(10) . '.' . $request->file_lokasi->getClientOriginalExtension();
 		$request->file_lokasi->move(public_path('pengukuran_kiblat'), $file_lokasi);
-		$pengukuran_kiblat->file_lokasi = 'pengukuran_kiblat/' . $file_lokasi;
+		$pengukuran_kiblat->file_lokasi = 'pengukuran_kiblat/' . $file_lokasi;	
+
+		$details = [
+            'nama' => $request->nama,
+			'nama_masjid' => $request->nama_masjid
+        ];
+
+        Mail::to($request->email)->send(new MailNotify($details));
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');
