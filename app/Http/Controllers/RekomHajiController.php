@@ -7,6 +7,8 @@ use DB;
 use File;
 use App\rekom_haji;
 use Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailRekom_haji;
 
 class RekomHajiController extends Controller
 {
@@ -37,8 +39,14 @@ class RekomHajiController extends Controller
 		$request->file_pendukung->move(public_path('rekom_haji'), $file_pendukung);
 		$rekom_haji->file_pendukung = 'rekom_haji/' . $file_pendukung;
 
+		$details = [
+            'nama' => $request->nama
+        ];
+
+        Mail::to($request->email)->send(new MailRekom_haji($details));
+
 		if($rekom_haji->save()){
-			return redirect('PengajuanDKP')->with('status', 'File Has been uploaded successfully');
+			return redirect('RekomHaji')->with('status', 'File Has been uploaded successfully');
 		}
 	}
 }

@@ -44,7 +44,7 @@
             <div class="card card-6">
                 <div class="card-heading">
                     <br><br>
-                    <h2 class="title">Form pengajuan pengantar rekomendasi Studi Luar Negeri di Kota Batu</h2>
+                    <h2 class="title">Form Pengajuan Pengantar rekomendasi Studi Luar Negeri di Kota Batu</h2>
                 </div>
                 <div class="card-body">
                     <form enctype="multipart/form-data" action="/RekomSLN/upload" method="POST">

@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use DB;
 use File;
 use App\rekom_pendirian_ri;
 use Str;
-
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailRekom_pendirianRI;
 
 class RekomPendirianRumahIbadahController extends Controller
 {
@@ -44,6 +46,12 @@ class RekomPendirianRumahIbadahController extends Controller
 		$file_dukungan = 'file_dukungan' . Str::random(10) . '.' . $request->file_dukungan->getClientOriginalExtension();
 		$request->file_dukungan->move(public_path('rekom_pendirian_ri'), $file_dukungan);
 		$rekom_pendirian_ri->file_dukungan = 'rekom_pendirian_ri/' . $file_dukungan;
+
+		$details = [
+            'asal_surat' => $request->asal_surat
+        ];
+
+        Mail::to($request->email)->send(new MailRekom_pendirianRI($details));
 
 		if($rekom_pendirian_ri->save()){
 			return redirect('RekomPendirianRumahIbadah')->with('status', 'File Has been uploaded successfully');

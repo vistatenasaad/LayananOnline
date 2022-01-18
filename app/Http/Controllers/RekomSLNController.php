@@ -7,6 +7,8 @@ use DB;
 use File;
 use App\rekom_sln;
 use Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailRekom_sln;
 
 class RekomSLNController extends Controller
 {
@@ -55,6 +57,11 @@ class RekomSLNController extends Controller
 		$request->file_pernyataan->move(public_path('rekom_sln'), $file_pernyataan);
 		$rekom_sln->file_pernyataan = 'rekom_sln/' . $file_pernyataan;
 
+		$details = [
+            'nama_siswa' => $request->nama_siswa
+        ];
+
+        Mail::to($request->email)->send(new MailRekom_sln($details));
 
 		if($rekom_sln->save()){
 			return redirect('RekomSLN')->with('status', 'File Has been uploaded successfully');
