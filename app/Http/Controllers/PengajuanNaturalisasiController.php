@@ -7,6 +7,8 @@ use DB;
 use File;
 use App\pengajuan_naturalisasi;
 use Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_naturalisasi;
 class PengajuanNaturalisasiController extends Controller
 {
     public function PengajuanNaturalisasi(){
@@ -50,6 +52,12 @@ class PengajuanNaturalisasiController extends Controller
 		$file_foto = 'file_foto' . Str::random(10) . '.' . $request->file_foto->getClientOriginalExtension();
 		$request->file_foto->move(public_path('pengajuan_naturalisasi'), $file_foto);
 		$pengajuan_naturalisasi->file_foto = 'pengajuan_naturalisasi/' . $file_foto;
+
+		$details = [
+            'nama_lembaga' => $request->nama_lembaga
+        ];
+
+        Mail::to($request->email)->send(new MailPengajuan_naturalisasi($details));
 
 		if($pengajuan_naturalisasi->save()){
 			return redirect('PengajuanNaturalisasi')->with('status', 'File Has been uploaded successfully');
