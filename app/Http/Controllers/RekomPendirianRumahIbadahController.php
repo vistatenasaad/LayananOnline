@@ -9,6 +9,7 @@ use App\rekom_pendirian_ri;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_pendirianRI;
+use App\Mail\MailRekom_pendirianRI_admin;
 
 class RekomPendirianRumahIbadahController extends Controller
 {
@@ -48,10 +49,12 @@ class RekomPendirianRumahIbadahController extends Controller
 		$rekom_pendirian_ri->file_dukungan = 'rekom_pendirian_ri/' . $file_dukungan;
 
 		$details = [
-            'asal_surat' => $request->asal_surat
+            'asal_surat' => $request->asal_surat,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailRekom_pendirianRI($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_pendirianRI_admin($details));
 
 		if($rekom_pendirian_ri->save()){
 			return redirect('RekomPendirianRumahIbadah')->with('status', 'File Has been uploaded successfully');

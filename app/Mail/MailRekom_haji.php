@@ -29,6 +29,6 @@ class MailRekom_haji extends Mailable
     public function build()
     {
         return $this->from('ratnaindah0124@gmail.com')
-                    ->view('Form.rekomUmroh_notify');
+                    ->view('Form.rekomHaji_notify');
     }
 }

@@ -9,6 +9,7 @@ use App\rekom_haji;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_haji;
+use App\Mail\MailRekom_haji_admin;
 
 class RekomHajiController extends Controller
 {
@@ -40,10 +41,12 @@ class RekomHajiController extends Controller
 		$rekom_haji->file_pendukung = 'rekom_haji/' . $file_pendukung;
 
 		$details = [
-            'nama' => $request->nama
+            'nama' => $request->nama,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailRekom_haji($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_haji_admin($details));
 
 		if($rekom_haji->save()){
 			return redirect('RekomHaji')->with('status', 'File Has been uploaded successfully');

@@ -9,6 +9,7 @@ use App\rekom_umroh;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_umroh;
+use App\Mail\MailRekom_umroh_admin;
 
 class RekomUmrohController extends Controller
 {
@@ -32,10 +33,12 @@ class RekomUmrohController extends Controller
 		$rekom_umroh->file_ppiu = 'rekom_umroh/' . $file_ppiu;
 
 		$details = [
-            'nama' => $request->nama
+            'nama' => $request->nama,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailRekom_umroh($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_umroh_admin($details));
 
 		if($rekom_umroh->save()){
 			return redirect('RekomUmroh')->with('status', 'File Has been uploaded successfully');
