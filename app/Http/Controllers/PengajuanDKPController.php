@@ -7,6 +7,8 @@ use DB;
 use File;
 use App\pengajuan_d_k_p;
 use Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_dkp;
 
 class PengajuanDKPController extends Controller
 {
@@ -40,6 +42,12 @@ class PengajuanDKPController extends Controller
 		$foto = 'foto' . Str::random(10) . '.' . $request->foto->getClientOriginalExtension();
 		$request->foto->move(public_path('pengajuan_dkp'), $foto);
 		$pengajuan_d_k_p->foto = 'pengajuan_dkp/' . $foto;
+
+		$details = [
+            'nama' => $request->nama
+        ];
+
+        Mail::to($request->email)->send(new MailPengajuan_dkp($details));
 
 		if($pengajuan_d_k_p->save()){
 			return redirect('PengajuanDKP')->with('status', 'File Has been uploaded successfully');
