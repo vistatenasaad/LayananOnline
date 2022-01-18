@@ -9,6 +9,7 @@ use App\pengajuan_kitab;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_kitab;
+use App\Mail\MailPengajuan_kitab_admin;
 class PengajuanKITABController extends Controller
 {
     public function PengajuanKITAB(){
@@ -62,10 +63,12 @@ class PengajuanKITABController extends Controller
 		$pengajuan_kitab->file_persetujuan_sebelumnya = 'pengajuan_kitab/' . $file_persetujuan_sebelumnya;
 
 		$details = [
-            'nama_lembaga' => $request->nama_lembaga
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailPengajuan_kitab($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_kitab_admin($details));
 
 		if($pengajuan_kitab->save()){
 			return redirect('PengajuanKITAB')->with('status', 'File Has been uploaded successfully');

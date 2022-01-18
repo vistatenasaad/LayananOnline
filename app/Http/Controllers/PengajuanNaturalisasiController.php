@@ -9,6 +9,7 @@ use App\pengajuan_naturalisasi;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_naturalisasi;
+use App\Mail\MailPengajuan_naturalisasi_admin;
 class PengajuanNaturalisasiController extends Controller
 {
     public function PengajuanNaturalisasi(){
@@ -54,10 +55,12 @@ class PengajuanNaturalisasiController extends Controller
 		$pengajuan_naturalisasi->file_foto = 'pengajuan_naturalisasi/' . $file_foto;
 
 		$details = [
-            'nama_lembaga' => $request->nama_lembaga
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailPengajuan_naturalisasi($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_naturalisasi_admin($details));
 
 		if($pengajuan_naturalisasi->save()){
 			return redirect('PengajuanNaturalisasi')->with('status', 'File Has been uploaded successfully');
