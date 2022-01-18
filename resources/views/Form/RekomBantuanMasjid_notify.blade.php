@@ -1,6 +1,6 @@
-<h3>Halo, {{$details['nama']}} !</h3>
+<h3>Halo, {{$details['nama_pemohon']}} !</h3>
 <p>Nama Masjid : {{$details['nama_masjid']}}</p>
- 
-<p>Pengajuan Pengukuran Kiblat anda telah berhasil</a></p>
+
+<p>Rekomendasi Bantuan Masjid anda telah berhasil</a></p>
 <p>Berikut ini adalah kode pengajuan anda</p>
 <h2>1234567abc</h2>

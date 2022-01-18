@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\rekom_bantuan_masjid;
 use Str;
 use DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailRekom_bantuanmasjid;
 
 class RekomBantuanMasjidController extends Controller
 {
@@ -30,6 +32,13 @@ class RekomBantuanMasjidController extends Controller
 		$file_permohonan_bantuan = 'file_permohonan_bantuan' . Str::random(10) . '.' . $request->file_permohonan_bantuan->getClientOriginalExtension();
 		$request->file_permohonan_bantuan->move(public_path('rekom_bantuanmasjid'), $file_permohonan_bantuan);
 		$rekom_bantuan_masjid->file_permohonan_bantuan = 'rekom_bantuanmasjid/' . $file_permohonan_bantuan;
+
+		$details = [
+            'nama_pemohon' => $request->nama_pemohon,
+			'nama_masjid' => $request->nama_masjid
+        ];
+
+        Mail::to($request->email)->send(new MailRekom_bantuanmasjid($details));
 
 		if($rekom_bantuan_masjid->save()){
 			return redirect('RekomBantuanMasjid')->with('status', 'File Has been uploaded successfully');
