@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +12,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
@@ -76,8 +80,11 @@ Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
 Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
 Route::post('/PengajuanVVT/upload', 'PengajuanVVTController@upload');
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
+Route::post('/PengajuanNaturalisasi/upload', 'PengajuanNaturalisasiController@upload');
 Route::get('/PengajuanKITAB', 'PengajuanKITABController@PengajuanKITAB');
+Route::post('/PengajuanKITAB/upload', 'PengajuanKITABController@upload');
 Route::get('/PengajuanRPTKA', 'PengajuanRPTKAController@PengajuanRPTKA');
+Route::post('/PengajuanRPTKA/upload', 'PengajuanRPTKAController@upload');
 
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
@@ -130,3 +137,8 @@ Route::get('/SuketIjazah', 'SuketIjazahController@SuketIjazah');
 
 //Pelayanan Yang diperlukan
 Route::get('/MutasiJamaah', 'MutasiJamaahController@MutasiJamaah');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home1', 'HomeController@home1')->name('home1');
+Route::get('/home2', 'HomeController@home2')->name('home2');
