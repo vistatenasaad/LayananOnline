@@ -7,6 +7,8 @@ use DB;
 use File;
 use App\pengajuan_rptka;
 use Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_rptka;
 class PengajuanRPTKAController extends Controller
 {
     public function PengajuanRPTKA(){
@@ -39,6 +41,12 @@ class PengajuanRPTKAController extends Controller
 			$request->file_surat_pendamping->move(public_path('pengajuan_rptka'), $file_surat_pendamping);
 			$pengajuan_rptka->file_surat_pendamping = 'pengajuan_rptka/' . $file_surat_pendamping;
 	
+			$details = [
+				'nama_lembaga' => $request->nama_lembaga
+			];
+	
+			Mail::to($request->email)->send(new MailPengajuan_rptka($details));
+
 			if($pengajuan_rptka->save()){
 				return redirect('PengajuanRPTKA')->with('status', 'File Has been uploaded successfully');
 			}

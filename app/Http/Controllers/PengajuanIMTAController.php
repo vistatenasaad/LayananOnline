@@ -7,6 +7,8 @@ use DB;
 use File;
 use App\pengajuan_imta;
 use Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_imta;
 class PengajuanIMTAController extends Controller
 {
     public function PengajuanIMTA(){
@@ -42,6 +44,12 @@ class PengajuanIMTAController extends Controller
 		$foto = 'foto' . Str::random(10) . '.' . $request->foto->getClientOriginalExtension();
 		$request->foto->move(public_path('pengajuan_imta'), $foto);
 		$pengajuan_imta->foto = 'pengajuan_imta/' . $foto;
+
+		$details = [
+            'nama_lembaga' => $request->nama_lembaga
+        ];
+
+        Mail::to($request->email)->send(new MailPengajuan_imta($details));
 
 		if($pengajuan_imta->save()){
 			return redirect('PengajuanIMTA')->with('status', 'File Has been uploaded successfully');

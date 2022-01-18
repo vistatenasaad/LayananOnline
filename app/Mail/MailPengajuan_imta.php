@@ -10,15 +10,15 @@ use Illuminate\Queue\SerializesModels;
 class MailPengajuan_imta extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $details;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($details)
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -28,6 +28,7 @@ class MailPengajuan_imta extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('ratnaindah0124@gmail.com')
+                    ->view('Form.PengajuanIMTA_notify');
     }
 }
