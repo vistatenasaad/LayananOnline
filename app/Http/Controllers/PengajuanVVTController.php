@@ -8,6 +8,7 @@ use Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_vvt;
+use App\Mail\MailPengajuan_vvt_admin;
 
 class PengajuanVVTController extends Controller
 {
@@ -58,11 +59,12 @@ class PengajuanVVTController extends Controller
 		$pengajuan_vvt->permohonan_vvt = 'pengajuan_vvt/' . $permohonan_vvt;
 
 		$details = [
-            'nama_lembaga' => $request->nama_lembaga
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailPengajuan_vvt($details));
-		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_vvt($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_vvt_admin($details));
 
 		if($pengajuan_vvt->save()){
 			return redirect('PengajuanVVT')->with('status', 'File Has been uploaded successfully');

@@ -8,6 +8,7 @@ use Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_bantuanmasjid;
+use App\Mail\MailRekom_bantuanmasjid_admin;
 
 class RekomBantuanMasjidController extends Controller
 {
@@ -35,10 +36,12 @@ class RekomBantuanMasjidController extends Controller
 
 		$details = [
             'nama_pemohon' => $request->nama_pemohon,
-			'nama_masjid' => $request->nama_masjid
+			'nama_masjid' => $request->nama_masjid,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailRekom_bantuanmasjid($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_bantuanmasjid_admin($details));
 
 		if($rekom_bantuan_masjid->save()){
 			return redirect('RekomBantuanMasjid')->with('status', 'File Has been uploaded successfully');

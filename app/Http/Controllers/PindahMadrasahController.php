@@ -8,6 +8,7 @@ use Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
+use App\Mail\MailPindah_madrasah_admin;
 
 class PindahMadrasahController extends Controller
 {
@@ -42,10 +43,12 @@ class PindahMadrasahController extends Controller
 		$details = [
             'nama_siswa' => $request->nama_siswa,
 			'asal_madrasah' => $request->asal_madrasah,
-			'madrasah_dituju' => $request->madrasah_dituju
+			'madrasah_dituju' => $request->madrasah_dituju,
+			'email' => $request->email
         ];
 
         Mail::to($request->email)->send(new MailPindah_madrasah($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPindah_madrasah_admin($details));
 
 		if($pindah_madrasah->save()){
 			return redirect('PindahMadrasah')->with('status', 'File Has been uploaded successfully');

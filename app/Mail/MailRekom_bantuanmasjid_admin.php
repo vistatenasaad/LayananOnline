@@ -11,14 +11,16 @@ class MailRekom_bantuanmasjid_admin extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $details;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($details)
     {
-        //
+        $this->details = $details;
     }
 
     /**
@@ -28,6 +30,7 @@ class MailRekom_bantuanmasjid_admin extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->from('ratnaindah0124@gmail.com')
+                    ->view('Form.RekomBantuanMasjid_notify_admin');
     }
 }
