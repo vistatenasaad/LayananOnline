@@ -29,6 +29,6 @@ class MailRekom_sln_admin extends Mailable
     public function build()
     {
         return $this->from('ratnaindah0124@gmail.com')
-                    ->view('Form.rekomUmroh_notify_admin');
+                    ->view('Form.rekomSLN_notify_admin');
     }
 }
