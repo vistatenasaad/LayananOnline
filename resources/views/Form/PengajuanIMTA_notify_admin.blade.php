@@ -2,4 +2,5 @@
  
 <p>Nama : {{$details['nama_lembaga']}} </a></p>
 <p>Jenis Layanan : Izin Menggunakan Tenaga Kerja Asing </p>
-<h2> Berikut adalah kode tracking pengajuan 1234567abc</h2>
+<p> Berikut adalah kode tracking pengajuan anda</p>
+<h2>1234567abc</h2>

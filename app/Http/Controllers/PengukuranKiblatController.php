@@ -8,6 +8,7 @@ use Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
+use App\Mail\MailPengajuan_dkp_admin;
 
 class PengukuranKiblatController extends Controller
 {
@@ -37,6 +38,7 @@ class PengukuranKiblatController extends Controller
 
 		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_dkp_admin($details));
 
 		//captcha
 		request()->validate([

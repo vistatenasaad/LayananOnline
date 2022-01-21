@@ -2,4 +2,5 @@
  
 <p>Nama : {{$details['nama']}} </a></p>
 <p>Jenis Layanan : Pengajuan Rekomendasi Penerbitan Paspor Ibadah Umroh pada Kankemenag Kota Batu </p>
-<h2> Berikut adalah kode tracking pengajuan 1234567abc</h2>
+<p> Berikut adalah kode tracking pengajuan anda</p>
+<h2>1234567abc</h2>
