@@ -8,7 +8,7 @@ use Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
-use App\Mail\MailPengajuan_dkp_admin;
+use App\Mail\MailNotify_admin;
 
 class PengukuranKiblatController extends Controller
 {
@@ -33,25 +33,17 @@ class PengukuranKiblatController extends Controller
 
 		$details = [
             'nama' => $request->nama,
-			'nama_masjid' => $request->nama_masjid
+			'nama_masjid' => $request->nama_masjid,
+			'email' => $request->email
         ];
-
-		//notif email
-        Mail::to($request->email)->send(new MailNotify($details));
-		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_dkp_admin($details));
 
 		//captcha
 		request()->validate([
-			'nama' => 'required',
-			'nama_masjid' => 'required',
-			'email' => 'required',
-			'whatsapp' => 'required',
-			'file_permohonan' => 'required',
-			'file_lokasi' => 'required',
 			'g-recaptcha-response' => 'required|captcha',
-			]);
-	 
-			dd('successfully validate');
+		]);
+		//notif email
+        Mail::to($request->email)->send(new MailNotify($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');
