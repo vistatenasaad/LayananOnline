@@ -63,6 +63,11 @@ class PengajuanVVTController extends Controller
 			'email' => $request->email
         ];
 
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		
         Mail::to($request->email)->send(new MailPengajuan_vvt($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_vvt_admin($details));
 
