@@ -66,7 +66,10 @@ class PengajuanKITABController extends Controller
             'nama_lembaga' => $request->nama_lembaga,
 			'email' => $request->email
         ];
-
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
         Mail::to($request->email)->send(new MailPengajuan_kitab($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_kitab_admin($details));
 

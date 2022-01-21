@@ -164,6 +164,12 @@
                                 <div class="label--desc">Foto copy surat persetujuan terdahulu dari Biro Hukum dan Kerja Sama Luar Negeri Kementerian Agama.; Maksimal file 2 MB</div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                        </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
