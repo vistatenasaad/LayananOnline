@@ -9,6 +9,7 @@ use App\pengajuan_imta;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_imta;
+use App\Mail\MailPengajuan_imta_admin;
 class PengajuanIMTAController extends Controller
 {
     public function PengajuanIMTA(){
@@ -46,10 +47,15 @@ class PengajuanIMTAController extends Controller
 		$pengajuan_imta->foto = 'pengajuan_imta/' . $foto;
 
 		$details = [
-            'nama_lembaga' => $request->nama_lembaga
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
         ];
-
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
         Mail::to($request->email)->send(new MailPengajuan_imta($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_imta_admin($details));
 
 		if($pengajuan_imta->save()){
 			return redirect('PengajuanIMTA')->with('status', 'File Has been uploaded successfully');

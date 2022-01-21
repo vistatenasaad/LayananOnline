@@ -8,6 +8,7 @@ use Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
+use App\Mail\MailNotify_admin;
 
 class PengukuranKiblatController extends Controller
 {
@@ -32,10 +33,17 @@ class PengukuranKiblatController extends Controller
 
 		$details = [
             'nama' => $request->nama,
-			'nama_masjid' => $request->nama_masjid
+			'nama_masjid' => $request->nama_masjid,
+			'email' => $request->email
         ];
 
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');

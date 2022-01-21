@@ -9,6 +9,7 @@ use App\pengajuan_d_k_p;
 use Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_dkp;
+use App\Mail\MailPengajuan_dkp_admin;
 
 class PengajuanDKPController extends Controller
 {
@@ -44,10 +45,15 @@ class PengajuanDKPController extends Controller
 		$pengajuan_d_k_p->foto = 'pengajuan_dkp/' . $foto;
 
 		$details = [
-            'nama' => $request->nama
+            'nama' => $request->nama,
+			'email' => $request->email
         ];
-
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
         Mail::to($request->email)->send(new MailPengajuan_dkp($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_dkp_admin($details));
 
 		if($pengajuan_d_k_p->save()){
 			return redirect('PengajuanDKP')->with('status', 'File Has been uploaded successfully');
