@@ -93,6 +93,12 @@
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf. Max file size 2 MB</div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                        </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
