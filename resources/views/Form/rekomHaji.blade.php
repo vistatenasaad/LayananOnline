@@ -111,6 +111,12 @@
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf maksimal 2MB pilih data yang sama dengan KTP antara lain Akte Kelahiran/ Ijazah terakhir/ Buku Nikah (bisa salah satunya). Max file size 50 MB</div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                        </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
