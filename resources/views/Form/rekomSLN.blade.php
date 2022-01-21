@@ -162,6 +162,12 @@
                                 <div class="label--desc">Surat Pernyataan Kebenaran Dokumen yang telah diisi lengkap dan ditandatangani oleh pemohon sesuai dengan format, maksimal file 2 MB dengan jenis file .pdf</div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                        </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>

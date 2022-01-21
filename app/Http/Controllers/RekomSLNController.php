@@ -63,6 +63,11 @@ class RekomSLNController extends Controller
 			'email' => $request->email
         ];
 
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		
         Mail::to($request->email)->send(new MailRekom_sln($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_sln_admin($details));
 

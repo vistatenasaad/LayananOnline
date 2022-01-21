@@ -129,6 +129,12 @@
                                 <div class="label--desc">Dukungan masyarakat setempat paling sedikit 60 orang yang disahkan oleh Lurah atau Kepala Desa. Max file size 2 MB</div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                        </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
