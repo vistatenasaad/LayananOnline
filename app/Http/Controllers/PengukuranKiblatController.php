@@ -35,7 +35,21 @@ class PengukuranKiblatController extends Controller
 			'nama_masjid' => $request->nama_masjid
         ];
 
+		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
+
+		//captcha
+		request()->validate([
+			'nama' => 'required',
+			'nama_masjid' => 'required',
+			'email' => 'required',
+			'whatsapp' => 'required',
+			'file_permohonan' => 'required',
+			'file_lokasi' => 'required',
+			'g-recaptcha-response' => 'required|captcha',
+			]);
+	 
+			dd('successfully validate');
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');
