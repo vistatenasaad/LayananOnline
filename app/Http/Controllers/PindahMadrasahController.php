@@ -47,6 +47,11 @@ class PindahMadrasahController extends Controller
 			'email' => $request->email
         ];
 
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+
         Mail::to($request->email)->send(new MailPindah_madrasah($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPindah_madrasah_admin($details));
 

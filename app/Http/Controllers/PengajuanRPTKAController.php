@@ -48,6 +48,11 @@ class PengajuanRPTKAController extends Controller
 				'email' => $request->email
 			];
 	
+			//captcha
+			request()->validate([
+				'g-recaptcha-response' => 'required|captcha',
+			]);
+
 			Mail::to($request->email)->send(new MailPengajuan_rptka($details));
 			Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_rptka_admin($details));
 

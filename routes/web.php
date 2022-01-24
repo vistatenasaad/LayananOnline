@@ -143,3 +143,4 @@ Route::get('/MutasiJamaah', 'MutasiJamaahController@MutasiJamaah');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home1', 'HomeController@home1')->name('home1');
 Route::get('/home2', 'HomeController@home2')->name('home2');
+Route::get('/datamasuk', 'Admin1Controller@datamasuk1')->name('datamasuk1');
