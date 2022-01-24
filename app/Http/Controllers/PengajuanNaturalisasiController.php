@@ -18,6 +18,7 @@ class PengajuanNaturalisasiController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_naturalisasi = new pengajuan_naturalisasi();
+		$pengajuan_naturalisasi->id = 'BATU' . Str::random(7);
 		$pengajuan_naturalisasi->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_naturalisasi->email = $request->email;
 		$pengajuan_naturalisasi->whatsapp = $request->whatsapp;
@@ -55,6 +56,7 @@ class PengajuanNaturalisasiController extends Controller
 		$pengajuan_naturalisasi->file_foto = 'pengajuan_naturalisasi/' . $file_foto;
 
 		$details = [
+			'id' => $pengajuan_naturalisasi->id,
             'nama_lembaga' => $request->nama_lembaga,
 			'email' => $request->email
         ];

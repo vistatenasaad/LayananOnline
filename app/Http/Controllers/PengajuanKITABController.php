@@ -18,6 +18,7 @@ class PengajuanKITABController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_kitab = new pengajuan_kitab();
+		$pengajuan_naturalisasi->id = 'BATU' . Str::random(7);
 		$pengajuan_kitab->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_kitab->email = $request->email;
 		$pengajuan_kitab->whatsapp = $request->whatsapp;
@@ -63,6 +64,7 @@ class PengajuanKITABController extends Controller
 		$pengajuan_kitab->file_persetujuan_sebelumnya = 'pengajuan_kitab/' . $file_persetujuan_sebelumnya;
 
 		$details = [
+			'id' => $pengajuan_naturalisasi->id,
             'nama_lembaga' => $request->nama_lembaga,
 			'email' => $request->email
         ];

@@ -18,6 +18,7 @@ class PengajuanIMTAController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_imta = new pengajuan_imta();
+		$pengajuan_naturalisasi->id = 'BATU' . Str::random(7);
 		$pengajuan_imta->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_imta->email = $request->email;
 		$pengajuan_imta->whatsapp = $request->whatsapp;
@@ -47,6 +48,7 @@ class PengajuanIMTAController extends Controller
 		$pengajuan_imta->foto = 'pengajuan_imta/' . $foto;
 
 		$details = [
+			'id' => $pengajuan_naturalisasi->id,
             'nama_lembaga' => $request->nama_lembaga,
 			'email' => $request->email
         ];
