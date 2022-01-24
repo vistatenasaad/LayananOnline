@@ -18,6 +18,7 @@ class PengukuranKiblatController extends Controller
 
 	public function upload(Request $request){
 		$pengukuran_kiblat = new pengukuran_kiblat();
+		$pengukuran_kiblat->id = 'BATU' . Str::random(7);
 		$pengukuran_kiblat->nama = $request->nama;
 		$pengukuran_kiblat->nama_masjid = $request->nama_masjid;
 		$pengukuran_kiblat->email = $request->email;
@@ -32,12 +33,12 @@ class PengukuranKiblatController extends Controller
 		$pengukuran_kiblat->file_lokasi = 'pengukuran_kiblat/' . $file_lokasi;	
 
 		$details = [
+			'id' => $pengukuran_kiblat->id,
             'nama' => $request->nama,
 			'nama_masjid' => $request->nama_masjid,
 			'email' => $request->email
         ];
-
-		//captcha
+		
 		request()->validate([
 			'g-recaptcha-response' => 'required|captcha',
 		]);
