@@ -20,6 +20,7 @@ class RekomPendirianRumahIbadahController extends Controller
 	public function upload(Request $request){
 
 		$rekom_pendirian_ri = new rekom_pendirian_ri();
+		$rekom_pendirian_ri->id = 'BATU' . Str::random(7);
 		$rekom_pendirian_ri->asal_surat = $request->asal_surat;
 		$rekom_pendirian_ri->email = $request->email;
 		$rekom_pendirian_ri->whatsapp = $request->whatsapp;
@@ -49,6 +50,7 @@ class RekomPendirianRumahIbadahController extends Controller
 		$rekom_pendirian_ri->file_dukungan = 'rekom_pendirian_ri/' . $file_dukungan;
 
 		$details = [
+			'id' => $rekom_pendirian_ri->id,
             'asal_surat' => $request->asal_surat,
 			'email' => $request->email
         ];

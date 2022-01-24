@@ -3,4 +3,4 @@
 <p>Nama Lembaga : {{$details['nama_lembaga']}} </a></p>
 <p>Jenis Layanan : Pengajuan Visa Tinggal Terbatas </p>
 <p> Berikut adalah kode tracking pengajuan anda</p>
-<h2>1234567abc</h2>
+<h2>{{$details['id']}}</h2>

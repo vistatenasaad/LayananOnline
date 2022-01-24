@@ -20,7 +20,7 @@ class PengajuanDKPController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_d_k_p = new pengajuan_d_k_p();
-		$pengajuan_naturalisasi->id = 'BATU' . Str::random(7);
+		$pengajuan_d_k_p->id = 'BATU' . Str::random(7);
 		$pengajuan_d_k_p->nama = $request->nama;
 		$pengajuan_d_k_p->email = $request->email;
 		$pengajuan_d_k_p->whatsapp = $request->whatsapp;
@@ -46,7 +46,7 @@ class PengajuanDKPController extends Controller
 		$pengajuan_d_k_p->foto = 'pengajuan_dkp/' . $foto;
 
 		$details = [
-			'id' => $pengajuan_naturalisasi->id,
+			'id' => $pengajuan_d_k_p->id,
             'nama' => $request->nama,
 			'email' => $request->email
         ];

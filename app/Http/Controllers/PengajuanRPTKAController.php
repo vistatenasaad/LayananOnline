@@ -19,6 +19,7 @@ class PengajuanRPTKAController extends Controller
 	public function upload(Request $request){
 
 			$pengajuan_rptka = new pengajuan_rptka();
+			$pengajuan_rptka->id = 'BATU' . Str::random(7);
 			$pengajuan_rptka->nama_lembaga = $request->nama_lembaga;
 			$pengajuan_rptka->email = $request->email;
 			$pengajuan_rptka->whatsapp = $request->whatsapp;
@@ -44,6 +45,7 @@ class PengajuanRPTKAController extends Controller
 			$pengajuan_rptka->file_surat_pendamping = 'pengajuan_rptka/' . $file_surat_pendamping;
 	
 			$details = [
+				'id' => $pengajuan_rptka->id,
 				'nama_lembaga' => $request->nama_lembaga,
 				'email' => $request->email
 			];

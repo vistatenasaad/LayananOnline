@@ -18,6 +18,7 @@ class PengajuanVVTController extends Controller
 	
 	public function upload(Request $request){
 		$pengajuan_vvt = new pengajuan_vvt();
+		$pengajuan_vvt->id = 'BATU' . Str::random(7);
 		$pengajuan_vvt->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_vvt->email = $request->email;
 		$pengajuan_vvt->whatsapp = $request->whatsapp;
@@ -59,6 +60,7 @@ class PengajuanVVTController extends Controller
 		$pengajuan_vvt->permohonan_vvt = 'pengajuan_vvt/' . $permohonan_vvt;
 
 		$details = [
+			'id' => $pengajuan_vvt->id,
             'nama_lembaga' => $request->nama_lembaga,
 			'email' => $request->email
         ];

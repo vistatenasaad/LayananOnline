@@ -20,6 +20,7 @@ class RekomSLNController extends Controller
 	public function upload(Request $request){
 
 		$rekom_sln = new rekom_sln();
+		$rekom_sln->id = 'BATU' . Str::random(7);
 		$rekom_sln->nama_siswa = $request->nama_siswa;
 		$rekom_sln->asal_madrasah = $request->asal_madrasah;
 		$rekom_sln->negara_tujuan = $request->negara_tujuan;
@@ -59,6 +60,7 @@ class RekomSLNController extends Controller
 		$rekom_sln->file_pernyataan = 'rekom_sln/' . $file_pernyataan;
 
 		$details = [
+			'id' => $rekom_sln->id,
             'nama_siswa' => $request->nama_siswa,
 			'email' => $request->email
         ];

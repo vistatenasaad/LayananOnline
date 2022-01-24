@@ -20,6 +20,7 @@ class RekomUmrohController extends Controller
 	public function upload(Request $request){
 
 		$rekom_umroh = new rekom_umroh();
+		$rekom_umroh->id = 'BATU' . Str::random(7);
 		$rekom_umroh->nama = $request->nama;
 		$rekom_umroh->email = $request->email;
 		$rekom_umroh->whatsapp = $request->whatsapp;
@@ -33,6 +34,7 @@ class RekomUmrohController extends Controller
 		$rekom_umroh->file_ppiu = 'rekom_umroh/' . $file_ppiu;
 
 		$details = [
+			'id' => $rekom_umroh->id,
             'nama' => $request->nama,
 			'email' => $request->email
         ];

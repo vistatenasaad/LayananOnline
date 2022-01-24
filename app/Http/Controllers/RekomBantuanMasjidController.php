@@ -17,6 +17,7 @@ class RekomBantuanMasjidController extends Controller
 	}
 	public function upload(Request $request){
 		$rekom_bantuan_masjid = new rekom_bantuan_masjid();
+		$rekom_bantuan_masjid->id = 'BATU' . Str::random(7);
 		$rekom_bantuan_masjid->nama_pemohon = $request->nama_pemohon;
 		$rekom_bantuan_masjid->nama_masjid = $request->nama_masjid;
 		$rekom_bantuan_masjid->email = $request->email;
@@ -35,6 +36,7 @@ class RekomBantuanMasjidController extends Controller
 		$rekom_bantuan_masjid->file_permohonan_bantuan = 'rekom_bantuanmasjid/' . $file_permohonan_bantuan;
 
 		$details = [
+			'id' => $rekom_bantuan_masjid->id,
             'nama_pemohon' => $request->nama_pemohon,
 			'nama_masjid' => $request->nama_masjid,
 			'email' => $request->email
