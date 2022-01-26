@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_kitab;
-use Str;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_kitab;
+use App\Mail\MailPengajuan_kitab_admin;
 class PengajuanKITABController extends Controller
 {
     public function PengajuanKITAB(){
@@ -15,6 +18,7 @@ class PengajuanKITABController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_kitab = new pengajuan_kitab();
+		$pengajuan_kitab->id = 'BATU' . Str::random(7);
 		$pengajuan_kitab->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_kitab->email = $request->email;
 		$pengajuan_kitab->whatsapp = $request->whatsapp;
@@ -58,6 +62,18 @@ class PengajuanKITABController extends Controller
 		$file_persetujuan_sebelumnya = 'file_persetujuan_sebelumnya' . Str::random(10) . '.' . $request->file_persetujuan_sebelumnya->getClientOriginalExtension();
 		$request->file_persetujuan_sebelumnya->move(public_path('pengajuan_kitab'), $file_persetujuan_sebelumnya);
 		$pengajuan_kitab->file_persetujuan_sebelumnya = 'pengajuan_kitab/' . $file_persetujuan_sebelumnya;
+
+		$details = [
+			'id' => $pengajuan_kitab->id,
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
+        ];
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+        Mail::to($request->email)->send(new MailPengajuan_kitab($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_kitab_admin($details));
 
 		if($pengajuan_kitab->save()){
 			return redirect('PengajuanKITAB')->with('status', 'File Has been uploaded successfully');

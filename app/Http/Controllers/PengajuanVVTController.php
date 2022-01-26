@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pengajuan_vvt;
-use Str;
+use Illuminate\Support\Str;
 use DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_vvt;
+use App\Mail\MailPengajuan_vvt_admin;
 
 class PengajuanVVTController extends Controller
 {
@@ -15,6 +18,7 @@ class PengajuanVVTController extends Controller
 	
 	public function upload(Request $request){
 		$pengajuan_vvt = new pengajuan_vvt();
+		$pengajuan_vvt->id = 'BATU' . Str::random(7);
 		$pengajuan_vvt->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_vvt->email = $request->email;
 		$pengajuan_vvt->whatsapp = $request->whatsapp;
@@ -55,6 +59,19 @@ class PengajuanVVTController extends Controller
 		$request->permohonan_vvt->move(public_path('pengajuan_vvt'), $permohonan_vvt);
 		$pengajuan_vvt->permohonan_vvt = 'pengajuan_vvt/' . $permohonan_vvt;
 
+		$details = [
+			'id' => $pengajuan_vvt->id,
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
+        ];
+
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		
+        Mail::to($request->email)->send(new MailPengajuan_vvt($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_vvt_admin($details));
 
 		if($pengajuan_vvt->save()){
 			return redirect('PengajuanVVT')->with('status', 'File Has been uploaded successfully');

@@ -10,6 +10,7 @@ class pengajuan_vvt extends Model
     protected $fillable = ['nama_lembaga','email','whatsapp','file_legalitas','file_drh','file_ijazah','file_rptka',
     'file_statistik','file_paspor', 'file_polis_asuransi', 'foto', 'permohonan_vvt'];    
     public $timestamps = false;
+    public $incrementing = false;
 
     public function pengajuan_vvt()
     {

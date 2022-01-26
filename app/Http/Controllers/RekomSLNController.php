@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\rekom_sln;
-use Str;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailRekom_sln;
+use App\Mail\MailRekom_sln_admin;
 
 class RekomSLNController extends Controller
 {
@@ -17,6 +20,7 @@ class RekomSLNController extends Controller
 	public function upload(Request $request){
 
 		$rekom_sln = new rekom_sln();
+		$rekom_sln->id = 'BATU' . Str::random(7);
 		$rekom_sln->nama_siswa = $request->nama_siswa;
 		$rekom_sln->asal_madrasah = $request->asal_madrasah;
 		$rekom_sln->negara_tujuan = $request->negara_tujuan;
@@ -55,6 +59,19 @@ class RekomSLNController extends Controller
 		$request->file_pernyataan->move(public_path('rekom_sln'), $file_pernyataan);
 		$rekom_sln->file_pernyataan = 'rekom_sln/' . $file_pernyataan;
 
+		$details = [
+			'id' => $rekom_sln->id,
+            'nama_siswa' => $request->nama_siswa,
+			'email' => $request->email
+        ];
+
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		
+        Mail::to($request->email)->send(new MailRekom_sln($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_sln_admin($details));
 
 		if($rekom_sln->save()){
 			return redirect('RekomSLN')->with('status', 'File Has been uploaded successfully');

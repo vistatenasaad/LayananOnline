@@ -108,6 +108,12 @@
                                 <div class="label--desc">Copy proposal permohoan bantuan pada pihak pemberi bantuan yang dimintakan rekomendasinya pada Kankemenag Kota Batu. Max file size 50 MB</div>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
+                        </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>

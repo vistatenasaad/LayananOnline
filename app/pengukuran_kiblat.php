@@ -9,6 +9,7 @@ class pengukuran_kiblat extends Model
     protected $table = 'pengukuran_kiblat';
     protected $fillable = ['nama','nama_masjid','email','whatsapp','file_permohonan','file_lokasi'];    
     public $timestamps = false;
+    public $incrementing = false;
 
     public function pengukuran_kiblat()
     {

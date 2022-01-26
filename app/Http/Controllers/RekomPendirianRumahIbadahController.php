@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use DB;
 use File;
 use App\rekom_pendirian_ri;
-use Str;
-
-use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailRekom_pendirianRI;
+use App\Mail\MailRekom_pendirianRI_admin;
 
 class RekomPendirianRumahIbadahController extends Controller
 {
@@ -17,6 +20,7 @@ class RekomPendirianRumahIbadahController extends Controller
 	public function upload(Request $request){
 
 		$rekom_pendirian_ri = new rekom_pendirian_ri();
+		$rekom_pendirian_ri->id = 'BATU' . Str::random(7);
 		$rekom_pendirian_ri->asal_surat = $request->asal_surat;
 		$rekom_pendirian_ri->email = $request->email;
 		$rekom_pendirian_ri->whatsapp = $request->whatsapp;
@@ -44,6 +48,20 @@ class RekomPendirianRumahIbadahController extends Controller
 		$file_dukungan = 'file_dukungan' . Str::random(10) . '.' . $request->file_dukungan->getClientOriginalExtension();
 		$request->file_dukungan->move(public_path('rekom_pendirian_ri'), $file_dukungan);
 		$rekom_pendirian_ri->file_dukungan = 'rekom_pendirian_ri/' . $file_dukungan;
+
+		$details = [
+			'id' => $rekom_pendirian_ri->id,
+            'asal_surat' => $request->asal_surat,
+			'email' => $request->email
+        ];
+
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		
+        Mail::to($request->email)->send(new MailRekom_pendirianRI($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_pendirianRI_admin($details));
 
 		if($rekom_pendirian_ri->save()){
 			return redirect('RekomPendirianRumahIbadah')->with('status', 'File Has been uploaded successfully');

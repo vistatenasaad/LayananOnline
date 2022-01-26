@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_imta;
-use Str;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_imta;
+use App\Mail\MailPengajuan_imta_admin;
 class PengajuanIMTAController extends Controller
 {
     public function PengajuanIMTA(){
@@ -15,6 +18,7 @@ class PengajuanIMTAController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_imta = new pengajuan_imta();
+		$pengajuan_imta->id = 'BATU' . Str::random(7);
 		$pengajuan_imta->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_imta->email = $request->email;
 		$pengajuan_imta->whatsapp = $request->whatsapp;
@@ -42,6 +46,18 @@ class PengajuanIMTAController extends Controller
 		$foto = 'foto' . Str::random(10) . '.' . $request->foto->getClientOriginalExtension();
 		$request->foto->move(public_path('pengajuan_imta'), $foto);
 		$pengajuan_imta->foto = 'pengajuan_imta/' . $foto;
+
+		$details = [
+			'id' => $pengajuan_imta->id,
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
+        ];
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+        Mail::to($request->email)->send(new MailPengajuan_imta($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_imta_admin($details));
 
 		if($pengajuan_imta->save()){
 			return redirect('PengajuanIMTA')->with('status', 'File Has been uploaded successfully');

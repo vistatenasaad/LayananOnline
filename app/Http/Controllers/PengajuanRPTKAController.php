@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_rptka;
-use Str;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_rptka;
+use App\Mail\MailPengajuan_rptka_admin;
+
 class PengajuanRPTKAController extends Controller
 {
     public function PengajuanRPTKA(){
@@ -15,6 +19,7 @@ class PengajuanRPTKAController extends Controller
 	public function upload(Request $request){
 
 			$pengajuan_rptka = new pengajuan_rptka();
+			$pengajuan_rptka->id = 'BATU' . Str::random(7);
 			$pengajuan_rptka->nama_lembaga = $request->nama_lembaga;
 			$pengajuan_rptka->email = $request->email;
 			$pengajuan_rptka->whatsapp = $request->whatsapp;
@@ -39,6 +44,20 @@ class PengajuanRPTKAController extends Controller
 			$request->file_surat_pendamping->move(public_path('pengajuan_rptka'), $file_surat_pendamping);
 			$pengajuan_rptka->file_surat_pendamping = 'pengajuan_rptka/' . $file_surat_pendamping;
 	
+			$details = [
+				'id' => $pengajuan_rptka->id,
+				'nama_lembaga' => $request->nama_lembaga,
+				'email' => $request->email
+			];
+	
+			//captcha
+			request()->validate([
+				'g-recaptcha-response' => 'required|captcha',
+			]);
+
+			Mail::to($request->email)->send(new MailPengajuan_rptka($details));
+			Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_rptka_admin($details));
+
 			if($pengajuan_rptka->save()){
 				return redirect('PengajuanRPTKA')->with('status', 'File Has been uploaded successfully');
 			}

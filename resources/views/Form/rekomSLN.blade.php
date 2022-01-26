@@ -44,7 +44,7 @@
             <div class="card card-6">
                 <div class="card-heading">
                     <br><br>
-                    <h2 class="title">Form pengajuan pengantar rekomendasi Studi Luar Negeri di Kota Batu</h2>
+                    <h2 class="title">Form Pengajuan Pengantar rekomendasi Studi Luar Negeri di Kota Batu</h2>
                 </div>
                 <div class="card-body">
                     <form enctype="multipart/form-data" action="/RekomSLN/upload" method="POST">
@@ -161,6 +161,12 @@
                                 </div>
                                 <div class="label--desc">Surat Pernyataan Kebenaran Dokumen yang telah diisi lengkap dan ditandatangani oleh pemohon sesuai dengan format, maksimal file 2 MB dengan jenis file .pdf</div>
                             </div>
+                        </div>
+                        <div class="form-row">
+                            <label for="captcha">Captcha</label>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                            <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
                         </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>

@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pindah_madrasah;
-use Str;
+use Illuminate\Support\Str;
 use DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPindah_madrasah;
+use App\Mail\MailPindah_madrasah_admin;
 
 class PindahMadrasahController extends Controller
 {
@@ -15,6 +18,7 @@ class PindahMadrasahController extends Controller
 
 	public function upload(Request $request){
 		$pindah_madrasah = new pindah_madrasah();
+		$pindah_madrasah->id = 'BATU' . Str::random(7);
 		$pindah_madrasah->nama_siswa = $request->nama_siswa;
 		$pindah_madrasah->asal_madrasah = $request->asal_madrasah;
 		$pindah_madrasah->madrasah_dituju = $request->madrasah_dituju;
@@ -36,6 +40,22 @@ class PindahMadrasahController extends Controller
 		$file_rapot_siswa = 'file_rapot_siswa' . Str::random(10) . '.' . $request->file_rapot_siswa->getClientOriginalExtension();
 		$request->file_rapot_siswa->move(public_path('pindah_madrasah'), $file_rapot_siswa);
 		$pindah_madrasah->file_rapot_siswa = 'pindah_madrasah/' . $file_rapot_siswa;
+
+		$details = [
+			'id' => $pindah_madrasah->id,
+            'nama_siswa' => $request->nama_siswa,
+			'asal_madrasah' => $request->asal_madrasah,
+			'madrasah_dituju' => $request->madrasah_dituju,
+			'email' => $request->email
+        ];
+
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+
+        Mail::to($request->email)->send(new MailPindah_madrasah($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPindah_madrasah_admin($details));
 
 		if($pindah_madrasah->save()){
 			return redirect('PindahMadrasah')->with('status', 'File Has been uploaded successfully');

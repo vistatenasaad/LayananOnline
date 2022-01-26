@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pengukuran_kiblat;
-use Str;
+use Illuminate\Support\Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
+use App\Mail\MailNotify_admin;
 
 class PengukuranKiblatController extends Controller
 {
@@ -17,6 +18,7 @@ class PengukuranKiblatController extends Controller
 
 	public function upload(Request $request){
 		$pengukuran_kiblat = new pengukuran_kiblat();
+		$pengukuran_kiblat->id = 'BATU' . Str::random(7);
 		$pengukuran_kiblat->nama = $request->nama;
 		$pengukuran_kiblat->nama_masjid = $request->nama_masjid;
 		$pengukuran_kiblat->email = $request->email;
@@ -31,11 +33,18 @@ class PengukuranKiblatController extends Controller
 		$pengukuran_kiblat->file_lokasi = 'pengukuran_kiblat/' . $file_lokasi;	
 
 		$details = [
+			'id' => $pengukuran_kiblat->id,
             'nama' => $request->nama,
-			'nama_masjid' => $request->nama_masjid
+			'nama_masjid' => $request->nama_masjid,
+			'email' => $request->email
         ];
-
+		
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');

@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_naturalisasi;
-use Str;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailPengajuan_naturalisasi;
+use App\Mail\MailPengajuan_naturalisasi_admin;
 class PengajuanNaturalisasiController extends Controller
 {
     public function PengajuanNaturalisasi(){
@@ -15,6 +18,7 @@ class PengajuanNaturalisasiController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_naturalisasi = new pengajuan_naturalisasi();
+		$pengajuan_naturalisasi->id = 'BATU' . Str::random(7);
 		$pengajuan_naturalisasi->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_naturalisasi->email = $request->email;
 		$pengajuan_naturalisasi->whatsapp = $request->whatsapp;
@@ -50,6 +54,18 @@ class PengajuanNaturalisasiController extends Controller
 		$file_foto = 'file_foto' . Str::random(10) . '.' . $request->file_foto->getClientOriginalExtension();
 		$request->file_foto->move(public_path('pengajuan_naturalisasi'), $file_foto);
 		$pengajuan_naturalisasi->file_foto = 'pengajuan_naturalisasi/' . $file_foto;
+
+		$details = [
+			'id' => $pengajuan_naturalisasi->id,
+            'nama_lembaga' => $request->nama_lembaga,
+			'email' => $request->email
+        ];
+		//captcha
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
+        Mail::to($request->email)->send(new MailPengajuan_naturalisasi($details));
+		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_naturalisasi_admin($details));
 
 		if($pengajuan_naturalisasi->save()){
 			return redirect('PengajuanNaturalisasi')->with('status', 'File Has been uploaded successfully');
