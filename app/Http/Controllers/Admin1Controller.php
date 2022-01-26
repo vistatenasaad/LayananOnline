@@ -32,7 +32,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pengukuran_kiblat', 'pengukuran_kiblat.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Pengukuran Kiblat";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function slipgaji1()
@@ -40,7 +40,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('permohonan_slipgaji', 'permohonan_slipgaji.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Permohonan Slip Gaji";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function buktipajak1()
@@ -48,7 +48,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('permohonan_pajak', 'permohonan_pajak.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Permohonan Bukti Pajak";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function konsulsyariah1()
@@ -56,7 +56,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Permohonan Bukti Pajak";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function batalhajireg1()
@@ -64,7 +64,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Pembatalan Haji Reg";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function batalhajiwft1()
@@ -72,7 +72,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Pembatalan Haji Wft";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function daftarhaji1()
@@ -80,7 +80,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Pendaftaran Haji";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ikrarmi1()
@@ -88,7 +88,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Ikrar Masuk Islam";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function sertifhalal1()
@@ -96,7 +96,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Sertifikasi Halal";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function limpahanporsihaji1()
@@ -104,7 +104,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Pelimpahan Porsi Haji";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function limpahanporsihajisakit1()
@@ -112,7 +112,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Pelimpahan Porsi Haji Sakit";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function legalisir1()
@@ -120,7 +120,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Legalisir Ijazah";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ttdsertif1()
@@ -128,7 +128,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Tanda Tangan Sertifikat";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rptka1()
@@ -136,7 +136,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pengajuan_rptka', 'pengajuan_rptka.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Rencana Penggunaan Tenaga Kerja Asing";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function imtka1()
@@ -144,7 +144,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pengajuan_imta', 'pengajuan_imta.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Izin Menggunakan Tenaga Kerja Asing";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function dkpoa1()
@@ -160,7 +160,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pengajuan_vvt', 'pengajuan_vvt.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Visa Tinggal Terbatas";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function kitp1()
@@ -168,7 +168,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pengajuan_kitab', 'pengajuan_kitab.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Kartu Izin Tinggal Tetap";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function naturalisasi1()
@@ -176,7 +176,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pengajuan_naturalisasi', 'pengajuan_naturalisasi.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Naturalisasi";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ijinpm1()
@@ -184,7 +184,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Ijin Penelitian Madrasah";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ijoptpq1()
@@ -192,7 +192,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Ijop TPQ";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ijopm1()
@@ -200,7 +200,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Ijop Madin";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ijopp1()
@@ -208,7 +208,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Ijop Pontren";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function propbos1()
@@ -216,7 +216,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Proposal BOS";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function blankokua1()
@@ -224,7 +224,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Permohonan Blanko KUA";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ripri1()
@@ -232,7 +232,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('rekom_pendirian_ri', 'rekom_pendirian_ri.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Rekomendasi Ijin Pendirian Rumah Ibadah";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rbm1()
@@ -240,7 +240,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('rekom_bantuan_masjid', 'rekom_bantuan_masjid.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Rekom Bantuan Masjid";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rskmt1()
@@ -248,7 +248,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Rekom Surat Keterangan Majelis Taklim";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rpm1()
@@ -256,7 +256,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('pindah_madrasah', 'pindah_madrasah.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Rekom Pindah Madrasah";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function prsln1()
@@ -264,7 +264,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('rekom_sln', 'rekom_sln.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Pengantar Rekom Studi Luar Negeri";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rbponpes1()
@@ -272,7 +272,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Rekom Bantuan Ponpes/ Madin";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rbmf1()
@@ -280,7 +280,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Rekom Bantuan Madrasah Formal";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ritas1()
@@ -288,7 +288,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Rekom ITAS";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rpu1()
@@ -296,7 +296,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('rekom_umroh', 'rekom_umroh.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Rekom Paspor Umroh";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function rph1()
@@ -304,7 +304,7 @@ class Admin1Controller extends Controller
         $data = DB::table('tracking')
             ->join('rekom_haji', 'rekom_haji.id', '=', 'tracking.kode')
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        $judul = "Rekom Paspor Haji";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function ppm1()
@@ -312,7 +312,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Piagam Pendirian Masjid";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function sijazah1()
@@ -320,7 +320,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Suket Ijazah";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function mjamaa1h()
@@ -328,7 +328,7 @@ class Admin1Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
-        // $judul = "Dana Kompensasi Penggunaan Orang Asing";
+        // $judul = "Mutasi Jamaah";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
 }
