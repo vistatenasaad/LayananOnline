@@ -33,9 +33,8 @@
                                     <td>{{$d->email}}</td>
                                     <td>{{$d->layanan}}</td>
                                     <td>{{$d->status}}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-sm">Verifikasi</button>
-                                        <button type="button" class="btn btn-danger btn-sm">Tolak</button>
+                                    <td>                                       
+                                        <button type="button" class="btn btn-warning btn-sm">Lihat detail</button>
                                     </td>
                                 </tr>
                                 @endforeach

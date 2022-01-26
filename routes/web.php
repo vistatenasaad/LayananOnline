@@ -184,3 +184,7 @@ Route::get('/rph1', 'Admin1Controller@rph1')->name('rph1');
 Route::get('/ppm1', 'Admin1Controller@ppm1')->name('ppm1');
 Route::get('/sijazah1', 'Admin1Controller@sijazah1')->name('sijazah1');
 Route::get('/mjamaa1h', 'Admin1Controller@mjamaa1h')->name('mjamaa1h');
+
+// DETAIL
+
+Route::get('/detail/{id}', 'DetailController@detail1')->name('detail1');
