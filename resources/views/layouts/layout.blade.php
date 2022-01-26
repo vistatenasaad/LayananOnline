@@ -96,6 +96,7 @@
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Legalisir Ijazah</a></li>  -->
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Tanda Tangan Sertifikat</a></li>  -->
                         </ul>
+                        
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perijinan</a>
