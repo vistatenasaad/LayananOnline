@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pindah_madrasah;
-use Str;
+use Illuminate\Support\Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
