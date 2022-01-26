@@ -75,27 +75,28 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Konsultasi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Konsultasi Syariah</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Konsultasi Syariah</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Pendaftaran</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Pembatalan Haji Reg</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Pembatalan Haji Wft</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pendaftaran Hajik</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Ikrar Masuk Islam</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Sertifikasi Halal</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pelimpahan Porsi Haji</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pelimpahan Porsi Haji Sakit</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Pembatalan Haji Reg</a></li> -->
+                            <!-- <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Pembatalan Haji Wft</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pendaftaran Hajik</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Ikrar Masuk Islam</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Sertifikasi Halal</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pelimpahan Porsi Haji</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pelimpahan Porsi Haji Sakit</a></li> -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Pengesahan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Legalisir Ijazah</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Tanda Tangan Sertifikat</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Legalisir Ijazah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Tanda Tangan Sertifikat</a></li>  -->
                         </ul>
+                        
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perijinan</a>
@@ -111,17 +112,17 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perizinan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijin Penelitian Madrasah</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop TPQ</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop Madin</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop Pontren</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijin Penelitian Madrasah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop TPQ</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop Madin</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop Pontren</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Persetujuan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Proposal BOS</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Permohonan Blanko KUA</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Proposal BOS</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Permohonan Blanko KUA</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -129,27 +130,27 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li> 
                             <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Masjid</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Surat Keterangan Majelis Taklim</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Surat Keterangan Majelis Taklim</a></li>  -->
                             <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Pindah Madrasah</a></li> 
                             <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Pengantar Rekom Studi Luar Negeri</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Ponpes/Madin</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Madrasah Formal </a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom ITAS</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Ponpes/Madin</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Madrasah Formal </a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom ITAS</a></li>  -->
                             <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Paspor Umroh</a></li> 
                             <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Paspor Haji</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Piagam Pendirian Masjid</a></li> 
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Piagam Pendirian Masjid</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan Lain yang Diperlukan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Suket Ijazah</a></li>
+                            <!-- <li><i class="fa fa-table"></i><a href="tables-basic.html">Suket Ijazah</a></li> -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan yang Diperlukan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">Mutasi Jamaah</a></li>
+                            <!-- <li><i class="fa fa-table"></i><a href="tables-basic.html">Mutasi Jamaah</a></li> -->
                         </ul>
                     </li>
                 </ul>
