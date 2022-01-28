@@ -4,4 +4,4 @@
 <p>Nama Masjid : {{$details['nama_masjid']}}</p>
 <p>Jenis Layanan : Rekomendasi Bantuan Masjid </p>
 <p> Berikut adalah kode tracking pengajuan anda</p>
-<h2>1234567abc</h2>
+<h2>{{$details['id']}}</h2>

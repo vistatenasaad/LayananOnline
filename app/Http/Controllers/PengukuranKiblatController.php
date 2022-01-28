@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pengukuran_kiblat;
-use Str;
+use Illuminate\Support\Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;

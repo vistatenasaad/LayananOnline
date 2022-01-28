@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_kitab;
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_kitab;
 use App\Mail\MailPengajuan_kitab_admin;
@@ -18,7 +18,7 @@ class PengajuanKITABController extends Controller
 	public function upload(Request $request){
 
 		$pengajuan_kitab = new pengajuan_kitab();
-		$pengajuan_naturalisasi->id = 'BATU' . Str::random(7);
+		$pengajuan_kitab->id = 'BATU' . Str::random(7);
 		$pengajuan_kitab->nama_lembaga = $request->nama_lembaga;
 		$pengajuan_kitab->email = $request->email;
 		$pengajuan_kitab->whatsapp = $request->whatsapp;
@@ -64,7 +64,7 @@ class PengajuanKITABController extends Controller
 		$pengajuan_kitab->file_persetujuan_sebelumnya = 'pengajuan_kitab/' . $file_persetujuan_sebelumnya;
 
 		$details = [
-			'id' => $pengajuan_naturalisasi->id,
+			'id' => $pengajuan_kitab->id,
             'nama_lembaga' => $request->nama_lembaga,
 			'email' => $request->email
         ];

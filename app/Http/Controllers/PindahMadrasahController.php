@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pindah_madrasah;
-use Str;
+use Illuminate\Support\Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
@@ -18,6 +18,7 @@ class PindahMadrasahController extends Controller
 
 	public function upload(Request $request){
 		$pindah_madrasah = new pindah_madrasah();
+		$pindah_madrasah->id = 'BATU' . Str::random(7);
 		$pindah_madrasah->nama_siswa = $request->nama_siswa;
 		$pindah_madrasah->asal_madrasah = $request->asal_madrasah;
 		$pindah_madrasah->madrasah_dituju = $request->madrasah_dituju;
@@ -41,6 +42,7 @@ class PindahMadrasahController extends Controller
 		$pindah_madrasah->file_rapot_siswa = 'pindah_madrasah/' . $file_rapot_siswa;
 
 		$details = [
+			'id' => $pindah_madrasah->id,
             'nama_siswa' => $request->nama_siswa,
 			'asal_madrasah' => $request->asal_madrasah,
 			'madrasah_dituju' => $request->madrasah_dituju,

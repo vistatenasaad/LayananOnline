@@ -10,6 +10,7 @@ class pindah_madrasah extends Model
     protected $fillable = ['nama_siswa','asal_madrasah','madrasah_dituju','email','whatsapp','file_permohonan_rekomendasi',
     'file_sk_pindah','file_sk_diterima','file_rapot_siswa'];    
     public $timestamps = false;
+    public $incrementing = false;
 
     public function pindah_madrasah()
     {

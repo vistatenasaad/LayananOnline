@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\rekom_haji;
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_haji;
 use App\Mail\MailRekom_haji_admin;
@@ -20,6 +20,7 @@ class RekomHajiController extends Controller
 	public function upload(Request $request){
 
 		$rekom_haji = new rekom_haji();
+		$rekom_haji->id = 'BATU' . Str::random(7);
 		$rekom_haji->nama = $request->nama;
 		$rekom_haji->email = $request->email;
 		$rekom_haji->whatsapp = $request->whatsapp;
@@ -41,6 +42,7 @@ class RekomHajiController extends Controller
 		$rekom_haji->file_pendukung = 'rekom_haji/' . $file_pendukung;
 
 		$details = [
+			'id' => $rekom_haji->id,
             'nama' => $request->nama,
 			'email' => $request->email
         ];

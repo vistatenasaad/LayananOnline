@@ -5,4 +5,4 @@
 <p>Madrasah Dituju : {{$details['madrasah_dituju']}}</p>
 <p>Jenis Layanan : Pengajuan Rekomendasi Pindah Madrasah/ Sekolah </p>
 <p> Berikut adalah kode tracking pengajuan anda</p>
-<h2>1234567abc</h2>
+<h2>{{$details['id']}}</h2>

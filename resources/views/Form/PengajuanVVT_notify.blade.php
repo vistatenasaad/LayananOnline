@@ -2,4 +2,4 @@
  
 <p>Pengajuan Visa Tinggal Terbatas anda telah berhasil</a></p>
 <p>Berikut ini adalah kode pengajuan anda</p>
-<h2>1234567abc</h2>
+<h2>{{$details['id']}}</h2>
