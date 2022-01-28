@@ -16,6 +16,7 @@ class PengukuranKiblatController extends Controller
 		return view('Form.PengukuranKiblat');
 	}
 
+	
 	public function upload(Request $request){
 		$pengukuran_kiblat = new pengukuran_kiblat();
 		$pengukuran_kiblat->id = 'BATU' . Str::random(7);
@@ -45,6 +46,7 @@ class PengukuranKiblatController extends Controller
 		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
+		Mail::to("irmarista16@gmail.com")->send(new MailNotify_admin($details));
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');
