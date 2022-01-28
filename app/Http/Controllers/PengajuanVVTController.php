@@ -78,7 +78,7 @@ class PengajuanVVTController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_vvt_admin($details));
 
 		if($pengajuan_vvt->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('PengajuanVVT')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

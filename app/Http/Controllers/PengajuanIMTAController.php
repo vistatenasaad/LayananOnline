@@ -64,7 +64,7 @@ class PengajuanIMTAController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_imta_admin($details));
 
 		if($pengajuan_imta->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('PengajuanIMTA')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

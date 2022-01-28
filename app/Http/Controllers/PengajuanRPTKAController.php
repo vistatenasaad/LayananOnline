@@ -63,7 +63,7 @@ class PengajuanRPTKAController extends Controller
 			Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_rptka_admin($details));
 
 			if($pengajuan_rptka->save()){
-				return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+				return redirect('PengajuanRPTKA')->with('sukses', 'File Has been uploaded successfully');
 			}
 		}
 }

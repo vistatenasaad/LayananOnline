@@ -72,7 +72,7 @@ class PengajuanNaturalisasiController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_naturalisasi_admin($details));
 
 		if($pengajuan_naturalisasi->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('PengajuanNaturalisasi')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

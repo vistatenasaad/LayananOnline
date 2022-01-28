@@ -80,7 +80,7 @@ class PengajuanKITABController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_kitab_admin($details));
 
 		if($pengajuan_kitab->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('PengajuanKITAB')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }
