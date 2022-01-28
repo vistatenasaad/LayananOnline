@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\pengajuan_vvt;
-use Str;
+use Illuminate\Support\Str;
 use DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_vvt;

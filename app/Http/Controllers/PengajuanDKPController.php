@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_d_k_p;
-use Str;
+use App\Tracking;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_dkp;
 use App\Mail\MailPengajuan_dkp_admin;
@@ -51,11 +52,17 @@ class PengajuanDKPController extends Controller
 			'email' => $request->email
         ];
 		//captcha
-		request()->validate([
-			'g-recaptcha-response' => 'required|captcha',
-		]);
+		// request()->validate([
+		// 	'g-recaptcha-response' => 'required|captcha',
+		// ]);
         Mail::to($request->email)->send(new MailPengajuan_dkp($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_dkp_admin($details));
+
+		Tracking::create([
+			'kode' => $pengajuan_d_k_p->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($pengajuan_d_k_p->save()){
 			return redirect('PengajuanDKP')->with('status', 'File Has been uploaded successfully');

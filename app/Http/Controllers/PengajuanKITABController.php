@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_kitab;
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_kitab;
 use App\Mail\MailPengajuan_kitab_admin;

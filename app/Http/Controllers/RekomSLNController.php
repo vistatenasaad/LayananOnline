@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\rekom_sln;
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_sln;
 use App\Mail\MailRekom_sln_admin;

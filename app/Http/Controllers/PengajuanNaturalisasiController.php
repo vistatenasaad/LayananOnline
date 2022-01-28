@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\pengajuan_naturalisasi;
-use Str;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_naturalisasi;
 use App\Mail\MailPengajuan_naturalisasi_admin;
