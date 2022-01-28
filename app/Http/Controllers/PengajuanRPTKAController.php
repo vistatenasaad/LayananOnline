@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\pengajuan_rptka;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -15,6 +16,9 @@ class PengajuanRPTKAController extends Controller
 {
     public function PengajuanRPTKA(){
 		return view('Form.PengajuanRPTKA');
+	}
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 	public function upload(Request $request){
 
@@ -59,7 +63,7 @@ class PengajuanRPTKAController extends Controller
 			Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_rptka_admin($details));
 
 			if($pengajuan_rptka->save()){
-				return redirect('PengajuanRPTKA')->with('status', 'File Has been uploaded successfully');
+				return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
 			}
 		}
 }
