@@ -47,6 +47,21 @@
                     <h2 class="title">Form Pengajuan Rekomendasi Penerbitan Paspor Ibadah Umroh pada Kankemenag Kota Batu</h2>
                 </div>
                 <div class="card-body">
+                    @if ($message = Session::get('sukses'))
+				<div class="alert alert-success alert-block">
+					<strong>{{ $message }}</strong>
+				</div>
+				@endif
+
+                <!-- @if (count($errors) > 0)
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif -->
                     <form enctype="multipart/form-data" action="/RekomUmroh/upload" method="POST">
                     @csrf    
                         <div class="form-row">
@@ -103,6 +118,17 @@
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
                         </div>
+                        <!-- <script>
+                        @if(Session::has('sukses'))
+                            $('.top-right').notify({
+                                message: { text: "{{ Session::get('sukses') }}" },
+                                type:'sukses'
+                            }).show();
+                            @php
+                                Session::forget('sukses');
+                            @endphp
+                        @endif
+                        </script> -->
                     </form>
                 </div>
             </div>
