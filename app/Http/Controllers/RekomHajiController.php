@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\rekom_haji;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -15,6 +16,10 @@ class RekomHajiController extends Controller
 {
     public function RekomHaji(){
 		return view('Form.RekomHaji');
+	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -56,7 +61,7 @@ class RekomHajiController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_haji_admin($details));
 
 		if($rekom_haji->save()){
-			return redirect('RekomHaji')->with('status', 'File Has been uploaded successfully');
+			return redirect('RekomHaji')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

@@ -47,6 +47,11 @@
                     <h2 class="title">Rekomendasi Pendirian Rumah Ibadah</h2>
                 </div>
                 <div class="card-body">
+                @if ($message = Session::get('sukses'))
+                    <div class="alert alert-success alert-block">
+                        <strong>{{ $message }}</strong>
+                    </div>
+				@endif
                     <form enctype="multipart/form-data" action="/RekomPendirianRumahIbadah/upload" method="POST">
                     @csrf
                         <div class="form-row">

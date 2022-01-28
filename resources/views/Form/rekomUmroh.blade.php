@@ -47,10 +47,10 @@
                     <h2 class="title">Form Pengajuan Rekomendasi Penerbitan Paspor Ibadah Umroh pada Kankemenag Kota Batu</h2>
                 </div>
                 <div class="card-body">
-                    @if ($message = Session::get('sukses'))
-				<div class="alert alert-success alert-block">
-					<strong>{{ $message }}</strong>
-				</div>
+                @if ($message = Session::get('sukses'))
+                    <div class="alert alert-success alert-block">
+                        <strong>{{ $message }}</strong>
+                    </div>
 				@endif
 
                 <!-- @if (count($errors) > 0)

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\rekom_bantuan_masjid;
 use Illuminate\Support\Str;
 use DB;
+use Session;
+use File;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_bantuanmasjid;
 use App\Mail\MailRekom_bantuanmasjid_admin;
@@ -15,6 +17,11 @@ class RekomBantuanMasjidController extends Controller
     public function RekomBantuanMasjid(){
 		return view('Form.RekomBantuanMasjid');
 	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
+	}
+
 	public function upload(Request $request){
 		$rekom_bantuan_masjid = new rekom_bantuan_masjid();
 		$rekom_bantuan_masjid->id = 'BATU' . Str::random(7);
@@ -51,7 +58,7 @@ class RekomBantuanMasjidController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_bantuanmasjid_admin($details));
 
 		if($rekom_bantuan_masjid->save()){
-			return redirect('RekomBantuanMasjid')->with('status', 'File Has been uploaded successfully');
+			return redirect('RekomBantuanMasjid')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }
