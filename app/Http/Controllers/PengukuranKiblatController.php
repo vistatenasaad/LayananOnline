@@ -51,6 +51,7 @@ class PengukuranKiblatController extends Controller
 		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
+		Mail::to("irmarista16@gmail.com")->send(new MailNotify_admin($details));
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('sukses', 'File Has been uploaded successfully');
