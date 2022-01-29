@@ -46,6 +46,11 @@
                     <h2 class="title">Form Pengajuan Rencana Penggunaan Tenaga Kerja Asing</h2>
                 </div>
                 <div class="card-body">
+                @if ($message = Session::get('sukses'))
+				<div class="alert alert-success alert-block">
+					<strong>{{ $message }}</strong>
+				</div>
+				@endif
                     <form method="POST" enctype="multipart/form-data" action="/PengajuanRPTKA/upload">
                     @csrf
                         <div class="form-row">

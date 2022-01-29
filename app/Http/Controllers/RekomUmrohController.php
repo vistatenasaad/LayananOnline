@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use App\rekom_umroh;
-use Illuminate\Support\Str;
+use Str;
+use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_umroh;
 use App\Mail\MailRekom_umroh_admin;
@@ -15,6 +16,10 @@ class RekomUmrohController extends Controller
 {
     public function RekomUmroh(){
 		return view('Form.rekomUmroh');
+	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -48,7 +53,7 @@ class RekomUmrohController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_umroh_admin($details));
 
 		if($rekom_umroh->save()){
-			return redirect('RekomUmroh')->with('status', 'File Has been uploaded successfully');
+			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

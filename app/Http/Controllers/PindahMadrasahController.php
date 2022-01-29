@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\pindah_madrasah;
 use Illuminate\Support\Str;
 use DB;
+use Session;
+use File;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
 use App\Mail\MailPindah_madrasah_admin;
@@ -14,6 +16,10 @@ class PindahMadrasahController extends Controller
 {
     public function PindahMadrasahController(){
 		return view('Form.PindahMadrasah');
+	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -58,7 +64,7 @@ class PindahMadrasahController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPindah_madrasah_admin($details));
 
 		if($pindah_madrasah->save()){
-			return redirect('PindahMadrasah')->with('status', 'File Has been uploaded successfully');
+			return redirect('PindahMadrasah')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

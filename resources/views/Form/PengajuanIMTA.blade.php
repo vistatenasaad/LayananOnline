@@ -46,6 +46,11 @@
                     <h2 class="title">Form Pengajuan Surat Izin Menggunakan Tenaga Kerja Asing (IMTA)</h2>
                 </div>
                 <div class="card-body">
+                @if ($message = Session::get('sukses'))
+				<div class="alert alert-success alert-block">
+					<strong>{{ $message }}</strong>
+				</div>
+				@endif
                     <form enctype="multipart/form-data" action="/PengajuanIMTA/upload" method="POST">
                     @csrf
                         <div class="form-row">

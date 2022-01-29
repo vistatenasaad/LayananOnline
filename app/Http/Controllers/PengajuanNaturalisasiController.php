@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\pengajuan_naturalisasi;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -14,6 +15,9 @@ class PengajuanNaturalisasiController extends Controller
 {
     public function PengajuanNaturalisasi(){
 		return view('Form.PengajuanNaturalisasi');
+	}
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 	public function upload(Request $request){
 
@@ -68,7 +72,7 @@ class PengajuanNaturalisasiController extends Controller
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_naturalisasi_admin($details));
 
 		if($pengajuan_naturalisasi->save()){
-			return redirect('PengajuanNaturalisasi')->with('status', 'File Has been uploaded successfully');
+			return redirect('PengajuanNaturalisasi')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

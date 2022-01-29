@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\pengajuan_d_k_p;
 use App\Tracking;
 use Illuminate\Support\Str;
@@ -16,6 +17,9 @@ class PengajuanDKPController extends Controller
 {
     public function PengajuanDKP(){
 		return view('Form.PengajuanDKP');
+	}
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -65,7 +69,7 @@ class PengajuanDKPController extends Controller
 		]);
 
 		if($pengajuan_d_k_p->save()){
-			return redirect('PengajuanDKP')->with('status', 'File Has been uploaded successfully');
+			return redirect('PengajuanDKP')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }
