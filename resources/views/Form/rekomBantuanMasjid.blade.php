@@ -57,7 +57,7 @@
                         <div class="name">Nama Pemohon</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_pemohon" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama_pemohon" required placeholder="Masukkan Nama Anda">
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         <div class="name">Nama Masjid atau Mushalla</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_masjid" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama_masjid" required placeholder="Masukkan Nama Anda">
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -90,7 +90,7 @@
                             <div class="name">Surat Permohonan Rekomendasi</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_permohonan_rekom" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_permohonan_rekom" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Permohonan Rekomendasi bantuan Masjid dan Mushalla yang ditujukan kepada Kankemenag Kota Batu . Max file size 2 MB</div>
                             </div>
@@ -99,7 +99,7 @@
                             <div class="name">Surat Keterangan Terdaftar dari KUA</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_sk_terdaftar" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_sk_terdaftar" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan terdaftar simwas dari KUA Kecamatan setempat. Max file size 50 MB</div>
                             </div>
@@ -108,7 +108,7 @@
                             <div class="name">Proposal Permohonan Bantuan</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_permohonan_bantuan" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_permohonan_bantuan" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Copy proposal permohoan bantuan pada pihak pemberi bantuan yang dimintakan rekomendasinya pada Kankemenag Kota Batu. Max file size 50 MB</div>
                             </div>

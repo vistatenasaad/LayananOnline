@@ -57,7 +57,7 @@
                         <div class="name">Nama Siswa</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_siswa" placeholder="Masukkan Nama Siswa">
+                                    <input class="input--style-6" type="text" name="nama_siswa" required placeholder="Masukkan Nama Siswa">
                                 </div>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
                         <div class="name">Asal Madrasah</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="asal_madrasah" placeholder="Masukkan Asal Madrasah">
+                                    <input class="input--style-6" type="text" name="asal_madrasah" required placeholder="Masukkan Asal Madrasah">
                                 </div>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                         <div class="name">Madrasah dan Kota yang Tertuju </div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="madrasah_dituju" placeholder="Masukkan Madrasah dan Kota yang Tertuju">
+                                    <input class="input--style-6" type="text" name="madrasah_dituju" required placeholder="Masukkan Madrasah dan Kota yang Tertuju">
                                 </div>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -98,7 +98,7 @@
                             <div class="name">Surat Permohonan Rekomendasi Pindah Sekolah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_permohonan_rekomendasi" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_permohonan_rekomendasi" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Permohonan Rekomendasi Pindah Sekolah dari Sekolah Asal ditujukan kepada Kepala Kemenag. Kota Batu ukuran maksimal 2 MB jenis file .jpg, .png, .pdf, .jpeg</div>
                             </div>
@@ -107,7 +107,7 @@
                             <div class="name">Surat Keterangan Pindah Sekolah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_sk_pindah" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_sk_pindah" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan Pindah Sekolah dari Sekolah Asal maksimal file 2 MB dengan ekstensi .jpg, .jpeg. .png, dan .pdf</div>
                             </div>
@@ -116,7 +116,7 @@
                             <div class="name">Surat Keterangan Diterima</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_sk_diterima" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_sk_diterima" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan Diterima dari Sekolah tujuan maksimal file 2 MB dengan jenis file .jpg, .png, .pdf, .jpeg</div>
                             </div>
@@ -125,7 +125,7 @@
                             <div class="name">Raport Siswa</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_rapot_siswa" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_rapot_siswa" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Copy Raport Siswa dari Madrasah Asal maksimal file 2 MB dengan jenis file .pdf</div>
                             </div>

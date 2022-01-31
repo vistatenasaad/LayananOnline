@@ -57,7 +57,7 @@
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_lembaga" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama_lembaga" required placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
                             </div>
@@ -66,7 +66,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -83,7 +83,7 @@
                             <div class="name">File Akta</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_akta" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_akta" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">akte notaris pendirian lembaga pendidikan/ lembaga pendidikan keagamaan/ lembaga keagamaan/ lembaga sosial/ badan hukum; Maksimal file 2 MB</div>
                             </div>
@@ -92,7 +92,7 @@
                             <div class="name">File Statistik jamaah/peserta didik</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_statistik" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_statistik" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Data statistik jumlah jamaah/peserta didik yang dilayani; Maksimal file 2 MB</div>
                             </div>
@@ -101,7 +101,7 @@
                             <div class="name">File Legalitas</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_legalitas" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_legalitas" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Izin operasional atau tanda daftar lembaga/ yayasan dan struktur organisasi lembaga pendidikan/ lembaga pendidikan keagamaan/ lembaga keagamaan/lembaga sosial/ badan hukum; Maksimal file 2 file (leglitas dan struktur) masing-masing 2 MB</div>
                             </div>
@@ -110,7 +110,7 @@
                             <div class="name">File nama orang asing dan pendamping</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_orsing_pendamping" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_orsing_pendamping" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Daftar nama Orang Asing dan tenaga pendamping dari Indonesia; dan Maksimal file 2 MB</div>
                             </div>
@@ -119,7 +119,7 @@
                             <div class="name">Surat Penunjukan pendamping orang asing</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_surat_pendamping" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_surat_pendamping" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat penunjukan warga negara Indonesia sebagai pendamping Orang Asing; Maksimal file 2 MB</div>
                             </div>
