@@ -11,6 +11,7 @@ use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_umroh;
 use App\Mail\MailRekom_umroh_admin;
+use App\Tracking;
 
 class RekomUmrohController extends Controller
 {
@@ -51,6 +52,12 @@ class RekomUmrohController extends Controller
 		
         Mail::to($request->email)->send(new MailRekom_umroh($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_umroh_admin($details));
+
+		Tracking::create([
+			'kode' => $rekom_umroh->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($rekom_umroh->save()){
 			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');

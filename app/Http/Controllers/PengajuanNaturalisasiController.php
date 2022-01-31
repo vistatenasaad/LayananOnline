@@ -11,6 +11,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_naturalisasi;
 use App\Mail\MailPengajuan_naturalisasi_admin;
+use App\Tracking;
+
 class PengajuanNaturalisasiController extends Controller
 {
     public function PengajuanNaturalisasi(){
@@ -71,8 +73,14 @@ class PengajuanNaturalisasiController extends Controller
         Mail::to($request->email)->send(new MailPengajuan_naturalisasi($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_naturalisasi_admin($details));
 
+		Tracking::create([
+			'kode' => $pengajuan_naturalisasi->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
+
 		if($pengajuan_naturalisasi->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('PengajuanNaturalisasi')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

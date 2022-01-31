@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
+Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('menu');
 });
 
 Route::get('/Menu', function () {
@@ -140,9 +142,9 @@ Route::get('/SuketIjazah', 'SuketIjazahController@SuketIjazah');
 Route::get('/MutasiJamaah', 'MutasiJamaahController@MutasiJamaah');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/home1', 'HomeController@home1')->name('home1');
-Route::get('/home2', 'HomeController@home2')->name('home2');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/home1', 'HomeController@home1')->name('home1')->middleware('auth');
+Route::get('/home2', 'HomeController@home2')->name('home2')->middleware('auth');
 Route::get('/datamasuk', 'Admin1Controller@datamasuk1')->name('datamasuk1');
 Route::get('/cekdata1', 'Admin1Controller@cekdata1')->name('cekdata1');
 Route::get('/dataselesai1', 'Admin1Controller@dataselesai1')->name('dataselesai1');
@@ -188,3 +190,5 @@ Route::get('/mjamaa1h', 'Admin1Controller@mjamaa1h')->name('mjamaa1h');
 // DETAIL
 
 Route::get('/detail/{id}', 'DetailController@detail1')->name('detail1');
+Route::get('/verif/{id}', 'DetailController@verif1')->name('verif1');
+Route::get('/tolak/{id}', 'DetailController@tolak1')->name('tolak1');

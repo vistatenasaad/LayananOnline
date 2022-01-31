@@ -2,6 +2,7 @@
 
 @section('nama_user', 'Admin Front Office')
 @section('page_title', $pagetitle)
+@section('sub_title', $subtitle)
 @section('content')
 
 <div class="content mt-3">
@@ -34,7 +35,7 @@
                                     <td>{{$d->layanan}}</td>
                                     <td>{{$d->status}}</td>
                                     <td>                                       
-                                        <button type="button" class="btn btn-warning btn-sm">Lihat detail</button>
+                                        <a href="/detail/{{$d->kode}}"><button type="button" class="btn btn-warning btn-sm">Lihat detail</button></a>
                                     </td>
                                 </tr>
                                 @endforeach

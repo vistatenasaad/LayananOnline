@@ -69,7 +69,7 @@ class PengajuanDKPController extends Controller
 		]);
 
 		if($pengajuan_d_k_p->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('PengajuanDKP')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

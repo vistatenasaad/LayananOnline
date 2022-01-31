@@ -67,90 +67,90 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Informasi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Pengukuran Kiblat</a></li>
-                            <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Permohonan Slip Gaji</a></li>
-                            <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Permohonan Bukti Pajak</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kiblat1')}}">Pengukuran Kiblat</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{route('slipgaji1')}}">Permohonan Slip Gaji</a></li>
+                            <li><i class="fa fa-bars"></i><a href="{{route('buktipajak1')}}">Permohonan Bukti Pajak</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Konsultasi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Konsultasi Syariah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('konsulsyariah1')}}">Konsultasi Syariah</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Pendaftaran</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Pembatalan Haji Reg</a></li> -->
-                            <!-- <li><i class="fa fa-id-badge"></i><a href="ui-badges.html">Pembatalan Haji Wft</a></li> -->
-                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pendaftaran Hajik</a></li> -->
-                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Ikrar Masuk Islam</a></li> -->
-                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Sertifikasi Halal</a></li> -->
-                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pelimpahan Porsi Haji</a></li> -->
-                            <!-- <li><i class="fa fa-bars"></i><a href="ui-tabs.html">Pelimpahan Porsi Haji Sakit</a></li> -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('batalhajireg1')}}">Pembatalan Haji Reg</a></li> -->
+                            <!-- <li><i class="fa fa-id-badge"></i><a href="{{route('batalhajiwft1')}}">Pembatalan Haji Wft</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('daftarhaji1')}}">Pendaftaran Haji</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('ikrarmi1')}}">Ikrar Masuk Islam</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('sertifhalal1')}}">Sertifikasi Halal</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('limpahanporsihaji1')}}">Pelimpahan Porsi Haji</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('limpahanporsihajisakit1')}}">Pelimpahan Porsi Haji Sakit</a></li> -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Pengesahan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Legalisir Ijazah</a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Tanda Tangan Sertifikat</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('legalisir1')}}">Legalisir Ijazah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ttdsertif1')}}">Tanda Tangan Sertifikat</a></li>  -->
                         </ul>
-                        
+
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perijinan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rencana Penggunaan Tenaga Kerja Asing</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Izin Menggunakan Tenaga Kerja Asing</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Dana Kompensasi Pengggunaan Orang Asing</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Visa Tinggal Terbatas</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Kartu Izin Tinggal Tetap</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Naturalisasi</a></li> 
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rptka1')}}">Rencana Penggunaan Tenaga Kerja Asing</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('imtka1')}}">Izin Menggunakan Tenaga Kerja Asing</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('dkpoa1')}}">Dana Kompensasi Pengggunaan Orang Asing</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('vtt1')}}">Visa Tinggal Terbatas</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kitp1')}}">Kartu Izin Tinggal Tetap</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('naturalisasi1')}}">Naturalisasi</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perizinan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijin Penelitian Madrasah</a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop TPQ</a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop Madin</a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Ijop Pontren</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijinpm1')}}">Ijin Penelitian Madrasah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijoptpq1')}}">Ijop TPQ</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijopm1')}}">Ijop Madin</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijopp1')}}">Ijop Pontren</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Persetujuan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Proposal BOS</a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Permohonan Blanko KUA</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('propbos1')}}">Proposal BOS</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('blankokua1')}}">Permohonan Blanko KUA</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Rekomendasi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Masjid</a></li> 
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Surat Keterangan Majelis Taklim</a></li>  -->
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Pindah Madrasah</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Pengantar Rekom Studi Luar Negeri</a></li> 
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Ponpes/Madin</a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Bantuan Madrasah Formal </a></li>  -->
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom ITAS</a></li>  -->
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Paspor Umroh</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Rekom Paspor Haji</a></li> 
-                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="ui-buttons.html">Piagam Pendirian Masjid</a></li>  -->
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ripri1')}}">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbm1')}}">Rekom Bantuan Masjid</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rskmt1')}}">Rekom Surat Keterangan Majelis Taklim</a></li>  -->
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpm1')}}">Rekom Pindah Madrasah</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('prsln1')}}">Pengantar Rekom Studi Luar Negeri</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbponpes1')}}">Rekom Bantuan Ponpes/Madin</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbmf1')}}">Rekom Bantuan Madrasah Formal </a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ritas1')}}">Rekom ITAS</a></li>  -->
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpu1')}}">Rekom Paspor Umroh</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rph1')}}">Rekom Paspor Haji</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ppm1')}}">Piagam Pendirian Masjid</a></li>  -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan Lain yang Diperlukan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-table"></i><a href="tables-basic.html">Suket Ijazah</a></li> -->
+                            <!-- <li><i class="fa fa-table"></i><a href="{{route('sijazah1')}}">Suket Ijazah</a></li> -->
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan yang Diperlukan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-table"></i><a href="tables-basic.html">Mutasi Jamaah</a></li> -->
+                            <!-- <li><i class="fa fa-table"></i><a href="{{route('mjamaa1h')}}">Mutasi Jamaah</a></li> -->
                         </ul>
                     </li>
                 </ul>
@@ -249,22 +249,19 @@
                 <div class="col-sm-5">
                     <div class="user-area dropdown float-right">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="user-avatar rounded-circle" src="{{asset('bootstrap/images/admin.jpg')}}" alt="User Avatar">
+                            <!-- <img class="user-avatar rounded-circle" src="{{asset('bootstrap/images/admin.jpg')}}" alt="User Avatar"> -->
+                            <i class="fa fa-user"></i>
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                            <!-- <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
 
                             <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a> -->
 
-                            <!-- <a class="nav-link" href="#"><i class="fa fa-power-off"></i> Logout</a> -->
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
+                            <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-power-off"></i> Logout</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
@@ -290,7 +287,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
+                            <li class="active">@yield('sub_title')</li>
                         </ol>
                     </div>
                 </div>
