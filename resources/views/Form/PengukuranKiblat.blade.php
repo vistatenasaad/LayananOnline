@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <link rel=”icon” href=”assets/img/logo.png” type=”image/png”>
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <title>Form Pengukuran Arah Kiblat</title>
 
     <!-- Font special for pages-->

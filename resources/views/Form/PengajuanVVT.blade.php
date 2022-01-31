@@ -10,6 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <title>Form Pengajuan VVT</title>
 
     <!-- Font special for pages-->

@@ -10,6 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <title>Rekomendasi Paspor Haji</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
