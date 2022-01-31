@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_haji;
 use App\Mail\MailRekom_haji_admin;
+use App\Tracking;
 
 class RekomHajiController extends Controller
 {
@@ -59,6 +60,12 @@ class RekomHajiController extends Controller
 		
         Mail::to($request->email)->send(new MailRekom_haji($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_haji_admin($details));
+
+		Tracking::create([
+			'kode' => $rekom_haji->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($rekom_haji->save()){
 			return redirect('RekomHaji')->with('sukses', 'File Has been uploaded successfully');

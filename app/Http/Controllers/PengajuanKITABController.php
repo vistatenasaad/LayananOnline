@@ -11,6 +11,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_kitab;
 use App\Mail\MailPengajuan_kitab_admin;
+use App\Tracking;
+
 class PengajuanKITABController extends Controller
 {
     public function PengajuanKITAB(){
@@ -78,6 +80,12 @@ class PengajuanKITABController extends Controller
 		]);
         Mail::to($request->email)->send(new MailPengajuan_kitab($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_kitab_admin($details));
+
+		Tracking::create([
+			'kode' => $pengajuan_kitab->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($pengajuan_kitab->save()){
 			return redirect('PengajuanKITAB')->with('sukses', 'File Has been uploaded successfully');

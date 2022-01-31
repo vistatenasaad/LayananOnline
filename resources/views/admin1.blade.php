@@ -2,6 +2,7 @@
 
 @section('nama_user', 'Admin Front Office')
 @section('page_title', $pagetitle)
+@section('sub_title', $subtitle)
 @section('content')
 
 <div class="content mt-3">

@@ -11,6 +11,7 @@ use File;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_bantuanmasjid;
 use App\Mail\MailRekom_bantuanmasjid_admin;
+use App\Tracking;
 
 class RekomBantuanMasjidController extends Controller
 {
@@ -56,6 +57,12 @@ class RekomBantuanMasjidController extends Controller
 
         Mail::to($request->email)->send(new MailRekom_bantuanmasjid($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_bantuanmasjid_admin($details));
+
+		Tracking::create([
+			'kode' => $rekom_bantuan_masjid->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($rekom_bantuan_masjid->save()){
 			return redirect('RekomBantuanMasjid')->with('sukses', 'File Has been uploaded successfully');

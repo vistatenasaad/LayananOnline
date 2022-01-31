@@ -23,8 +23,16 @@ class DetailController extends Controller
     public function verif1($id)
     {
         $data = Tracking::find($id);
-        $data->status = "Diproses oleh admin back office";
+        $data->status = "Diproses oleh admin";
         $data->save();
-        return redirect('/barang');
+        return redirect('/home1');
+    }
+
+    public function tolak1($id)
+    {
+        // $data = Tracking::find($id);
+        // $data->status = "Diproses oleh admin";
+        // $data->save();
+        // return redirect('/home1');
     }
 }

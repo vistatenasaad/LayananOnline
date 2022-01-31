@@ -11,6 +11,7 @@ use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
 use App\Mail\MailNotify_admin;
+use App\Tracking;
 
 class PengukuranKiblatController extends Controller
 {
@@ -52,6 +53,12 @@ class PengukuranKiblatController extends Controller
         Mail::to($request->email)->send(new MailNotify($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
 		Mail::to("irmarista16@gmail.com")->send(new MailNotify_admin($details));
+
+		Tracking::create([
+			'kode' => $pengukuran_kiblat->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($pengukuran_kiblat->save()){
 			return redirect('PengukuranKiblat')->with('sukses', 'File Has been uploaded successfully');

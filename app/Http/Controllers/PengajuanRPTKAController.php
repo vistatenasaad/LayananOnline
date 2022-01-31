@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_rptka;
 use App\Mail\MailPengajuan_rptka_admin;
+use App\Tracking;
 
 class PengajuanRPTKAController extends Controller
 {
@@ -61,6 +62,12 @@ class PengajuanRPTKAController extends Controller
 
 			Mail::to($request->email)->send(new MailPengajuan_rptka($details));
 			Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_rptka_admin($details));
+
+			Tracking::create([
+				'kode' => $pengajuan_rptka->id,
+				'status' => 'Data Berhasil diupload',
+				'layanan' => 'pengajuan_d_k_p'
+			]);
 
 			if($pengajuan_rptka->save()){
 				return redirect('PengajuanRPTKA')->with('sukses', 'File Has been uploaded successfully');

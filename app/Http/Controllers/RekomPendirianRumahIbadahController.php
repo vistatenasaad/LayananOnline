@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_pendirianRI;
 use App\Mail\MailRekom_pendirianRI_admin;
+use App\Tracking;
 
 class RekomPendirianRumahIbadahController extends Controller
 {
@@ -67,6 +68,12 @@ class RekomPendirianRumahIbadahController extends Controller
 		
         Mail::to($request->email)->send(new MailRekom_pendirianRI($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_pendirianRI_admin($details));
+
+		Tracking::create([
+			'kode' => $rekom_pendirian_ri->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($rekom_pendirian_ri->save()){
 			return redirect('RekomPendirianRumahIbadah')->with('sukses', 'File Has been uploaded successfully');

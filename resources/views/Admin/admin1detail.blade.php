@@ -99,8 +99,8 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            <button type="button" class="btn btn-success btn-sm">Verifikasi</button>
-                            <button type="button" class="btn btn-danger btn-sm">Tolak</button>
+                            <a href="{{route('verif1')}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
+                            <a href="{{route('tolak1')}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
                         </div>
                     </div>
                 </div>

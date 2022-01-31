@@ -9,8 +9,10 @@ class Admin1Controller extends Controller
 {
     public function datamasuk1()
     {
+        $data = DB::table('tracking')->get();
         $judul = "Data Masuk";
-        return view('admin1datamasuk');
+        $subjudul = "Dashboard";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function cekdata1()
     {
@@ -18,15 +20,17 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Pengecekan Data";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Dashboard";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function dataselesai1()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
+        //     ->join('pengajuan_d_k_p', 'pengajuaxn_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Data Selesai";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Dashboard";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function kiblat1()
     {
@@ -34,7 +38,8 @@ class Admin1Controller extends Controller
             ->join('pengukuran_kiblat', 'pengukuran_kiblat.id', '=', 'tracking.kode')
             ->get();
         $judul = "Pengukuran Kiblat";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Informasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function slipgaji1()
     {
@@ -42,7 +47,8 @@ class Admin1Controller extends Controller
             ->join('permohonan_slipgaji', 'permohonan_slipgaji.id', '=', 'tracking.kode')
             ->get();
         $judul = "Permohonan Slip Gaji";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Informasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function buktipajak1()
     {
@@ -50,7 +56,8 @@ class Admin1Controller extends Controller
             ->join('permohonan_pajak', 'permohonan_pajak.id', '=', 'tracking.kode')
             ->get();
         $judul = "Permohonan Bukti Pajak";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Informasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function konsulsyariah1()
     {
@@ -58,7 +65,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Konsultasi Syariah";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Konsultasi";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function batalhajireg1()
     {
@@ -66,7 +74,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Pembatalan Haji Reg";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function batalhajiwft1()
     {
@@ -74,7 +83,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Pembatalan Haji Wft";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function daftarhaji1()
     {
@@ -82,7 +92,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Pendaftaran Haji";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ikrarmi1()
     {
@@ -90,7 +101,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Ikrar Masuk Islam";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function sertifhalal1()
     {
@@ -98,7 +110,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Sertifikasi Halal";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function limpahanporsihaji1()
     {
@@ -106,7 +119,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Pelimpahan Porsi Haji";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function limpahanporsihajisakit1()
     {
@@ -114,7 +128,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Pelimpahan Porsi Haji Sakit";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pendaftaran";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function legalisir1()
     {
@@ -122,7 +137,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Legalisir Ijazah";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pengesahan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ttdsertif1()
     {
@@ -130,7 +146,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Tanda Tangan Sertifikat";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pengesahan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rptka1()
     {
@@ -138,7 +155,8 @@ class Admin1Controller extends Controller
             ->join('pengajuan_rptka', 'pengajuan_rptka.id', '=', 'tracking.kode')
             ->get();
         $judul = "Rencana Penggunaan Tenaga Kerja Asing";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Perijinan";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function imtka1()
     {
@@ -146,7 +164,8 @@ class Admin1Controller extends Controller
             ->join('pengajuan_imta', 'pengajuan_imta.id', '=', 'tracking.kode')
             ->get();
         $judul = "Izin Menggunakan Tenaga Kerja Asing";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Perijinan";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function dkpoa1()
     {
@@ -154,7 +173,8 @@ class Admin1Controller extends Controller
             ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
             ->get();
         $judul = "Dana Kompensasi Pengggunaan Orang Asing";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Perijinan";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function vtt1()
     {
@@ -162,7 +182,8 @@ class Admin1Controller extends Controller
             ->join('pengajuan_vvt', 'pengajuan_vvt.id', '=', 'tracking.kode')
             ->get();
         $judul = "Visa Tinggal Terbatas";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Perijinan";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function kitp1()
     {
@@ -170,7 +191,8 @@ class Admin1Controller extends Controller
             ->join('pengajuan_kitab', 'pengajuan_kitab.id', '=', 'tracking.kode')
             ->get();
         $judul = "Kartu Izin Tinggal Tetap";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Perijinan";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function naturalisasi1()
     {
@@ -178,7 +200,8 @@ class Admin1Controller extends Controller
             ->join('pengajuan_naturalisasi', 'pengajuan_naturalisasi.id', '=', 'tracking.kode')
             ->get();
         $judul = "Naturalisasi";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Perijinan";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ijinpm1()
     {
@@ -186,7 +209,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Ijin Penelitian Madrasah";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Perizinan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ijoptpq1()
     {
@@ -194,7 +218,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Ijop TPQ";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Perizinan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ijopm1()
     {
@@ -202,7 +227,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Ijop Madin";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Perizinan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ijopp1()
     {
@@ -210,7 +236,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Ijop Pontren";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Perizinan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function propbos1()
     {
@@ -218,7 +245,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Proposal BOS";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Persetujuan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function blankokua1()
     {
@@ -226,7 +254,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Permohonan Blanko KUA";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Persetujuan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ripri1()
     {
@@ -234,7 +263,8 @@ class Admin1Controller extends Controller
             ->join('rekom_pendirian_ri', 'rekom_pendirian_ri.id', '=', 'tracking.kode')
             ->get();
         $judul = "Rekomendasi Ijin Pendirian Rumah Ibadah";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Rekomendasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rbm1()
     {
@@ -242,7 +272,8 @@ class Admin1Controller extends Controller
             ->join('rekom_bantuan_masjid', 'rekom_bantuan_masjid.id', '=', 'tracking.kode')
             ->get();
         $judul = "Rekom Bantuan Masjid";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Rekomendasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rskmt1()
     {
@@ -250,7 +281,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Rekom Surat Keterangan Majelis Taklim";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Rekomendasi";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rpm1()
     {
@@ -258,7 +290,8 @@ class Admin1Controller extends Controller
             ->join('pindah_madrasah', 'pindah_madrasah.id', '=', 'tracking.kode')
             ->get();
         $judul = "Rekom Pindah Madrasah";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Rekomendasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function prsln1()
     {
@@ -266,7 +299,8 @@ class Admin1Controller extends Controller
             ->join('rekom_sln', 'rekom_sln.id', '=', 'tracking.kode')
             ->get();
         $judul = "Pengantar Rekom Studi Luar Negeri";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Rekomendasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rbponpes1()
     {
@@ -274,7 +308,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Rekom Bantuan Ponpes/Madin";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Rekomendasi";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rbmf1()
     {
@@ -282,7 +317,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Rekom Bantuan Madrasah Formal";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Rekomendasi";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ritas1()
     {
@@ -290,7 +326,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Rekom ITAS";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Rekomendasi";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rpu1()
     {
@@ -298,7 +335,8 @@ class Admin1Controller extends Controller
             ->join('rekom_umroh', 'rekom_umroh.id', '=', 'tracking.kode')
             ->get();
         $judul = "Rekom Paspor Umroh";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Rekomendasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function rph1()
     {
@@ -306,7 +344,8 @@ class Admin1Controller extends Controller
             ->join('rekom_haji', 'rekom_haji.id', '=', 'tracking.kode')
             ->get();
         $judul = "Rekom Paspor Haj";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        $subjudul = "Rekomendasi";
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function ppm1()
     {
@@ -314,7 +353,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Piagam Pendirian Masjid";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Rekomendasi";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function sijazah1()
     {
@@ -322,7 +362,8 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Suket Ijazah";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pelayanan Lain yang Diperlukan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function mjamaa1h()
     {
@@ -330,6 +371,7 @@ class Admin1Controller extends Controller
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->get();
         // $judul = "Mutasi Jamaah";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // $subjudul = "Pelayanan Yang diperlukan";
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
 }

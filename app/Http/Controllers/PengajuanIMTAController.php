@@ -11,6 +11,8 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_imta;
 use App\Mail\MailPengajuan_imta_admin;
+use App\Tracking;
+
 class PengajuanIMTAController extends Controller
 {
     public function PengajuanIMTA(){
@@ -62,6 +64,12 @@ class PengajuanIMTAController extends Controller
 		]);
         Mail::to($request->email)->send(new MailPengajuan_imta($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_imta_admin($details));
+
+		Tracking::create([
+			'kode' => $pengajuan_imta->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($pengajuan_imta->save()){
 			return redirect('PengajuanIMTA')->with('sukses', 'File Has been uploaded successfully');

@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_sln;
 use App\Mail\MailRekom_sln_admin;
+use App\Tracking;
 
 class RekomSLNController extends Controller
 {
@@ -77,6 +78,12 @@ class RekomSLNController extends Controller
 		
         Mail::to($request->email)->send(new MailRekom_sln($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_sln_admin($details));
+
+		Tracking::create([
+			'kode' => $rekom_sln->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($rekom_sln->save()){
 			return redirect('RekomSLN')->with('sukses', 'File Has been uploaded successfully');

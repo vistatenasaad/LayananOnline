@@ -11,6 +11,7 @@ use File;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
 use App\Mail\MailPindah_madrasah_admin;
+use App\Tracking;
 
 class PindahMadrasahController extends Controller
 {
@@ -62,6 +63,12 @@ class PindahMadrasahController extends Controller
 
         Mail::to($request->email)->send(new MailPindah_madrasah($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPindah_madrasah_admin($details));
+
+		Tracking::create([
+			'kode' => $pindah_madrasah->id,
+			'status' => 'Data Berhasil diupload',
+			'layanan' => 'pengajuan_d_k_p'
+		]);
 
 		if($pindah_madrasah->save()){
 			return redirect('PindahMadrasah')->with('sukses', 'File Has been uploaded successfully');
