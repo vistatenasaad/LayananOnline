@@ -19,4 +19,12 @@ class DetailController extends Controller
         $judul = "Dana Kompensasi Penggunaan Orang Asing";
         return view('Admin.admin1detail', ['data' => $data, 'pagetitle' => $judul]);
     }
+
+    public function verif1($id)
+    {
+        $data = Tracking::find($id);
+        $data->status = "Diproses oleh admin back office";
+        $data->save();
+        return redirect('/barang');
+    }
 }

@@ -190,3 +190,4 @@ Route::get('/mjamaa1h', 'Admin1Controller@mjamaa1h')->name('mjamaa1h');
 // DETAIL
 
 Route::get('/detail/{id}', 'DetailController@detail1')->name('detail1');
+Route::get('/verif/{id}', 'DetailController@verif1')->name('verif1');
