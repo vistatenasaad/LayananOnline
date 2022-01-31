@@ -10,6 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
+    <link rel=”icon” href=”assets/img/logo.png”>
     <title>Form Pengajuan DKP Orang Asing</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
  
