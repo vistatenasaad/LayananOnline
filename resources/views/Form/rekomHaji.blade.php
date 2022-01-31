@@ -53,7 +53,7 @@
                         <div class="name">Nama</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama" required placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Nama Pengaju Surat Paspor Haji</div>
                             </div>
@@ -62,7 +62,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -79,7 +79,7 @@
                             <div class="name">Dokumen Porsi Haji</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_porsi_haji" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_porsi_haji" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf maksimal 2MB untuk pendaftaran sebelum April 2016 menggunakan lembar PPIH, untuk pendaftaran setelah April 2016 menggunakan SPPH. Max file size 2 MB</div>
                             </div>
@@ -88,7 +88,7 @@
                             <div class="name">Scan KTP</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_ktp" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_ktp" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf. Max file size 50 MB</div>
                             </div>
@@ -97,7 +97,7 @@
                             <div class="name">Scan Kartu Keluarga</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_kk" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_kk" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf. Max file size 50 MB</div>
                             </div>
@@ -106,7 +106,7 @@
                             <div class="name">Dokumen Pendukung</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_pendukung" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_pendukung" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">File dapat berbentuk jpg, png, ataupun pdf maksimal 2MB pilih data yang sama dengan KTP antara lain Akte Kelahiran/ Ijazah terakhir/ Buku Nikah (bisa salah satunya). Max file size 50 MB</div>
                             </div>

@@ -57,7 +57,7 @@
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_lembaga" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama_lembaga" required placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
                             </div>
@@ -66,7 +66,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -83,7 +83,7 @@
                             <div class="name">File Persetujuan</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_persetujuan" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_persetujuan" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat persetujuan dari Pengguna Orang Asing; Maksimal file 2 MB</div>
                             </div>
@@ -92,7 +92,7 @@
                             <div class="name">File Akte kelahiran</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_akte_kelahiran" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_akte_kelahiran" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Akte kelahiran/ kenal lahir yang menunjukkan bahwa Orang Asing telah berusia 21 (dua puluh satu) tahun; Maksimal file 2 MB</div>
                             </div>
@@ -101,7 +101,7 @@
                             <div class="name">File Pernyataan Bahasa</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_pernyataan_bahasa" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_pernyataan_bahasa" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat pernyataan Orang Asing dapat berbahasa Indonesia; Maksimal file 2 MB</div>
                             </div>
@@ -110,7 +110,7 @@
                             <div class="name">File SKKB/ SKCK</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_skkb_skck" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_skkb_skck" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">surat keterangan kelakuan baik dari kepolisian; Maksimal file 2 MB</div>
                             </div>
@@ -119,7 +119,7 @@
                             <div class="name">File KITAB</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_kitab" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_kitab" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">foto copy KITAP; Maksimal file 2 MB</div>
                             </div>
@@ -128,7 +128,7 @@
                             <div class="name">File Ijazah</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_ijazah" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_ijazah" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy ijasah/lisensi pemohon sebagai tenaga ahli di bidang agama/ rohaniwan;Maksimal file 2 MB</div>
                             </div>
@@ -137,7 +137,7 @@
                             <div class="name">File Jaminan</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_jaminan" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_jaminan" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat jaminan dari Pemberi Kerja Orang Asing bahwa Orang Asing tidak akan terlantar di Indonesia; Maksimal file 2 MB</div>
                             </div>
@@ -146,7 +146,7 @@
                             <div class="name">File Foto</div>
                             <div class="value">
                             <div class="input-group js-input-file">
-                                    <input type="file" name="file_foto" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_foto" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">pas foto terbaru ukuran 4 x 6 cm sebanyak 2 (dua) lembar berwarna latar belakang merah Maksimal file 2 MB</div>
                             </div>
