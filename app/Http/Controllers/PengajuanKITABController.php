@@ -83,8 +83,8 @@ class PengajuanKITABController extends Controller
 
 		Tracking::create([
 			'kode' => $pengajuan_kitab->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'pengajuan_kitab'
 		]);
 
 		if($pengajuan_kitab->save()){

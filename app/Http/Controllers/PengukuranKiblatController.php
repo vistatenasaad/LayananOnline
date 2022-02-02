@@ -56,8 +56,8 @@ class PengukuranKiblatController extends Controller
 
 		Tracking::create([
 			'kode' => $pengukuran_kiblat->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'pengukuran_kiblat'
 		]);
 
 		if($pengukuran_kiblat->save()){

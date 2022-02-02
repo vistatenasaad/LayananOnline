@@ -71,8 +71,8 @@ class RekomPendirianRumahIbadahController extends Controller
 
 		Tracking::create([
 			'kode' => $rekom_pendirian_ri->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'rekom_pendirian_ri'
 		]);
 
 		if($rekom_pendirian_ri->save()){

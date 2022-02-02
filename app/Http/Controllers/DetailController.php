@@ -23,7 +23,7 @@ class DetailController extends Controller
     public function verif1($id)
     {
         $data = Tracking::find($id);
-        $data->status = "Diproses oleh admin";
+        $data->status = "2";
         $data->save();
         return redirect('/home1');
     }
@@ -31,7 +31,23 @@ class DetailController extends Controller
     public function tolak1($id)
     {
         // $data = Tracking::find($id);
-        // $data->status = "Diproses oleh admin";
+        // $data->status = "11";
+        // $data->save();
+        // return redirect('/home1');
+    }
+
+    public function verif2($id)
+    {
+        $data = Tracking::find($id);
+        $data->status = "3";
+        $data->save();
+        return redirect('/home1');
+    }
+
+    public function tolak2($id)
+    {
+        // $data = Tracking::find($id);
+        // $data->status = "12";
         // $data->save();
         // return redirect('/home1');
     }

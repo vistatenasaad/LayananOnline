@@ -60,8 +60,8 @@ class RekomBantuanMasjidController extends Controller
 
 		Tracking::create([
 			'kode' => $rekom_bantuan_masjid->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'rekom_bantuan_masjid'
 		]);
 
 		if($rekom_bantuan_masjid->save()){

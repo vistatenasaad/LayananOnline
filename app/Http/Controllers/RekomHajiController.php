@@ -63,8 +63,8 @@ class RekomHajiController extends Controller
 
 		Tracking::create([
 			'kode' => $rekom_haji->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'rekom_haji'
 		]);
 
 		if($rekom_haji->save()){

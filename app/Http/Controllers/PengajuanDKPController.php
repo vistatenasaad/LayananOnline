@@ -64,7 +64,7 @@ class PengajuanDKPController extends Controller
 
 		Tracking::create([
 			'kode' => $pengajuan_d_k_p->id,
-			'status' => 'Data Berhasil diupload',
+			'status' => '1',
 			'layanan' => 'pengajuan_d_k_p'
 		]);
 

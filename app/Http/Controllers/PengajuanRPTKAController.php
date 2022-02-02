@@ -65,8 +65,8 @@ class PengajuanRPTKAController extends Controller
 
 			Tracking::create([
 				'kode' => $pengajuan_rptka->id,
-				'status' => 'Data Berhasil diupload',
-				'layanan' => 'pengajuan_d_k_p'
+				'status' => '1',
+				'layanan' => 'pengajuan_rptka'
 			]);
 
 			if($pengajuan_rptka->save()){
