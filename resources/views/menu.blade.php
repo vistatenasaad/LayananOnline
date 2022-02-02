@@ -38,11 +38,6 @@
 
     <!-- Portfolio-->
     <section class="content-section" id="portfolio">
-        <div class="container text-left">
-            <!-- <h5 class="text-secondary mb-0">Kategori</h5> -->
-            <a href="{{route('login')}}"><button class="btn-primary"><i class="fa fa-user"></i>  Login</button></a>
-            <!-- <h2>Layanan Online</h2> -->
-        </div>
         <div class="container px-2 px-lg-1">
             <div class="content-section-heading text-center">
                 <h3 class="text-secondary mb-0">Kategori</h3>
