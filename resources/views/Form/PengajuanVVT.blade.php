@@ -10,6 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <title>Form Pengajuan VVT</title>
 
     <!-- Font special for pages-->
@@ -57,7 +58,7 @@
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_lembaga" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama_lembaga" required placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
                             </div>
@@ -66,7 +67,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -74,7 +75,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -83,7 +84,7 @@
                             <div class="name">File legalitas</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_legalitas" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_legalitas" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Izin operasional atau tanda daftar lembaga/ yayasan; Maksimal file 2 file masing-masing 2 MB</div>
                             </div>
@@ -92,7 +93,7 @@
                             <div class="name">File DRH</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_drh" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_drh" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Daftar riwayat hidup Orang Asing Maksimal file 2 MB</div>
                             </div>
@@ -101,7 +102,7 @@
                             <div class="name">File Ijazah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_ijazah" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_ijazah" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy ijazah Orang Asing Maksimal file 2 MB</div>
                             </div>
@@ -110,7 +111,7 @@
                             <div class="name">File RPTKA</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_rptka" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_rptka" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">RPTKA (Rencana Penggunaan Tenaga Kerja Asing);(khusus rohaniwan dan tenaga ahli, mahasiswa/pelajar tidak perlu) Maksimal file 2 MB</div>
                             </div>
@@ -119,7 +120,7 @@
                             <div class="name">File Statistik jamaah/peserta didik</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_statistik" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_statistik" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Data statistik jumlah jamaah/peserta didik yang dilayani;(khusus pengajuan rohaniwan dan tenaga ahli, untuk mahasiswa dan pelajar tidak perlu) Maksimal file 2 MB</div>
                             </div>
@@ -128,7 +129,7 @@
                             <div class="name">Paspor</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_paspor" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_paspor" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy paspor; Maksimal file 2 MB</div>
                             </div>
@@ -137,7 +138,7 @@
                             <div class="name">File Polis Asuransi</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_polis_asuransi" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_polis_asuransi" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy polis asuransi kesehatan Orang Asing untuk jangka waktu masa kunjungan; Maksimal file 2 MB</div>
                             </div>
@@ -146,7 +147,7 @@
                             <div class="name">File Foto</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="foto" placeholder="Choose file" id="file">
+                                    <input type="file" name="foto" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">pas foto terbaru ukuran 4 x 6 cm sebanyak 2 (dua) lembar berwarna latar belakang merah Maksimal file 2 MB</div>
                             </div>
@@ -155,7 +156,7 @@
                             <div class="name">File Permohonan VVT</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="permohonan_vvt" placeholder="Choose file" id="file">
+                                    <input type="file" name="permohonan_vvt" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Permohonan VTT dari perwakilan Republik Indonesia.(Khusus pengajuan rohaniwan dan tenaga ahli,pelajar dan mahasiswa tidak perlu) Maksimal file 2 MB</div>
                             </div>
