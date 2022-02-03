@@ -12,25 +12,13 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_dkp;
 use App\Mail\MailPengajuan_dkp_admin;
+use PDF;
 
 class PengajuanDKPController extends Controller
 {
     public function PengajuanDKP(){
 		return view('Form.PengajuanDKP');
 	}
-
-
-	public function PengajuanDKP_sm(){
-		return view('Form.PengajuanDKP_sm');
-	}
-
-	public function cetak_pdf()
-    {
-    	$pengajuan_d_k_p = pengajuan_d_k_p::all();
- 
-    	$pdf = PDF::loadview('PengajuanDKP_pdf',['pengajuan_d_k_p'=>$pengajuan_d_k_p]);
-    	return $pdf->download('Pengajuan-DKP-pdf');
-    }
 
 	public function sukses(){
 		Session::flash('sukses','File Has been uploaded successfully');
@@ -70,9 +58,10 @@ class PengajuanDKPController extends Controller
 			'email' => $request->email
         ];
 		//captcha
-		// request()->validate([
-		// 	'g-recaptcha-response' => 'required|captcha',
-		// ]);
+		 request()->validate([
+		 	'g-recaptcha-response' => 'required|captcha',
+		 ]);
+
         Mail::to($request->email)->send(new MailPengajuan_dkp($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_dkp_admin($details));
 
@@ -83,7 +72,18 @@ class PengajuanDKPController extends Controller
 		]);
 
 		if($pengajuan_d_k_p->save()){
-			return redirect('PengajuanDKP')->with('sukses', 'File Has been uploaded successfully');
+			//return baru
+			return view('Form.PengajuanDKP_sm', ['details' => $pengajuan_d_k_p->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+
+	//pdf
+	public function cetak_pdf($id){
+
+    	$pengajuan_d_k_p = pengajuan_d_k_p::find($id);
+
+    	$pdf = PDF::loadview('Form.PengajuanDKP_pdf',['pengajuan_d_k_p'=>$pengajuan_d_k_p]);
+    	 return $pdf->download('Pengajuan-DKP.pdf');
+		 return view('Form.PengajuanDKP_sm');
+    }
 }

@@ -84,8 +84,8 @@ Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGa
 //Perijinan
 Route::get('/PengajuanDKP', 'PengajuanDKPController@PengajuanDKP');
 Route::post('/PengajuanDKP/upload', 'PengajuanDKPController@upload');
-Route::get('/PengajuanDKP_sm', 'PengajuanDKPController@PengajuanDKP_sm');
-Route::get('/PengajuanDKP_sm/cetak_pdf', 'PengajuanDKPController@cetak_pdf');
+Route::get('/PengajuanDKP_sm', 'PengajuanDKPController@PengajuanDKP_sm'); //download
+Route::get('/PengajuanDKP_sm/cetak_pdf/{id}', 'PengajuanDKPController@cetak_pdf'); //pdf
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
 Route::post('/PengajuanIMTA/upload', 'PengajuanIMTAController@upload');
 Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
