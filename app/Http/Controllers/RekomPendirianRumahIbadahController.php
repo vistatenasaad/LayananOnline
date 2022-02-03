@@ -16,7 +16,7 @@ use App\Tracking;
 class RekomPendirianRumahIbadahController extends Controller
 {
     public function RekomPendirianRumahIbadah(){
-		return view('Form.RekomPendirianRumahIbadah');
+		return view('Form.rekomPendirianRumahIbadah');
 	}
 
 	public function sukses(){
@@ -76,7 +76,7 @@ class RekomPendirianRumahIbadahController extends Controller
 		]);
 
 		if($rekom_pendirian_ri->save()){
-			return redirect('RekomPendirianRumahIbadah')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('rekomPendirianRumahIbadah')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

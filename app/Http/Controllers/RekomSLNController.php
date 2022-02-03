@@ -16,7 +16,7 @@ use App\Tracking;
 class RekomSLNController extends Controller
 {
     public function RekomSLN(){
-		return view('Form.RekomSLN');
+		return view('Form.rekomSLN');
 	}
 
 	public function sukses(){
@@ -86,7 +86,7 @@ class RekomSLNController extends Controller
 		]);
 
 		if($rekom_sln->save()){
-			return redirect('RekomSLN')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('rekomSLN')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

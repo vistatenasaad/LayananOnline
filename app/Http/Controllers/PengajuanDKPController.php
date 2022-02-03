@@ -18,6 +18,20 @@ class PengajuanDKPController extends Controller
     public function PengajuanDKP(){
 		return view('Form.PengajuanDKP');
 	}
+
+
+	public function PengajuanDKP_sm(){
+		return view('Form.PengajuanDKP_sm');
+	}
+
+	public function cetak_pdf()
+    {
+    	$pengajuan_d_k_p = pengajuan_d_k_p::all();
+ 
+    	$pdf = PDF::loadview('PengajuanDKP_pdf',['pengajuan_d_k_p'=>$pengajuan_d_k_p]);
+    	return $pdf->download('Pengajuan-DKP-pdf');
+    }
+
 	public function sukses(){
 		Session::flash('sukses','File Has been uploaded successfully');
 	}

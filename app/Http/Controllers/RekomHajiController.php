@@ -16,7 +16,7 @@ use App\Tracking;
 class RekomHajiController extends Controller
 {
     public function RekomHaji(){
-		return view('Form.RekomHaji');
+		return view('Form.rekomHaji');
 	}
 
 	public function sukses(){
@@ -68,7 +68,7 @@ class RekomHajiController extends Controller
 		]);
 
 		if($rekom_haji->save()){
-			return redirect('RekomHaji')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('rekomHaji')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }
