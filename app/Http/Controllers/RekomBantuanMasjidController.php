@@ -16,7 +16,7 @@ use App\Tracking;
 class RekomBantuanMasjidController extends Controller
 {
     public function RekomBantuanMasjid(){
-		return view('Form.RekomBantuanMasjid');
+		return view('Form.rekomBantuanMasjid');
 	}
 
 	public function sukses(){
@@ -65,7 +65,7 @@ class RekomBantuanMasjidController extends Controller
 		]);
 
 		if($rekom_bantuan_masjid->save()){
-			return redirect('RekomBantuanMasjid')->with('sukses', 'File Has been uploaded successfully');
+			return redirect('rekomBantuanMasjid')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

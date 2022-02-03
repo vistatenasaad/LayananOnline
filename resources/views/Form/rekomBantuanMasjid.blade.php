@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
     <title>Rekomendasi Bantuan Masjid</title>
 
     <!-- Font special for pages-->
@@ -52,7 +52,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
 				@endif
-                    <form method="POST" enctype="multipart/form-data" action="/RekomBantuanMasjid/upload">
+                    <form method="POST" enctype="multipart/form-data" action="/rekomBantuanMasjid/upload">
                     @csrf
                         <div class="form-row">
                         <div class="name">Nama Pemohon</div>
@@ -122,6 +122,7 @@
                         </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <p>         Ketika data berhasil terkirim akan terdapat keterangan sukses</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
                         </div>
                     </form>
