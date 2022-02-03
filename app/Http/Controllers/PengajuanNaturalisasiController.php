@@ -80,7 +80,15 @@ class PengajuanNaturalisasiController extends Controller
 		]);
 
 		if($pengajuan_naturalisasi->save()){
-			return redirect('PengajuanNaturalisasi')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PengajuanNaturalisasi_sm', ['details' => $pengajuan_naturalisasi->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+	public function cetak_pdf($id){
+
+    	$pengajuan_naturalisasi = pengajuan_naturalisasi::find($id);
+
+    	$pdf = PDF::loadview('Form.PengajuanNaturalisasi_pdf',['pengajuan_naturalisasi'=>$pengajuan_naturalisasi]);
+    	 return $pdf->download('Pengajuan-Naturalisasi.pdf');
+		 return view('Form.PengajuanNaturalisasi_sm');
+    }
 }

@@ -88,7 +88,15 @@ class PengajuanKITABController extends Controller
 		]);
 
 		if($pengajuan_kitab->save()){
-			return redirect('PengajuanKITAB')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PengajuanKITAB_sm', ['details' => $pengajuan_kitab->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+	public function cetak_pdf($id){
+
+    	$pengajuan_kitab = pengajuan_kitab::find($id);
+
+    	$pdf = PDF::loadview('Form.PengajuanKITAB_pdf',['pengajuan_kitab'=>$pengajuan_kitab]);
+    	 return $pdf->download('Pengajuan-KITAB.pdf');
+		 return view('Form.PengajuanKITAB_sm');
+    }
 }

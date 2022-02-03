@@ -88,14 +88,22 @@ Route::get('/PengajuanDKP_sm', 'PengajuanDKPController@PengajuanDKP_sm'); //down
 Route::get('/PengajuanDKP_sm/cetak_pdf/{id}', 'PengajuanDKPController@cetak_pdf'); //pdf
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
 Route::post('/PengajuanIMTA/upload', 'PengajuanIMTAController@upload');
+Route::get('/PengajuanIMTA_sm', 'PengajuanIMTAController@PengajuanIMTA_sm'); //download
+Route::get('/PengajuanIMTA_sm/cetak_pdf/{id}', 'PengajuanIMTAController@cetak_pdf'); //pdf
 Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
 Route::post('/PengajuanVVT/upload', 'PengajuanVVTController@upload');
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
 Route::post('/PengajuanNaturalisasi/upload', 'PengajuanNaturalisasiController@upload');
+Route::get('/PengajuanNaturalisasi_sm', 'PengajuanNaturalisasiController@PengajuanNaturalisasi_sm'); //download
+Route::get('/PengajuanNaturalisasi_sm/cetak_pdf/{id}', 'PengajuanNaturalisasiController@cetak_pdf'); //pdf
 Route::get('/PengajuanKITAB', 'PengajuanKITABController@PengajuanKITAB');
 Route::post('/PengajuanKITAB/upload', 'PengajuanKITABController@upload');
+Route::get('/PengajuanKITAB_sm', 'PengajuanKITABController@PengajuanKITAB_sm'); //download
+Route::get('/PengajuanKITAB_sm/cetak_pdf/{id}', 'PengajuanKITABController@cetak_pdf'); //pdf
 Route::get('/PengajuanRPTKA', 'PengajuanRPTKAController@PengajuanRPTKA');
 Route::post('/PengajuanRPTKA/upload', 'PengajuanRPTKAController@upload');
+Route::get('/PengajuanRPTKA_sm', 'PengajuanRPTKAController@PengajuanRPTKA_sm'); //download
+Route::get('/PengajuanRPTKA_sm/cetak_pdf/{id}', 'PengajuanRPTKAController@cetak_pdf'); //pdf
 
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
