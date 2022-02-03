@@ -104,12 +104,20 @@ Route::get('/rekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasj
 Route::post('rekomBantuanMasjid/upload', 'RekomBantuanMasjidController@upload');
 Route::get('/rekomHaji', 'RekomHajiController@RekomHaji');
 Route::post('/rekomHaji/upload', 'RekomHajiController@upload');
+Route::get('/rekomHaji_sm', 'RekomUmrohController@PengajuanDKP_sm'); //download
+Route::get('/rekomHaji_sm/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
 Route::get('/rekomPendirianRumahIbadah', 'RekomPendirianRumahIbadahController@RekomPendirianRumahIbadah');
 Route::post('/rekomPendirianRumahIbadah/upload', 'RekomPendirianRumahIbadahController@upload');
+Route::get('/rekomPendirianRumahIbadah', 'RekomUmrohController@PengajuanDKP_sm'); //download
+Route::get('/rekomPendirianRumahIbadah/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
 Route::get('/rekomSLN', 'RekomSLNController@RekomSLN');
 Route::post('/rekomSLN/upload', 'RekomSLNController@upload');
+Route::get('/rekomSLN_sm', 'RekomUmrohController@PengajuanDKP_sm'); //download
+Route::get('/rekomSLN_sm/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
 Route::get('/RekomUmroh', 'RekomUmrohController@RekomUmroh');
 Route::post('/RekomUmroh/upload', 'RekomUmrohController@upload');
+Route::get('/rekomUmrooh_sm', 'RekomUmrohController@PengajuanDKP_sm'); //download
+Route::get('/rekomUmroh_sm/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
 //offline
 Route::get('/RekomSuratKeteranganMajelisTaklim', 'RekomSuratKeteranganMajelisTaklimController@RekomSuratKeteranganMajelisTaklim');
 Route::get('/RekomBantuanPonpesMadin', 'RekomBantuanPonpesMadinController@RekomBantuanPonpesMadin');

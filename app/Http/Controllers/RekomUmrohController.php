@@ -11,7 +11,7 @@ use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_umroh;
 use App\Mail\MailRekom_umroh_admin;
-use App\Tracking;
+use PDF;
 
 class RekomUmrohController extends Controller
 {
@@ -60,7 +60,17 @@ class RekomUmrohController extends Controller
 		]);
 
 		if($rekom_umroh->save()){
-			return redirect('RekomUmroh')->with('sukses', 'File Has been uploaded successfully');
+			//return baru
+			return view('Form.rekomUmroh_sm', ['details' => $rekom_umroh->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+	//pdf
+	public function cetak_pdf($id){
+
+    	$rekom_umroh = rekom_umroh::find($id);
+
+    	$pdf = PDF::loadview('Form.rekomUmroh_pdf',['rekom_umroh'=>$rekom_umroh]);
+    	 return $pdf->download('Rekom-Umroh.pdf');
+		 return view('Form.rekomUmroh_sm');
+    }
 }
