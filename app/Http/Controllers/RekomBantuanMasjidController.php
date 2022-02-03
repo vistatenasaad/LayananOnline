@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_bantuanmasjid;
 use App\Mail\MailRekom_bantuanmasjid_admin;
 use App\Tracking;
+use PDF;
 
 class RekomBantuanMasjidController extends Controller
 {

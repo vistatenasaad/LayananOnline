@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
 use App\Mail\MailPindah_madrasah_admin;
 use App\Tracking;
+use PDF;
 
 class PindahMadrasahController extends Controller
 {
@@ -71,7 +72,7 @@ class PindahMadrasahController extends Controller
 		]);
 
 		if($pindah_madrasah->save()){
-			return view('Form.PengajuanDKP_sm', ['details' => $pengajuan_d_k_p->id])->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PindahMadrasah_sm', ['details' => $pindah_madrasah->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 
@@ -80,8 +81,8 @@ class PindahMadrasahController extends Controller
 
     	$pindah_madrasah = pindah_madrasah::find($id);
 
-    	$pdf = PDF::loadview('Form.PengajuanDKP_pdf',['pindah_madrasah'=>$pindah_madrasah]);
-    	 return $pdf->download('Pengajuan-DKP.pdf');
-		 return view('Form.PengajuanDKP_sm');
+    	$pdf = PDF::loadview('Form.PindahMadrasah_pdf',['pindah_madrasah'=>$pindah_madrasah]);
+    	 return $pdf->download('PindahMadrasah.pdf');
+		 return view('Form.PindahMadrasah_sm');
     }
 }

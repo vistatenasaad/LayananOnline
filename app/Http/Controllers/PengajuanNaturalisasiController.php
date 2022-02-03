@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use Session;
+use PDF;
 use App\pengajuan_naturalisasi;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;

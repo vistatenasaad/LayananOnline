@@ -63,7 +63,7 @@
                         </ul>
                     </div>
                 @endif -->
-                    <form enctype="multipart/form-data" action="/RekomUmroh/upload" method="POST">
+                    <form enctype="multipart/form-data" action="/rekomUmroh/upload" method="POST">
                     @csrf    
                         <div class="form-row">
                         <div class="name">Nama</div>

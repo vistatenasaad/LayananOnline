@@ -41,12 +41,12 @@
 				<hr>
 				<br>
 				<p>Terimakasih atas ajuan anda, detail ajuan sebagai berikut:</p>
-				<p>Nama: {{$pindah_madrasah['nama']}} </p>
+				<p>Nama: {{$pindah_madrasah['nama_siswa']}} </p>
                 <p>Asal Madrasah: {{$pindah_madrasah['asal_madrasah']}} </p>
                 <p>Madrasah dan Kota yang Tertuju: {{$pindah_madrasah['madrasah_dituju']}} </p>
-                <p>Whatsapp: {{$pindah_madrasah['nama']}} </p>
-                <p>Email: {{$pindah_madrasah['nama']}} </p>
-				<p>Jenis Layanan: Pengajuan Surat Persetujuan Dana Kompensasi Penggunaan (DKP) Orang Asing</p>
+                <p>Whatsapp: {{$pindah_madrasah['whatsapp']}} </p>
+                <p>Email: {{$pindah_madrasah['email']}} </p>
+				<p>Jenis Layanan: Pengajuan Rekomendasi Pindah Madrasah/ Sekolah</p>
 				<br><br>
 				<h3>Berikut adalah Kode Tracking Status Pengajuan Surat Anda:</h3>
 				<h3>{{$pindah_madrasah['id']}}</h3>

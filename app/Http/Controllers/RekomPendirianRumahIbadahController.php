@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_pendirianRI;
 use App\Mail\MailRekom_pendirianRI_admin;
+use PDF;
 use App\Tracking;
 
 class RekomPendirianRumahIbadahController extends Controller
@@ -77,7 +78,7 @@ class RekomPendirianRumahIbadahController extends Controller
 
 		if($rekom_pendirian_ri->save()){
 			//return baru
-			return view('Form.rekomPendirianRumahIbadah', ['details' => $rekom_pendirian_ri->id])->with('sukses', 'File Has been uploaded successfully');		
+			return view('Form.rekomPendirianRumahIbadah_sm', ['details' => $rekom_pendirian_ri->id])->with('sukses', 'File Has been uploaded successfully');		
 		}
 	}
 
@@ -86,7 +87,7 @@ class RekomPendirianRumahIbadahController extends Controller
     	$rekom_pendirian_ri = rekom_pendirian_ri::find($id);
 
     	$pdf = PDF::loadview('Form.rekomPendirianRumahIbadah_pdf',['rekom_pendirian_ri'=>$rekom_pendirian_ri]);
-    	 return $pdf->download('Rekom-Pendirian Rumah Ibadah.pdf');
-		 return view('Form.rekomPendirianRumahIbadah');
+    	 return $pdf->download('Rekom-PendirianRumahIbadah.pdf');
+		 return view('Form.rekomPendirianRumahIbadah_sm');
     }
 }

@@ -78,6 +78,9 @@ Route::get('/tracking', function () {
 //Informasi
 Route::get('/PengukuranKiblat', 'PengukuranKiblatController@PengukuranKiblat');
 Route::post('/PengukuranKiblat/upload', 'PengukuranKiblatController@upload');
+Route::get('/PengukuranKiblat_sm', 'PengukuranKiblatController@PengukuranKiblat_sm'); //download
+Route::get('/PengukuranKiblat_sm/cetak_pdf/{id}', 'PengukuranKiblatController@cetak_pdf'); //pdf
+
 Route::get('/PermohonanPajak', 'PermohonanPajakController@PermohonanPajak');
 Route::get('/PermohonanSlipGaji', 'PermohonanSlipGajiController@PermohonanSlipGaji');
 
@@ -86,20 +89,27 @@ Route::get('/PengajuanDKP', 'PengajuanDKPController@PengajuanDKP');
 Route::post('/PengajuanDKP/upload', 'PengajuanDKPController@upload');
 Route::get('/PengajuanDKP_sm', 'PengajuanDKPController@PengajuanDKP_sm'); //download
 Route::get('/PengajuanDKP_sm/cetak_pdf/{id}', 'PengajuanDKPController@cetak_pdf'); //pdf
+
 Route::get('/PengajuanIMTA', 'PengajuanIMTAController@PengajuanIMTA');
 Route::post('/PengajuanIMTA/upload', 'PengajuanIMTAController@upload');
 Route::get('/PengajuanIMTA_sm', 'PengajuanIMTAController@PengajuanIMTA_sm'); //download
 Route::get('/PengajuanIMTA_sm/cetak_pdf/{id}', 'PengajuanIMTAController@cetak_pdf'); //pdf
+
 Route::get('/PengajuanVVT', 'PengajuanVVTController@pengajuan_vvt');
 Route::post('/PengajuanVVT/upload', 'PengajuanVVTController@upload');
+Route::get('/PengajuanVVT_sm', 'PengajuanVVTController@PengajuanIMTA_sm'); //download
+Route::get('/PengajuanVVT_sm/cetak_pdf/{id}', 'PengajuanVVTController@cetak_pdf'); //pdf
+
 Route::get('/PengajuanNaturalisasi', 'PengajuanNaturalisasiController@PengajuanNaturalisasi');
 Route::post('/PengajuanNaturalisasi/upload', 'PengajuanNaturalisasiController@upload');
 Route::get('/PengajuanNaturalisasi_sm', 'PengajuanNaturalisasiController@PengajuanNaturalisasi_sm'); //download
 Route::get('/PengajuanNaturalisasi_sm/cetak_pdf/{id}', 'PengajuanNaturalisasiController@cetak_pdf'); //pdf
+
 Route::get('/PengajuanKITAB', 'PengajuanKITABController@PengajuanKITAB');
 Route::post('/PengajuanKITAB/upload', 'PengajuanKITABController@upload');
 Route::get('/PengajuanKITAB_sm', 'PengajuanKITABController@PengajuanKITAB_sm'); //download
 Route::get('/PengajuanKITAB_sm/cetak_pdf/{id}', 'PengajuanKITABController@cetak_pdf'); //pdf
+
 Route::get('/PengajuanRPTKA', 'PengajuanRPTKAController@PengajuanRPTKA');
 Route::post('/PengajuanRPTKA/upload', 'PengajuanRPTKAController@upload');
 Route::get('/PengajuanRPTKA_sm', 'PengajuanRPTKAController@PengajuanRPTKA_sm'); //download
@@ -108,23 +118,32 @@ Route::get('/PengajuanRPTKA_sm/cetak_pdf/{id}', 'PengajuanRPTKAController@cetak_
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
 Route::post('/PindahMadrasah/upload', 'PindahMadrasahController@upload');
+Route::get('/PindahMadrasah_sm', 'PindahMadrasahController@PindahMadrasah_sm'); //download
+Route::get('/PindahMadrasah_sm/cetak_pdf/{id}', 'PindahMadrasahController@cetak_pdf'); //pdf
+
 Route::get('/RekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasjid');
 Route::post('RekomBantuanMasjid/upload', 'RekomBantuanMasjidController@upload');
+Route::get('/RekomBantuanMasjid_sm', 'RekomBantuanMasjidController@PindahMadrasah_sm'); //download
+Route::get('/RekomBantuanMasjid_sm/cetak_pdf/{id}', 'RekomBantuanMasjidController@cetak_pdf'); //pdf
+
 Route::get('/rekomHaji', 'RekomHajiController@RekomHaji');
 Route::post('/rekomHaji/upload', 'RekomHajiController@upload');
-Route::get('/rekomHaji_sm', 'RekomUmrohController@PengajuanDKP_sm'); //download
-Route::get('/rekomHaji_sm/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
+Route::get('/rekomHaji_sm', 'RekomHajiController@rekomHaji_sm'); //download
+Route::get('/rekomHaji_sm/cetak_pdf/{id}', 'RekomHajiController@cetak_pdf'); //pdf
+
 Route::get('/rekomPendirianRumahIbadah', 'RekomPendirianRumahIbadahController@RekomPendirianRumahIbadah');
 Route::post('/rekomPendirianRumahIbadah/upload', 'RekomPendirianRumahIbadahController@upload');
-Route::get('/rekomPendirianRumahIbadah', 'RekomUmrohController@PengajuanDKP_sm'); //download
-Route::get('/rekomPendirianRumahIbadah/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
+Route::get('/rekomPendirianRumahIbadah_sm', 'RekomPendirianRumahIbadahController@rekomPendirianRumahIbadah_sm'); //download
+Route::get('/rekomPendirianRumahIbadah_sm/cetak_pdf/{id}', 'RekomPendirianRumahIbadahController@cetak_pdf'); //pdf
+
 Route::get('/rekomSLN', 'RekomSLNController@RekomSLN');
 Route::post('/rekomSLN/upload', 'RekomSLNController@upload');
-Route::get('/rekomSLN_sm', 'RekomUmrohController@PengajuanDKP_sm'); //download
-Route::get('/rekomSLN_sm/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
-Route::get('/RekomUmroh', 'RekomUmrohController@RekomUmroh');
-Route::post('/RekomUmroh/upload', 'RekomUmrohController@upload');
-Route::get('/rekomUmrooh_sm', 'RekomUmrohController@PengajuanDKP_sm'); //download
+Route::get('/rekomSLN_sm', 'RekomSLNController@rekomSLN_sm'); //download
+Route::get('/rekomSLN_sm/cetak_pdf/{id}', 'RekomSLNController@cetak_pdf'); //pdf
+
+Route::get('/rekomUmroh', 'RekomUmrohController@RekomUmroh');
+Route::post('/rekomUmroh/upload', 'RekomUmrohController@upload');
+Route::get('/rekomUmrooh_sm', 'RekomUmrohController@rekomUmroh_sm'); //download
 Route::get('/rekomUmroh_sm/cetak_pdf/{id}', 'RekomUmrohController@cetak_pdf'); //pdf
 //offline
 Route::get('/RekomSuratKeteranganMajelisTaklim', 'RekomSuratKeteranganMajelisTaklimController@RekomSuratKeteranganMajelisTaklim');

@@ -41,10 +41,10 @@
 				<hr>
 				<br>
 				<p>Terimakasih atas ajuan anda, detail ajuan sebagai berikut:</p>
-				<p>Nama: {{$rekom_bantuan_masjid['nama']}} </p>
-                <p>Whatsapp: {{$rekom_bantuan_masjid['nama']}} </p>
-                <p>Email: {{$rekom_bantuan_masjid['nama']}} </p>
-				<p>Jenis Layanan: Bantuan Masjid</p>
+				<p>Nama: {{$rekom_bantuan_masjid['nama_pemohon']}} </p>
+                <p>Whatsapp: {{$rekom_bantuan_masjid['whatsapp']}} </p>
+                <p>Email: {{$rekom_bantuan_masjid['email']}} </p>
+				<p>Jenis Layanan: Rekomendasi Bantuan Masjid</p>
 				<br><br>
 				<h3>Berikut adalah Kode Tracking Status Pengajuan Surat Anda:</h3>
 				<h3>{{$rekom_bantuan_masjid['id']}}</h3>

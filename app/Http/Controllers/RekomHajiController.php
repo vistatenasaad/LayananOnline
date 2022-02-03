@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_haji;
 use App\Mail\MailRekom_haji_admin;
+use PDF;
 use App\Tracking;
 
 class RekomHajiController extends Controller

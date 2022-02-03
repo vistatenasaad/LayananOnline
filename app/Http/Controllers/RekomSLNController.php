@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_sln;
 use App\Mail\MailRekom_sln_admin;
 use App\Tracking;
+use PDF;
 
 class RekomSLNController extends Controller
 {

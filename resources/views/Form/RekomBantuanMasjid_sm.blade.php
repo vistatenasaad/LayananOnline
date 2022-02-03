@@ -11,7 +11,7 @@
 
     <!-- Title Page-->
     <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
-    <title>Form Pengajuan DKP Orang Asing</title>
+    <title>Rekomendasi Bantuan Masjid</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
  
     <!-- Font special for pages-->
@@ -45,7 +45,7 @@
             <div class="card card-6">
                 <div class="card-heading">
                     <br><br>
-                    <h2 class="title">Pengajuan Surat Persetujuan Dana Kompensasi Penggunaan (DKP) Orang Asing</h2>
+                    <h2 class="title">Rekomendasi Bantuan Masjid</h2>
                 </div>
                 <div class="card-body">
                 @if ($message = Session::get('sukses'))
@@ -69,6 +69,7 @@
                         <div class="form-row">
                             <div>Pastikan pula anda mendapatkan pemberitahuan pengajuan yang anda lakukan pada email (mungkin saja masuk di kotak spam).
                         </div>
+                        <br><br><br><br>
                 </div>
             </div>
         </div>

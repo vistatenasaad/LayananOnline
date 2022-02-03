@@ -41,7 +41,7 @@
 				<hr>
 				<br>
 				<p>Terimakasih atas ajuan anda, detail ajuan sebagai berikut:</p>
-				<p>Nama: {{$rekom_pendirian_ri['nama']}} </p>
+				<p>Asal Surat: {{$rekom_pendirian_ri['asal_surat']}} </p>
                 <p>Whatsapp: {{$rekom_pendirian_ri['whatsapp']}} </p>
                 <p>Email: {{$rekom_pendirian_ri['email']}} </p>
 				<p>Jenis Layanan: Rekomendasi Pendirian Rumah Ibadah</p>

@@ -69,6 +69,7 @@
                         <div class="form-row">
                             <div>Pastikan pula anda mendapatkan pemberitahuan pengajuan yang anda lakukan pada email (mungkin saja masuk di kotak spam).
                         </div>
+                        <br><br><br><br>
                 </div>
             </div>
         </div>

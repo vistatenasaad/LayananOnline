@@ -52,7 +52,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
 				@endif
-                    <form method="POST" enctype="multipart/form-data" action="/rekomBantuanMasjid/upload">
+                    <form method="POST" enctype="multipart/form-data" action="/RekomBantuanMasjid/upload">
                     @csrf
                         <div class="form-row">
                         <div class="name">Nama Pemohon</div>

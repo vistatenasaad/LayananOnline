@@ -58,7 +58,7 @@
         <!-- About-->
         <section class="page-section" id="about">
             <div class="container">
-            <a href="/RekomPendirianRumahIbadah">
+            <a href="/rekomPendirianRumahIbadah">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Ijin Pendirian Rumah Ibadah</span>
@@ -90,7 +90,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="/RekomSLN">
+                <a href="/rekomSLN">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Pengantar Rekomendasi Study Luar Negri</span>
@@ -122,7 +122,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="/RekomUmroh">
+                <a href="/rekomUmroh">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Paspor Umroh</span>
@@ -130,7 +130,7 @@
                 </nav>
                 </a>
                 <br>
-                <a href="/RekomHaji">
+                <a href="/rekomHaji">
                 <nav class="navbar navbar-light color-nav" >
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Rekomendasi Paspor Haji</span>

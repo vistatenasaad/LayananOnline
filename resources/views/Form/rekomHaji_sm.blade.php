@@ -64,11 +64,12 @@
                         </div>
                         <div class="card-footer">
                              <!-- tambah detail-->
-                            <a href="/rekomSLN_sm/cetak_pdf/{{$details}}" class="bg-button" type="submit">Download pdf</a>
+                            <a href="/rekomHaji_sm/cetak_pdf/{{$details}}" class="bg-button" type="submit">Download pdf</a>
                         </div>
                         <div class="form-row">
                             <div>Pastikan pula anda mendapatkan pemberitahuan pengajuan yang anda lakukan pada email (mungkin saja masuk di kotak spam).
                         </div>
+                        <br><br><br><br>
                 </div>
             </div>
         </div>
