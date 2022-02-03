@@ -21,6 +21,12 @@ Route::get('/', function () {
     return view('menu');
 });
 
+// Route::get('/Cetak', function () {
+//     return view('cetakkemenag');
+// });
+
+Route::get('/Cetak', 'CetakController@cetak');
+
 Route::get('/Menu', function () {
     return view('menu');
 });
