@@ -10,6 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <title>Rekomendasi Pendirian Rumah Ibadah</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -47,13 +48,18 @@
                     <h2 class="title">Rekomendasi Pendirian Rumah Ibadah</h2>
                 </div>
                 <div class="card-body">
+                @if ($message = Session::get('sukses'))
+                    <div class="alert alert-success alert-block">
+                        <strong>{{ $message }}</strong>
+                    </div>
+				@endif
                     <form enctype="multipart/form-data" action="/RekomPendirianRumahIbadah/upload" method="POST">
                     @csrf
                         <div class="form-row">
                         <div class="name">Asal Surat</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="asal_surat" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="asal_surat" required placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Pengirim Surat</div>
                             </div>
@@ -62,7 +68,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -70,7 +76,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -79,7 +85,7 @@
                             <div class="name">Surat Permohoan Rekomendasi</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_permohonan_rekom" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_permohonan_rekom" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Permohoan Rekomendasi pada KanKemenag Kota Batu. Max file size 2 MB</div>
                             </div>
@@ -88,7 +94,7 @@
                             <div class="name">Susunan pengurus rumah ibadah / takmir</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_susunan_pengurus" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_susunan_pengurus" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Susunan pengurus rumah ibadah / takmir. Max file size 50 MB</div>
                             </div>
@@ -97,7 +103,7 @@
                             <div class="name">Surat Keterangan Kepemilikan Tanah/ status tanah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_sk_tanah" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_sk_tanah" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat Keterangan Kepemilikan Tanah/ status tanah. Max file size 50 MB</div>
                             </div>
@@ -106,7 +112,7 @@
                             <div class="name">Surat keterangan domisili dari Desa/ Kelurahan</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_sk_domisili" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_sk_domisili" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Surat keterangan domisili dari Desa/ Kelurahan. Max file size 50 MB</div>
                             </div>
@@ -115,7 +121,7 @@
                             <div class="name">Daftar Nama dan KTP pengguna rumah ibadah</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_nama_ktp" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_nama_ktp" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Daftar Nama dan KTP pengguna rumah ibadah paling sedikt 90 orang yang disahkan oleh pejabat setempat sesuai dengan tingkat batas wilayah. Max file size 2 MB</div>
                             </div>
@@ -124,7 +130,7 @@
                             <div class="name">Dukungan masyarakat setempat</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_dukungan" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_dukungan" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Dukungan masyarakat setempat paling sedikit 60 orang yang disahkan oleh Lurah atau Kepala Desa. Max file size 2 MB</div>
                             </div>

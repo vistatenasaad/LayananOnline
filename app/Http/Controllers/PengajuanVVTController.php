@@ -6,16 +6,21 @@ use Illuminate\Http\Request;
 use App\pengajuan_vvt;
 use Illuminate\Support\Str;
 use DB;
+use File;
+use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_vvt;
 use App\Mail\MailPengajuan_vvt_admin;
+use App\Tracking;
 
 class PengajuanVVTController extends Controller
 {
     public function pengajuan_vvt(){
 		return view('Form.PengajuanVVT');
 	}
-	
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
+	}
 	public function upload(Request $request){
 		$pengajuan_vvt = new pengajuan_vvt();
 		$pengajuan_vvt->id = 'BATU' . Str::random(7);
@@ -73,8 +78,14 @@ class PengajuanVVTController extends Controller
         Mail::to($request->email)->send(new MailPengajuan_vvt($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_vvt_admin($details));
 
+		Tracking::create([
+			'kode' => $pengajuan_vvt->id,
+			'status' => '1',
+			'layanan' => 'pengajuan_vvt'
+		]);
+
 		if($pengajuan_vvt->save()){
-			return redirect('PengajuanVVT')->with('status', 'File Has been uploaded successfully');
+			return redirect('PengajuanVVT')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

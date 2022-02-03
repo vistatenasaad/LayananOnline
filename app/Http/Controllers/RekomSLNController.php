@@ -5,16 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\rekom_sln;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_sln;
 use App\Mail\MailRekom_sln_admin;
+use App\Tracking;
 
 class RekomSLNController extends Controller
 {
     public function RekomSLN(){
 		return view('Form.RekomSLN');
+	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -73,8 +79,14 @@ class RekomSLNController extends Controller
         Mail::to($request->email)->send(new MailRekom_sln($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailRekom_sln_admin($details));
 
+		Tracking::create([
+			'kode' => $rekom_sln->id,
+			'status' => '1',
+			'layanan' => 'rekom_sln'
+		]);
+
 		if($rekom_sln->save()){
-			return redirect('RekomSLN')->with('status', 'File Has been uploaded successfully');
+			return redirect('RekomSLN')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

@@ -5,15 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\pengukuran_kiblat;
 use Illuminate\Support\Str;
+use File;
 use DB;
+use Session;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
 use App\Mail\MailNotify_admin;
+use App\Tracking;
 
 class PengukuranKiblatController extends Controller
 {
     public function PengukuranKiblat(){
 		return view('Form.PengukuranKiblat');
+	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -45,9 +52,16 @@ class PengukuranKiblatController extends Controller
 		//notif email
         Mail::to($request->email)->send(new MailNotify($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
+		Mail::to("irmarista16@gmail.com")->send(new MailNotify_admin($details));
+
+		Tracking::create([
+			'kode' => $pengukuran_kiblat->id,
+			'status' => '1',
+			'layanan' => 'pengukuran_kiblat'
+		]);
 
 		if($pengukuran_kiblat->save()){
-			return redirect('PengukuranKiblat')->with('status', 'File Has been uploaded successfully');
+			return redirect('PengukuranKiblat')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

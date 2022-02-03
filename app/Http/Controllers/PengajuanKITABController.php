@@ -5,15 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\pengajuan_kitab;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_kitab;
 use App\Mail\MailPengajuan_kitab_admin;
+use App\Tracking;
+
 class PengajuanKITABController extends Controller
 {
     public function PengajuanKITAB(){
 		return view('Form.PengajuanKITAP');
+	}
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 	public function upload(Request $request){
 
@@ -75,8 +81,14 @@ class PengajuanKITABController extends Controller
         Mail::to($request->email)->send(new MailPengajuan_kitab($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_kitab_admin($details));
 
+		Tracking::create([
+			'kode' => $pengajuan_kitab->id,
+			'status' => '1',
+			'layanan' => 'pengajuan_kitab'
+		]);
+
 		if($pengajuan_kitab->save()){
-			return redirect('PengajuanKITAB')->with('status', 'File Has been uploaded successfully');
+			return redirect('PengajuanKITAB')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

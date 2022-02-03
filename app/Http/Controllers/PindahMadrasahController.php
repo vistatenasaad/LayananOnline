@@ -6,14 +6,21 @@ use Illuminate\Http\Request;
 use App\pindah_madrasah;
 use Illuminate\Support\Str;
 use DB;
+use Session;
+use File;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPindah_madrasah;
 use App\Mail\MailPindah_madrasah_admin;
+use App\Tracking;
 
 class PindahMadrasahController extends Controller
 {
     public function PindahMadrasahController(){
 		return view('Form.PindahMadrasah');
+	}
+
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 
 	public function upload(Request $request){
@@ -57,8 +64,14 @@ class PindahMadrasahController extends Controller
         Mail::to($request->email)->send(new MailPindah_madrasah($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPindah_madrasah_admin($details));
 
+		Tracking::create([
+			'kode' => $pindah_madrasah->id,
+			'status' => '1',
+			'layanan' => 'pindah_madrasah'
+		]);
+
 		if($pindah_madrasah->save()){
-			return redirect('PindahMadrasah')->with('status', 'File Has been uploaded successfully');
+			return redirect('PindahMadrasah')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }

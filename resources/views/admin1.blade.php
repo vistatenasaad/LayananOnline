@@ -2,6 +2,7 @@
 
 @section('nama_user', 'Admin Front Office')
 @section('page_title', $pagetitle)
+@section('sub_title', $subtitle)
 @section('content')
 
 <div class="content mt-3">
@@ -18,7 +19,6 @@
                             <thead>
                                 <tr>
                                     <th>Kode</th>
-                                    <th>Nama</th>
                                     <th>Email</th>
                                     <th>Layanan</th>
                                     <th>Status</th>
@@ -29,13 +29,12 @@
                                 @foreach($data as $d)
                                 <tr>
                                     <td>{{$d->kode}}</td>
-                                    <td>{{$d->nama}}</td>
+                                    
                                     <td>{{$d->email}}</td>
                                     <td>{{$d->layanan}}</td>
                                     <td>{{$d->status}}</td>
-                                    <td>
-                                        <button type="button" class="btn btn-success btn-sm">Verifikasi</button>
-                                        <button type="button" class="btn btn-danger btn-sm">Tolak</button>
+                                    <td>                                       
+                                        <a href="/detail/{{$d->kode}}"><button type="button" class="btn btn-warning btn-sm">Lihat detail</button></a>
                                     </td>
                                 </tr>
                                 @endforeach

@@ -10,6 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
+    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
     <title>Form Pengajuan DKP Orang Asing</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
  
@@ -47,13 +48,18 @@
                     <h2 class="title">Form Pengajuan Surat Persetujuan Dana Kompensasi Penggunaan (DKP) Orang Asing</h2>
                 </div>
                 <div class="card-body">
+                @if ($message = Session::get('sukses'))
+				<div class="alert alert-success alert-block">
+					<strong>{{ $message }}</strong>
+				</div>
+				@endif
                     <form enctype="multipart/form-data" action="/PengajuanDKP/upload" method="POST">
                     @csrf
                         <div class="form-row">
                         <div class="name">Nama Lembaga Asal</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama" placeholder="Masukkan Nama Anda">
+                                    <input class="input--style-6" type="text" name="nama" required placeholder="Masukkan Nama Anda">
                                 </div>
                                 <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
                             </div>
@@ -62,7 +68,7 @@
                             <div class="name">Email</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="email" placeholder="example@email.com">
+                                    <input class="input--style-6" type="text" name="email" required placeholder="example@email.com">
                                 </div>
                             </div>
                         </div>
@@ -70,7 +76,7 @@
                             <div class="name">Nomor Whatsapp</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-6" type="text" name="whatsapp" placeholder="Masukkan Nomor Whatsapp">
+                                    <input class="input--style-6" type="text" name="whatsapp" required placeholder="Masukkan Nomor Whatsapp">
                                 </div>
                                 <div class="label--desc">Masukkan nomer wa agar mendapatkan balasan alternatif selain email</div>
                             </div>
@@ -79,7 +85,7 @@
                             <div class="name">File DRH</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                <input type="file" name="file_drh" placeholder="Choose file" id="file">
+                                <input type="file" name="file_drh" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Daftar riwayat hidup Orang Asing Maksimal file 2 MB</div>
                             </div>
@@ -88,7 +94,7 @@
                             <div class="name">File RPTKA dan IMTA</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_rptka_imta" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_rptka_imta" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">foto copy Keputusan Pengesahan RPTKA dan IMTA; Maksimal file 2 masing-masing file 2 MB</div>
                             </div>
@@ -97,7 +103,7 @@
                             <div class="name">File Paspor</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_paspor" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_paspor" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy paspor; Maksimal file 2 MB</div>
                             </div>
@@ -106,7 +112,7 @@
                             <div class="name">File Polis Asuransi</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="file_polis_asuransi" placeholder="Choose file" id="file">
+                                    <input type="file" name="file_polis_asuransi" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">Foto copy polis asuransi kesehatan Orang Asing untuk jangka waktu masa kunjungan; Maksimal file 2 MB</div>
                             </div>
@@ -115,7 +121,7 @@
                             <div class="name">File Foto</div>
                             <div class="value">
                                 <div class="input-group js-input-file">
-                                    <input type="file" name="foto" placeholder="Choose file" id="file">
+                                    <input type="file" name="foto" required placeholder="Choose file" id="file">
                                 </div>
                                 <div class="label--desc">pas foto terbaru ukuran 4 x 6 cm sebanyak 2 (dua) lembar berwarna latar belakang merah Maksimal file 2 MB</div>
                             </div>

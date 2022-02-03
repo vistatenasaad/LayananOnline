@@ -5,15 +5,21 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use File;
+use Session;
 use App\pengajuan_imta;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_imta;
 use App\Mail\MailPengajuan_imta_admin;
+use App\Tracking;
+
 class PengajuanIMTAController extends Controller
 {
     public function PengajuanIMTA(){
 		return view('Form.PengajuanIMTA');
+	}
+	public function sukses(){
+		Session::flash('sukses','File Has been uploaded successfully');
 	}
 	public function upload(Request $request){
 
@@ -59,8 +65,14 @@ class PengajuanIMTAController extends Controller
         Mail::to($request->email)->send(new MailPengajuan_imta($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_imta_admin($details));
 
+		Tracking::create([
+			'kode' => $pengajuan_imta->id,
+			'status' => '1',
+			'layanan' => 'pengajuan_imta'
+		]);
+
 		if($pengajuan_imta->save()){
-			return redirect('PengajuanIMTA')->with('status', 'File Has been uploaded successfully');
+			return redirect('PengajuanIMTA')->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
 }
