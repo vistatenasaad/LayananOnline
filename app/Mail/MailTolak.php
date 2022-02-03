@@ -11,6 +11,7 @@ class MailTolak extends Mailable
 {
     use Queueable, SerializesModels;
     public $details;
+
     /**
      * Create a new message instance.
      *
@@ -29,6 +30,6 @@ class MailTolak extends Mailable
     public function build()
     {
         return $this->from('ratnaindah0124@gmail.com')
-                    ->view('Admin.tolak');
+            ->view('Form.Tolak_notify');
     }
 }

@@ -56,9 +56,9 @@ class PengajuanDKPController extends Controller
 			'email' => $request->email
         ];
 		//captcha
-		// request()->validate([
-		// 	'g-recaptcha-response' => 'required|captcha',
-		// ]);
+		request()->validate([
+			'g-recaptcha-response' => 'required|captcha',
+		]);
         Mail::to($request->email)->send(new MailPengajuan_dkp($details));
 		Mail::to("ratnaindah0124@gmail.com")->send(new MailPengajuan_dkp_admin($details));
 
