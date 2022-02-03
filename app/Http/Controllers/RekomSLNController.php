@@ -81,8 +81,8 @@ class RekomSLNController extends Controller
 
 		Tracking::create([
 			'kode' => $rekom_sln->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'rekom_sln'
 		]);
 
 		if($rekom_sln->save()){

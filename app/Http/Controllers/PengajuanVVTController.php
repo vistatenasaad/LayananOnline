@@ -80,8 +80,8 @@ class PengajuanVVTController extends Controller
 
 		Tracking::create([
 			'kode' => $pengajuan_vvt->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'pengajuan_vvt'
 		]);
 
 		if($pengajuan_vvt->save()){

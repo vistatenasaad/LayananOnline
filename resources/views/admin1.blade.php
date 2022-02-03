@@ -19,7 +19,6 @@
                             <thead>
                                 <tr>
                                     <th>Kode</th>
-                                    <th>Nama</th>
                                     <th>Email</th>
                                     <th>Layanan</th>
                                     <th>Status</th>
@@ -30,7 +29,7 @@
                                 @foreach($data as $d)
                                 <tr>
                                     <td>{{$d->kode}}</td>
-                                    <td>{{$d->nama}}</td>
+                                    
                                     <td>{{$d->email}}</td>
                                     <td>{{$d->layanan}}</td>
                                     <td>{{$d->status}}</td>

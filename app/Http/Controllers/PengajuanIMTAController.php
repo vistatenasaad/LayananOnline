@@ -67,8 +67,8 @@ class PengajuanIMTAController extends Controller
 
 		Tracking::create([
 			'kode' => $pengajuan_imta->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'pengajuan_imta'
 		]);
 
 		if($pengajuan_imta->save()){

@@ -75,8 +75,8 @@ class PengajuanNaturalisasiController extends Controller
 
 		Tracking::create([
 			'kode' => $pengajuan_naturalisasi->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'pengajuan_naturalisasi'
 		]);
 
 		if($pengajuan_naturalisasi->save()){

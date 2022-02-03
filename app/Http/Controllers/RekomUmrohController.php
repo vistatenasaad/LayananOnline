@@ -55,8 +55,8 @@ class RekomUmrohController extends Controller
 
 		Tracking::create([
 			'kode' => $rekom_umroh->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'rekom_umroh'
 		]);
 
 		if($rekom_umroh->save()){

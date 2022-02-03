@@ -9,7 +9,24 @@ class Admin1Controller extends Controller
 {
     public function datamasuk1()
     {
-        $data = DB::table('tracking')->get();
+        $data = DB::table('tracking')
+            ->leftjoin('pengukuran_kiblat', 'pengukuran_kiblat.id', '=', 'tracking.kode')
+            ->leftjoin('permohonan_slipgaji', 'permohonan_slipgaji.id', '=', 'tracking.kode')
+            ->leftjoin('permohonan_pajak', 'permohonan_pajak.id', '=', 'tracking.kode')
+            ->leftjoin('pengajuan_rptka', 'pengajuan_rptka.id', '=', 'tracking.kode')
+            ->leftjoin('pengajuan_imta', 'pengajuan_imta.id', '=', 'tracking.kode')
+            ->leftjoin('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
+            ->leftjoin('pengajuan_vvt', 'pengajuan_vvt.id', '=', 'tracking.kode')
+            ->leftjoin('pengajuan_kitab', 'pengajuan_kitab.id', '=', 'tracking.kode')
+            ->leftjoin('pengajuan_naturalisasi', 'pengajuan_naturalisasi.id', '=', 'tracking.kode')
+            ->leftjoin('rekom_pendirian_ri', 'rekom_pendirian_ri.id', '=', 'tracking.kode')
+            ->leftjoin('rekom_bantuan_masjid', 'rekom_bantuan_masjid.id', '=', 'tracking.kode')
+            ->leftjoin('pindah_madrasah', 'pindah_madrasah.id', '=', 'tracking.kode')
+            ->leftjoin('rekom_sln', 'rekom_sln.id', '=', 'tracking.kode')
+            ->leftjoin('rekom_umroh', 'rekom_umroh.id', '=', 'tracking.kode')
+            ->leftjoin('rekom_haji', 'rekom_haji.id', '=', 'tracking.kode')
+            ->where('tracking.status', '=', '1')
+            ->get();
         $judul = "Data Masuk";
         $subjudul = "Dashboard";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
@@ -365,7 +382,7 @@ class Admin1Controller extends Controller
         // $subjudul = "Pelayanan Lain yang Diperlukan";
         // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
-    public function mjamaa1h()
+    public function mjamaah1()
     {
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')

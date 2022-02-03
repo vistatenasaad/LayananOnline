@@ -66,8 +66,8 @@ class PindahMadrasahController extends Controller
 
 		Tracking::create([
 			'kode' => $pindah_madrasah->id,
-			'status' => 'Data Berhasil diupload',
-			'layanan' => 'pengajuan_d_k_p'
+			'status' => '1',
+			'layanan' => 'pindah_madrasah'
 		]);
 
 		if($pindah_madrasah->save()){

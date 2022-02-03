@@ -42,10 +42,12 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./">@yield('nama_user') </a>
+                <a class="navbar-brand" href="./">@yield('nama_user') {{auth()->user()->role}} </a>
                 <a class="navbar-brand hidden" href="./">A</a>
             </div>
-
+            
+            @if(auth()->user()->role == 'admin1')
+            <!-- MENU ADMIN 1 -->
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
@@ -56,12 +58,12 @@
                     <li>
                         <a href="{{route('datamasuk1')}}"> <i class="menu-icon fa fa-inbox"></i>Data Masuk</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="#"> <i class="menu-icon fa fa-table"></i>Pengecekan Data</a>
                     </li>
                     <li>
                         <a href="#"> <i class="menu-icon fa fa-check-square"></i>Data Selesai</a>
-                    </li>
+                    </li> -->
                     <h3 class="menu-title">Layanan</h3>
                     <!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
@@ -150,11 +152,128 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan yang Diperlukan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <!-- <li><i class="fa fa-table"></i><a href="{{route('mjamaa1h')}}">Mutasi Jamaah</a></li> -->
+                            <!-- <li><i class="fa fa-table"></i><a href="{{route('mjamaah1')}}">Mutasi Jamaah</a></li> -->
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
+            </div>
+            <!-- END OF MENU ADMIN 1 -->
+            @endif
+
+            @if(auth()->user()->role == 'admin2')
+            <!-- MENU ADMIN 2 -->
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="{{route('home2')}}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                    </li>
+                    <h3 class="menu-title">Menu</h3>
+                    <!-- /.menu-title -->
+                    <li>
+                        <a href="{{route('datamasuk2')}}"> <i class="menu-icon fa fa-inbox"></i>Data Masuk</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#"> <i class="menu-icon fa fa-table"></i>Pengecekan Data</a>
+                    </li>
+                    <li>
+                        <a href="#"> <i class="menu-icon fa fa-check-square"></i>Data Selesai</a>
+                    </li> -->
+                    <h3 class="menu-title">Layanan</h3>
+                    <!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Informasi</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kiblat2')}}">Pengukuran Kiblat</a></li>
+                            <li><i class="fa fa-id-badge"></i><a href="{{route('slipgaji2')}}">Permohonan Slip Gaji</a></li>
+                            <li><i class="fa fa-bars"></i><a href="{{route('buktipajak2')}}">Permohonan Bukti Pajak</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Konsultasi</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('konsulsyariah2')}}">Konsultasi Syariah</a></li>  -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Pendaftaran</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('batalhajireg2')}}">Pembatalan Haji Reg</a></li> -->
+                            <!-- <li><i class="fa fa-id-badge"></i><a href="{{route('batalhajiwft2')}}">Pembatalan Haji Wft</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('daftarhaji2')}}">Pendaftaran Haji</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('ikrarmi2')}}">Ikrar Masuk Islam</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('sertifhalal2')}}">Sertifikasi Halal</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('limpahanporsihaji2')}}">Pelimpahan Porsi Haji</a></li> -->
+                            <!-- <li><i class="fa fa-bars"></i><a href="{{route('limpahanporsihajisakit2')}}">Pelimpahan Porsi Haji Sakit</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Pengesahan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('legalisir2')}}">Legalisir Ijazah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ttdsertif2')}}">Tanda Tangan Sertifikat</a></li>  -->
+                        </ul>
+
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perijinan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rptka2')}}">Rencana Penggunaan Tenaga Kerja Asing</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('imtka2')}}">Izin Menggunakan Tenaga Kerja Asing</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('dkpoa2')}}">Dana Kompensasi Pengggunaan Orang Asing</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('vtt2')}}">Visa Tinggal Terbatas</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kitp2')}}">Kartu Izin Tinggal Tetap</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('naturalisasi2')}}">Naturalisasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perizinan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijinpm2')}}">Ijin Penelitian Madrasah</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijoptpq2')}}">Ijop TPQ</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijopm2')}}">Ijop Madin</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ijopp2')}}">Ijop Pontren</a></li>  -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Persetujuan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('propbos2')}}">Proposal BOS</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('blankokua2')}}">Permohonan Blanko KUA</a></li>  -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Rekomendasi</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ripri2')}}">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbm2')}}">Rekom Bantuan Masjid</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rskmt2')}}">Rekom Surat Keterangan Majelis Taklim</a></li>  -->
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpm2')}}">Rekom Pindah Madrasah</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('prsln2')}}">Pengantar Rekom Studi Luar Negeri</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbponpes2')}}">Rekom Bantuan Ponpes/Madin</a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbmf2')}}">Rekom Bantuan Madrasah Formal </a></li>  -->
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ritas2')}}">Rekom ITAS</a></li>  -->
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpu2')}}">Rekom Paspor Umroh</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rph2')}}">Rekom Paspor Haji</a></li>
+                            <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ppm2')}}">Piagam Pendirian Masjid</a></li>  -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan Lain yang Diperlukan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-table"></i><a href="{{route('sijazah2')}}">Suket Ijazah</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Pelayanan yang Diperlukan</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <!-- <li><i class="fa fa-table"></i><a href="{{route('mjamaah2')}}">Mutasi Jamaah</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- END OF MENU ADMIN 2 -->
+            @endif
+
         </nav>
     </aside><!-- /#left-panel -->
 
