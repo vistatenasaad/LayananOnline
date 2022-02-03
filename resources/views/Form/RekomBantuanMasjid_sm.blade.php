@@ -63,7 +63,8 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="/PengajuanDKP_sm/cetak_pdf" class="bg-button" type="submit">Download pdf</a>
+                             <!-- tambah detail-->
+                            <a href="/RekomBantuanMasjid_sm/cetak_pdf/{{$details}}" class="bg-button" type="submit">Download pdf</a>
                         </div>
                         <div class="form-row">
                             <div>Pastikan pula anda mendapatkan pemberitahuan pengajuan yang anda lakukan pada email (mungkin saja masuk di kotak spam).

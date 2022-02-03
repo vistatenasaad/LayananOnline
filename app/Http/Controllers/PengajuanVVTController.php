@@ -85,7 +85,17 @@ class PengajuanVVTController extends Controller
 		]);
 
 		if($pengajuan_vvt->save()){
-			return redirect('PengajuanVVT')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PengajuanVVT_sm', ['details' => $pengajuan_vvt->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+
+	//pdf
+	public function cetak_pdf($id){
+
+    	$pengajuan_vvt = pengajuan_vvt::find($id);
+
+    	$pdf = PDF::loadview('Form.PengajuanVVT_pdf',['pengajuan_vvt'=>$pengajuan_vvt]);
+    	 return $pdf->download('Pengajuan-VVT.pdf');
+		 return view('Form.PengajuanVVT_sm');
+    }
 }

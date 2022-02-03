@@ -16,7 +16,7 @@ use App\Tracking;
 class RekomBantuanMasjidController extends Controller
 {
     public function RekomBantuanMasjid(){
-		return view('Form.rekomBantuanMasjid');
+		return view('Form.RekomBantuanMasjid');
 	}
 
 	public function sukses(){
@@ -65,7 +65,17 @@ class RekomBantuanMasjidController extends Controller
 		]);
 
 		if($rekom_bantuan_masjid->save()){
-			return redirect('rekomBantuanMasjid')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.RekomBantuanMasjid_sm', ['details' => $rekom_bantuan_masjid->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+
+	//pdf
+	public function cetak_pdf($id){
+
+    	$rekom_bantuan_masjid = rekom_bantuan_masjid::find($id);
+
+    	$pdf = PDF::loadview('Form.RekomBantuanMasjid_pdf',['rekom_bantuan_masjid'=>$rekom_bantuan_masjid]);
+    	 return $pdf->download('RekomBantuanMasjid.pdf');
+		 return view('Form.RekomBantuanMasjid_sm');
+    }
 }

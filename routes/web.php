@@ -100,8 +100,8 @@ Route::post('/PengajuanRPTKA/upload', 'PengajuanRPTKAController@upload');
 //Rekomendasi
 Route::get('/PindahMadrasah', 'PindahMadrasahController@PindahMadrasahController');
 Route::post('/PindahMadrasah/upload', 'PindahMadrasahController@upload');
-Route::get('/rekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasjid');
-Route::post('rekomBantuanMasjid/upload', 'RekomBantuanMasjidController@upload');
+Route::get('/RekomBantuanMasjid', 'RekomBantuanMasjidController@RekomBantuanMasjid');
+Route::post('RekomBantuanMasjid/upload', 'RekomBantuanMasjidController@upload');
 Route::get('/rekomHaji', 'RekomHajiController@RekomHaji');
 Route::post('/rekomHaji/upload', 'RekomHajiController@upload');
 Route::get('/rekomPendirianRumahIbadah', 'RekomPendirianRumahIbadahController@RekomPendirianRumahIbadah');
