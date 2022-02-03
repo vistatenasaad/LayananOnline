@@ -70,7 +70,15 @@ class PengajuanRPTKAController extends Controller
 			]);
 
 			if($pengajuan_rptka->save()){
-				return redirect('PengajuanRPTKA')->with('sukses', 'File Has been uploaded successfully');
+				return view('Form.PengajuanRPTKA_sm', ['details' => $pengajuan_rptka->id])->with('sukses', 'File Has been uploaded successfully');
 			}
+		}
+		public function cetak_pdf($id){
+
+			$pengajuan_rptka = pengajuan_kitab::find($id);
+	
+			$pdf = PDF::loadview('Form.PengajuanRPTKA_pdf',['pengajuan_rptka'=>$pengajuan_rptka]);
+			 return $pdf->download('Pengajuan-RPTKA.pdf');
+			 return view('Form.PengajuanRPTKA_sm');
 		}
 }

@@ -72,7 +72,15 @@ class PengajuanIMTAController extends Controller
 		]);
 
 		if($pengajuan_imta->save()){
-			return redirect('PengajuanIMTA')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PengajuanIMTA_sm', ['details' => $pengajuan_imta->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+	public function cetak_pdf($id){
+
+    	$pengajuan_imta = pengajuan_imta::find($id);
+
+    	$pdf = PDF::loadview('Form.PengajuanIMTA_pdf',['pengajuan_imta'=>$pengajuan_imta]);
+    	 return $pdf->download('Pengajuan-IMTA.pdf');
+		 return view('Form.PengajuanIMTA_sm');
+    }
 }

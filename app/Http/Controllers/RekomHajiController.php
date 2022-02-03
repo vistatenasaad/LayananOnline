@@ -68,7 +68,17 @@ class RekomHajiController extends Controller
 		]);
 
 		if($rekom_haji->save()){
-			return redirect('rekomHaji')->with('sukses', 'File Has been uploaded successfully');
+			//return baru
+			return view('Form.rekomHaji_sm', ['details' => $rekom_haji->id])->with('sukses', 'File Has been uploaded successfully');		
 		}
 	}
+
+	public function cetak_pdf($id){
+
+    	$rekom_haji = rekom_haji::find($id);
+
+    	$pdf = PDF::loadview('Form.rekomHaji_pdf',['rekom_haji'=>$rekom_haji]);
+    	 return $pdf->download('Rekom-Haji.pdf');
+		 return view('Form.rekomHaji_sm');
+    }
 }
