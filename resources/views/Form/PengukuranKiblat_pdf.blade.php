@@ -20,8 +20,6 @@
 	</style>
 </head>
 <body>
-<br>
-<br>
 <table border="6" cellpadding="80" cellspacing="0" width="100%">
 <tr>
 	<td>
@@ -44,17 +42,15 @@
                 <p>Whatsapp: {{$pengukuran_kiblat['whatsapp']}} </p>
                 <p>Email: {{$pengukuran_kiblat['email']}} </p>
 				<p>Jenis Layanan: Pengukuran Arah Kiblat</p>
-				<br><br>
+				<br>
 				<h3>Berikut adalah Kode Tracking Status Pengajuan Surat Anda:</h3>
 				<h3>{{$pengukuran_kiblat['id']}}</h3>
-				<p></p>
-				<p></p>
 				</center>
 			</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td width="300px">
+			<td width="500px">
 				<p>Hormat Kami,
 				<br/>
 				<br/>

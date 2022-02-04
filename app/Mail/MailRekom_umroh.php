@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class MailTolak extends Mailable
+class MailRekom_umroh extends Mailable
 {
     use Queueable, SerializesModels;
     public $details;
@@ -29,6 +29,6 @@ class MailTolak extends Mailable
     public function build()
     {
         return $this->from('ratnaindah0124@gmail.com')
-                    ->view('Admin.tolak');
+                    ->view('Form.rekomUmroh_notify');
     }
 }

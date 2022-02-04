@@ -22,8 +22,6 @@
 	</style>
 </head>
 <body>
-<br>
-<br>
 <table border="6" cellpadding="80" cellspacing="0" width="100%">
 <tr>
 	<td>
@@ -45,17 +43,15 @@
                 <p>Whatsapp: {{$rekom_sln['whatsapp']}} </p>
                 <p>Email: {{$rekom_sln['email']}} </p>
 				<p>Jenis Layanan: Pengajuan Pengantar rekomendasi Studi Luar Negeri di Kota Batu</p>
-				<br><br>
+				<br>
 				<h3>Berikut adalah Kode Tracking Status Pengajuan Surat Anda:</h3>
 				<h3>{{$rekom_sln['id']}}</h3>
-				<p></p>
-				<p></p>
 				</center>
 			</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td width="300px">
+			<td width="500px">
 				<p>Hormat Kami,
 				<br/>
 				<br/>

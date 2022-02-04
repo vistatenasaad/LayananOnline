@@ -22,13 +22,13 @@
 	</style>
 </head>
 <body>
-<br>
-<br>
 <table border="6" cellpadding="80" cellspacing="0" width="100%">
 <tr>
 	<td>
 	<table width="100%">
-		<?php
+	<?php
+		// $sql=mysqli_query($koneksi, "SELECT * FROM warga WHERE id_warga='$_GET[id_warga]'");
+		// $d=mysqli_fetch_array($sql);
 		?>
 		<tr>
 			<td colspan="3">
@@ -42,20 +42,20 @@
 				<br>
 				<p>Terimakasih atas ajuan anda, detail ajuan sebagai berikut:</p>
 				<p>Nama: {{$pengajuan_d_k_p['nama']}} </p>
-                <p>Whatsapp: {{$pengajuan_d_k_p['nama']}} </p>
-                <p>Email: {{$pengajuan_d_k_p['nama']}} </p>
+                <p>Whatsapp: {{$pengajuan_d_k_p['whatsapp']}} </p>
+                <p>Email: {{$pengajuan_d_k_p['email']}} </p>
 				<p>Jenis Layanan: Pengajuan Surat Persetujuan Dana Kompensasi Penggunaan (DKP) Orang Asing</p>
-				<br><br>
+				<br>
 				<h3>Berikut adalah Kode Tracking Status Pengajuan Surat Anda:</h3>
 				<h3>{{$pengajuan_d_k_p['id']}}</h3>
-				<p></p>
-				<p></p>
+				<!-- <p></p>
+				<p></p> -->
 				</center>
 			</td>
 		</tr>
 		<tr>
 			<td></td>
-			<td width="300px">
+			<td width="500px">
 				<p>Hormat Kami,
 				<br/>
 				<br/>
@@ -73,4 +73,7 @@
 </html>
 
 <?php
+// }else{
+// 	header('location:login.php');
+// }
 ?>
