@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailNotify;
 use App\Mail\MailNotify_admin;
 use App\Tracking;
+use PDF;
 
 class PengukuranKiblatController extends Controller
 {

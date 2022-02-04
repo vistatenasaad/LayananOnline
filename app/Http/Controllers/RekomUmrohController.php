@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailRekom_umroh;
 use App\Mail\MailRekom_umroh_admin;
 use PDF;
+use App\Tracking;
 
 class RekomUmrohController extends Controller
 {

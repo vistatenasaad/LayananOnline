@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\MailPengajuan_vvt;
 use App\Mail\MailPengajuan_vvt_admin;
 use App\Tracking;
+use PDF;
 
 class PengajuanVVTController extends Controller
 {

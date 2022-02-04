@@ -11,7 +11,7 @@
 
     <!-- Title Page-->
     <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
-    <title>Form Pengajuan DKP Orang Asing</title>
+    <title>Rekomendasi Pendirian Rumah Ibadah></title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
  
     <!-- Font special for pages-->
@@ -64,11 +64,12 @@
                         </div>
                         <div class="card-footer">
                              <!-- tambah detail-->
-                            <a href="/rekomSLN_sm/cetak_pdf/{{$details}}" class="bg-button" type="submit">Download pdf</a>
+                            <a href="/rekomPendirianRumahIbadah_sm/cetak_pdf/{{$details}}" class="bg-button" type="submit">Download pdf</a>
                         </div>
                         <div class="form-row">
                             <div>Pastikan pula anda mendapatkan pemberitahuan pengajuan yang anda lakukan pada email (mungkin saja masuk di kotak spam).
                         </div>
+                        <br><br><br><br>
                 </div>
             </div>
         </div>

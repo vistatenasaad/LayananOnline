@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use File;
 use Session;
+use PDF;
 use App\pengajuan_rptka;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Mail;
@@ -75,7 +76,7 @@ class PengajuanRPTKAController extends Controller
 		}
 		public function cetak_pdf($id){
 
-			$pengajuan_rptka = pengajuan_kitab::find($id);
+			$pengajuan_rptka = pengajuan_rptka::find($id);
 	
 			$pdf = PDF::loadview('Form.PengajuanRPTKA_pdf',['pengajuan_rptka'=>$pengajuan_rptka]);
 			 return $pdf->download('Pengajuan-RPTKA.pdf');

@@ -41,7 +41,7 @@
 				<hr>
 				<br>
 				<p>Terimakasih atas ajuan anda, detail ajuan sebagai berikut:</p>
-				<p>Nama: {{$rekom_sln['nama']}} </p>
+				<p>Nama: {{$rekom_sln['nama_siswa']}} </p>
                 <p>Whatsapp: {{$rekom_sln['whatsapp']}} </p>
                 <p>Email: {{$rekom_sln['email']}} </p>
 				<p>Jenis Layanan: Pengajuan Pengantar rekomendasi Studi Luar Negeri di Kota Batu</p>
