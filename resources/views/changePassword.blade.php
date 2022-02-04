@@ -1,4 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.layout')
+@section('nama_user', 'Admin Profile')
+@section('page_title', $pagetitle)
+@section('sub_title', $subtitle)
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

@@ -29,7 +29,7 @@ class Admin2Controller extends Controller
             ->get();
         $judul = "Data Masuk";
         $subjudul = "Dashboard";
-        return view('admin2', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
+        return view('admindatamasuk', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function cekdata2()
     {

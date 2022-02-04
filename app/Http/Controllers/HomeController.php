@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Tracking;
 
 class HomeController extends Controller
 {
@@ -23,16 +24,52 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin1home');
+        $jml1 = Tracking::all()->count();
+        $jml2 = Tracking::where('status', '=', '1')->count();
+        $jml3 = Tracking::where('status', '=', '2')->count();
+        $jml4 = Tracking::where('status', '=', '11')->count();
+        return view(
+            'admin1home',
+            [
+                'jml1' => $jml1,
+                'jml2' => $jml2,
+                'jml3' => $jml3,
+                'jml4' => $jml4,
+            ]
+        );
     }
 
     public function home1()
     {
-        return view('admin1home');
+        $jml1 = Tracking::all()->count();
+        $jml2 = Tracking::where('status', '=', '1')->count();
+        $jml3 = Tracking::where('status', '=', '2')->count();
+        $jml4 = Tracking::where('status', '=', '11')->count();
+        return view(
+            'admin1home',
+            [
+                'jml1' => $jml1,
+                'jml2' => $jml2,
+                'jml3' => $jml3,
+                'jml4' => $jml4,
+            ]
+        );
     }
 
     public function home2()
     {
-        return view('admin2home');
+        $jml1 = Tracking::all()->count();
+        $jml2 = Tracking::where('status', '=', '2')->count();
+        $jml3 = Tracking::where('status', '=', '3')->count();
+        $jml4 = Tracking::where('status', '=', '12')->count();
+        return view(
+            'admin2home',
+            [
+                'jml1' => $jml1,
+                'jml2' => $jml2,
+                'jml3' => $jml3,
+                'jml4' => $jml4,
+            ]
+        );
     }
 }

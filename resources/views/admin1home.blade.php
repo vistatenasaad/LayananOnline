@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <h4 class="mb-0">
-                    <span class="count">10468</span>
+                    <span class="count">{{$jml1}}</span>
                 </h4>
                 <p class="text-light">Data Masuk</p>
             </div>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <h4 class="mb-0">
-                    <span class="count">10468</span>
+                    <span class="count">{{$jml2}}</span>
                 </h4>
                 <p class="text-light">Belum Diperiksa</p>
 
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <h4 class="mb-0">
-                    <span class="count">10468</span>
+                    <span class="count">{{$jml3}}</span>
                 </h4>
                 <p class="text-light">Selesai</p>
             </div>
@@ -95,7 +95,7 @@
                     </div>
                 </div>
                 <h4 class="mb-0">
-                    <span class="count">10468</span>
+                    <span class="count">{{$jml4}}</span>
                 </h4>
                 <p class="text-light">Belum Lengkap</p>
 

@@ -26,7 +26,9 @@ class ChangePasswordController extends Controller
      */
     public function index()
     {
-        return view('changePassword');
+        $judul = "Change Password";
+        $subjudul = "Dashboard";
+        return view('changePassword', ['pagetitle' => $judul, 'subtitle' => $subjudul]);
     } 
    
     /**

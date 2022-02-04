@@ -10,7 +10,14 @@
     </div>
     <div class="card-body card-block">
         @foreach($data as $d)
+
+        @if(auth()->user()->role == 'admin1')
         <form action="/subtolak1" method="post" class="form-horizontal">
+        @endif
+        @if(auth()->user()->role == 'admin2')
+        <form action="/subtolak2" method="post" class="form-horizontal">
+        @endif
+
             @csrf
             <div class="content mt-3">
                 <div class="animated fadeIn">

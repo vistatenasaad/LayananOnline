@@ -309,6 +309,8 @@ Route::get('/verif2/{id}', 'DetailController@verif2')->name('verif2');
 
 Route::get('/tolak1/{id}', 'DetailController@tolak1')->name('tolak1');
 Route::post('/subtolak1', 'DetailController@prosestolak1')->name('subtolak1');
+Route::get('/tolak2/{id}', 'DetailController@tolak2')->name('tolak2');
+Route::post('/subtolak2', 'DetailController@prosestolak2')->name('subtolak2');
 
 Route::get('change-password', 'ChangePasswordController@index')->name('change-password');
 Route::post('change-password', 'ChangePasswordController@store')->name('change.password');

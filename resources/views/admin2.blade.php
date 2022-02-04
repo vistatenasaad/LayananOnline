@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('nama_user', 'Admin Front Office')
+@section('nama_user', 'Admin Back Office')
 @section('page_title', $pagetitle)
 @section('sub_title', $subtitle)
 @section('content')

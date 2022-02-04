@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\MailTolak;
+use App\Mail\MailSelesai;
 
 use App\Tracking;
 use App\pengajuan_imta;
@@ -222,6 +223,16 @@ class DetailController extends Controller
     public function verif2($id)
     {
         $data = Tracking::find($id);
+        $tabel = $data->layanan;
+        $datafind = DB::table($tabel)
+            ->find($id);
+        $details = [
+            'id' => $id,
+            'email' => $datafind->email
+        ];
+
+        Mail::to($datafind->email)->send(new MailSelesai($details));
+        
         $data->status = "3";
         $data->save();
         return redirect('/home2');
@@ -229,9 +240,34 @@ class DetailController extends Controller
 
     public function tolak2($id)
     {
+        $data = DB::table('tracking')
+            ->where('kode', '=', $id)
+            ->get();
+        return view('Admin.tolak', ['data' => $data]);
         // $data = Tracking::find($id);
         // $data->status = "12";
         // $data->save();
         // return redirect('/home1');
+    }
+
+    public function prosestolak2(Request $request)
+    {
+        $tabel = $request->layanan;
+        $id = $request->kode;
+        $data = DB::table($tabel)
+            ->find($id);
+
+        // return view('cek', ['data' => $data]);
+        $details = [
+            'id' => $request->kode,
+            'email' => $data->email,
+            'pesan' => $request->pesan
+        ];
+        Mail::to($data->email)->send(new MailTolak($details));
+
+        $data = Tracking::find($id);
+        $data->status = "12";
+        $data->save();
+        return redirect('/home2');
     }
 }
