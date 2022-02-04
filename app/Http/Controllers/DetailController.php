@@ -54,7 +54,7 @@ class DetailController extends Controller
             ->where('rekom_bantuan_masjid.id', '=', $id)
             ->get();
         $judul = "Rekom Bantuan Masjid";
-        return view('Admin.detail1pengukurankiblat', ['data' => $data, 'pagetitle' => $judul]);
+        return view('Admin.detail1bantuanmasjid', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function detail1dkp($id)
     {
@@ -104,8 +104,8 @@ class DetailController extends Controller
     public function detail1pendirianri($id)
     {
         $data = DB::table('tracking')
-            ->join('rekom_bantuan_masjid', 'rekom_bantuan_masjid.id', '=', 'tracking.kode')
-            ->where('rekom_bantuan_masjid.id', '=', $id)
+            ->join('rekom_pendirian_ri', 'rekom_pendirian_ri.id', '=', 'tracking.kode')
+            ->where('rekom_pendirian_ri.id', '=', $id)
             ->get();
         $judul = "Rekomendasi Ijin Pendirian Rumah Ibadah";
         return view('Admin.detail1pendirianri', ['data' => $data, 'pagetitle' => $judul]);

@@ -281,6 +281,24 @@ Route::get('/sijazah2', 'Admin2Controller@sijazah2')->name('sijazah2');
 Route::get('/mjamaah2', 'Admin2Controller@mjamaah2')->name('mjamaah2');
 
 // DETAIL
+Route::get('/detail/rekom_bantuan_masjid/{id}', 'DetailController@detail1bantuanmasjid');
+Route::get('/detail/pengajuan_d_k_p/{id}', 'DetailController@detail1dkp');
+Route::get('/detail/rekom_haji/{id}', 'DetailController@detail1haji');
+Route::get('/detail/pengajuan_imta/{id}', 'DetailController@detail1imta');
+Route::get('/detail/pengajuan_naturalisasi/{id}', 'DetailController@detail1naturalisasi');
+Route::get('/detail/permohonan_pajak/{id}', 'DetailController@detailpajak');
+Route::get('/detail/rekom_pendirian_ri/{id}', 'DetailController@detail1pendirianri');
+Route::get('/detail/pengajuan_kitab/{id}', 'DetailController@detail1pengajuankitab');
+Route::get('/detail/pengukuran_kiblat/{id}', 'DetailController@detail1pengukurankiblat');
+Route::get('/detail/pindah_madrasah/{id}', 'DetailController@detail1pindahmadrasah');
+Route::get('/detail/rekom_sln/{id}', 'DetailController@detail1rekomsln');
+Route::get('/detail/pengajuan_rptka/{id}', 'DetailController@detail1rptka');
+Route::get('/detail/permohonan_slipgaji/{id}', 'DetailController@detail1slipgaji');
+Route::get('/detail/rekom_umroh/{id}', 'DetailController@detail1umroh');
+Route::get('/detail/pengajuan_vvt/{id}', 'DetailController@detail1vvt');
+
+
+//
 
 Route::get('/detail/{id}', 'DetailController@detail1')->name('detail1');
 Route::get('/verif/{id}', 'DetailController@verif1')->name('verif1');
@@ -291,11 +309,6 @@ Route::get('/verif2/{id}', 'DetailController@verif2')->name('verif2');
 
 Route::get('/tolak1/{id}', 'DetailController@tolak1')->name('tolak1');
 Route::post('/subtolak1', 'DetailController@prosestolak1')->name('subtolak1');
-<<<<<<< HEAD
 
 Route::get('change-password', 'ChangePasswordController@index')->name('change-password');
 Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
-=======
-Route::post('/tracking/search', 'DetailController@tracking')->name('trackingfind');
-// Route::get('/tracking/{id}', 'DetailController@tolak1')->name('tolak1');
->>>>>>> 5a7cdad3998fb8547c45c32588b16ff52bccdb66
