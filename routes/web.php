@@ -80,6 +80,8 @@ Route::get('/tracking', function () {
     return view('Tracking', ['data' => $data]);
 });
 
+Route::post('/tracking/search', 'DetailController@tracking');
+
 //Informasi
 Route::get('/PengukuranKiblat', 'PengukuranKiblatController@PengukuranKiblat');
 Route::post('/PengukuranKiblat/upload', 'PengukuranKiblatController@upload');
