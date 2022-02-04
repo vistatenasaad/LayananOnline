@@ -19,16 +19,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Nama Siswa :</th>
-                                        <th scope="col">{{$d->nama_siswa}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Asal Madrasah/Pondok :</th>
-                                        <th scope="col">{{$d->asal_madrasah}}</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="col">Negara Tujuan :</th>
-                                        <th scope="col">{{$d->negara_tujuan}}</th>
+                                        <th scope="col">Nama :</th>
+                                        <th scope="col">{{$d->nama}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -55,80 +47,100 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">File Legalitas</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_surat_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_legalitas}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Keterangan Diterima</strong>
+                            <strong class="card-title">File DRH</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_diterima}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_drh}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Jaminan</strong>
+                            <strong class="card-title">File Ijazah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_surat_jaminan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Legalisir Ijazah</strong>
+                            <strong class="card-title">File RPTKA dan IMTA</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_legalisir_ijazah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_rptka_imta}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Scan Paspor</strong>
+                            <strong class="card-title">File Statistik jamaah/peserta didik</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_scan_paspor}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_statistik}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Biodata Pemohon</strong>
+                            <strong class="card-title">Paspor dan KITAS</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_biodata}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_paspor_kitas}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Pakta Integritas</strong>
+                            <strong class="card-title">File Polis Asuransi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_pakta_integritas}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_polis_asuransi}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Pernyataan Kebenaran Dokumen</strong>
+                            <strong class="card-title">File Foto</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_pernyataan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_foto}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File SKKB/SKCK</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_skkb_skck}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Surat Persetujuan Sebelumnya</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_persetujuan_sebelumnya}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

@@ -19,8 +19,16 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Nama :</th>
-                                        <th scope="col">{{$d->nama}}</th>
+                                        <th scope="col">Nama Siswa :</th>
+                                        <th scope="col">{{$d->nama_siswa}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Asal Madrasah :</th>
+                                        <th scope="col">{{$d->asal_madrasah}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Madrasah dan Kota yang Tertuju :</th>
+                                        <th scope="col">{{$d->madrasah_dituju}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -47,20 +55,38 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">Surat Permohonan Rekomendasi Pindah Sekolah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_permohonan_rekomendasi}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">Surat Keterangan Pindah Sekolah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_sk_pindah}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Surat Keterangan Diterima</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_sk_diterima}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Raport Siswa</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_rapot_siswa}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

@@ -47,23 +47,41 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">Dokumen Porsi Haji</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_porsi_haji}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">Scan KTP</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_ktp}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Scan Kartu Keluarga</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_kk}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Dokumen Pendukung</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_pendukung}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">

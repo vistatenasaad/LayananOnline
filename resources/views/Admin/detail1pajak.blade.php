@@ -47,7 +47,7 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">Upload CV</strong>
                         </div>
                         <div class="card-body">
                             <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>

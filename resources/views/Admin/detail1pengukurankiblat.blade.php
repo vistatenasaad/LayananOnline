@@ -23,6 +23,10 @@
                                         <th scope="col">{{$d->nama}}</th>
                                     </tr>
                                     <tr>
+                                        <th scope="col">Nama Masjid atau Mushalla :</th>
+                                        <th scope="col">{{$d->nama_masjid}}</th>
+                                    </tr>
+                                    <tr>
                                         <th scope="col">Email :</th>
                                         <th scope="col">{{$d->email}}</th>
                                     </tr>
@@ -57,7 +61,7 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">Foto Tempat/ Lokasi</strong>
                         </div>
                         <div class="card-body">
                             <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>

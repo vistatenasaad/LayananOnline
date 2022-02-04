@@ -19,8 +19,12 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Nama :</th>
-                                        <th scope="col">{{$d->nama}}</th>
+                                        <th scope="col">Nama Pemohon :</th>
+                                        <th scope="col">{{$d->nama_pemohon}}</th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="col">Nama Masjid atau Mushalla :</th>
+                                        <th scope="col">{{$d->nama_masjid}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -47,20 +51,30 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">Surat Permohonan Rekomendasi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_permohonan_rekom}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">Surat Keterangan Terdaftar dari KUA</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_sk_terdaftar}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Proposal Permohonan Bantuan</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_permohonan_bantuan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

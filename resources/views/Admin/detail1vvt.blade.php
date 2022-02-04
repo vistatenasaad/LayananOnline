@@ -47,20 +47,80 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">File Legalitas</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_legalitas}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">File DRH</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_drh}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Ijazah</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">Foto RPTKA</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_rptka}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Statistik jamaah/peserta didik</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_statistik}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Polis Asuransi</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_polis_asuransi}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Foto</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->foto}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Permohonan VTT</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->permohonan_vvt}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
