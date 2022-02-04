@@ -68,21 +68,43 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <form enctype="multipart/form-data" action="/PengajuanIMTA/upload" method="POST">
+                        <form enctype="multipart/form-data" action="/tracking/search" method="POST">
                             @csrf
                             <div class="form-row">
-                                <div class="name">Nama Lembaga Asal</div>
+                                <div class="name">Kode Tracking</div>
                                 <div class="value">
                                     <div class="input-group">
-                                        <input class="input--style-6" type="text" name="nama_lembaga" required placeholder="Masukkan Nama Anda">
+                                        <input class="input--style-6" type="text" name="id" required placeholder="Masukkan Kode Tracking">
                                     </div>
-                                    <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
+                                    <div class="label--desc">
+                                        <button class="bg-button" type="submit">Lacak</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <div class="form-row">
-                        <a href="/PengajuanDKP_sm/" class="bg-button" type="submit">Lacak</a>
+
+                        @if($data != null)
+                        @foreach($data as $d)
+                        <?php
+                        $status = "-";
+                        if ($d->status == "1") {
+                            $status = " berhasil diupload";
+                        } else if ($d->status == "2") {
+                            $status = " sedang diperiksa oleh admin";
+                        } else if ($d->status == "3") {
+                            $status = " SELESAI";
+                        } else if ($d->status == "11") {
+                            $status = " DITOLAK karena tidak lengkap";
+                        } else {
+                            $status = " DITOLAK karena terdapat kesalahan";
+                        }
+                        ?>
+                        <div class="form-row">
+                            <p>Status pengajuan dengan kode  "<code>{{$d->id}}</code>" </p>
+                            <p> <strong> {{$status}}</strong></p>
+                        </div>
+                        @endforeach
+                        @endif
                     </div>
                     <br><br><br><br>
                 </div>

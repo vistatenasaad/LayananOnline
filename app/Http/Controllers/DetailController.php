@@ -26,6 +26,18 @@ use App\rekom_umroh;
 
 class DetailController extends Controller
 {
+    public function tracking(Request $request)
+    {
+        $id = $request->id;
+        $datafind =Tracking::find($id);
+        $tabel = $datafind->layanan;
+        $data = DB::table('tracking')
+            ->join($tabel, $tabel.'.id', '=', 'tracking.kode')
+            ->where($tabel.'.id', '=', $id)
+            ->get();
+        return view('Tracking', ['data' => $data]);
+    }
+
     public function detail1($id)
     {
         $data = DB::table('tracking')
@@ -33,7 +45,7 @@ class DetailController extends Controller
             ->where('pengukuran_kiblat.id', '=', $id)
             ->get();
         $judul = "Pengukuran Kiblat";
-        return view('Admin.detail1kiblat', ['data' => $data, 'pagetitle' => $judul]);
+        return view('Admin.detail1pengukurankiblat', ['data' => $data, 'pagetitle' => $judul]);
     }
 
     public function verif1($id)
@@ -78,7 +90,7 @@ class DetailController extends Controller
         $data = Tracking::find($id);
         $data->status = "3";
         $data->save();
-        return redirect('/home1');
+        return redirect('/home2');
     }
 
     public function tolak2($id)

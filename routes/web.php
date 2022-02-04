@@ -76,7 +76,8 @@ Route::get('/pelayanan', function () {
 });
 
 Route::get('/tracking', function () {
-    return view('Tracking');
+    $data = null;
+    return view('Tracking', ['data' => $data]);
 });
 
 //Informasi
@@ -285,5 +286,10 @@ Route::get('/detail/{id}', 'DetailController@detail1')->name('detail1');
 Route::get('/verif/{id}', 'DetailController@verif1')->name('verif1');
 // Route::get('/tolak/{id}', 'DetailController@tolak1')->name('tolak1');
 
+Route::get('/detail2/{id}', 'DetailController@detail2')->name('detail2');
+Route::get('/verif2/{id}', 'DetailController@verif2')->name('verif2');
+
 Route::get('/tolak1/{id}', 'DetailController@tolak1')->name('tolak1');
 Route::post('/subtolak1', 'DetailController@prosestolak1')->name('subtolak1');
+Route::post('/tracking/search', 'DetailController@tracking')->name('trackingfind');
+// Route::get('/tracking/{id}', 'DetailController@tolak1')->name('tolak1');
