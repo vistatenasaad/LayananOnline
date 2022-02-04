@@ -105,12 +105,12 @@
                                 <div class="label--desc">Foto lokasi yang dimintakan pengukuran arah kiblat pada Kankemenag Kota Batu dengan ukuran file. Maksimal 2MB dengan jenis file .jpg, .png, .gif, .jpeg</div>
                             </div>
                         </div>
-                        <div class="form-row">
+                        <!-- <div class="form-row">
                             <label for="captcha">Captcha</label>
                             {!! NoCaptcha::renderJs() !!}
                             {!! NoCaptcha::display() !!}
                             <span class="text-danger">{{ $errors->first('g-recaptcha-response') }}</span>
-                        </div>
+                        </div> -->
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>

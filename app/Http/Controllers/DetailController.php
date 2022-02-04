@@ -4,20 +4,36 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use \Illuminate\Support\Facades\DB;
-use App\pengajuan_d_k_p;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailTolak;
 
 use App\Tracking;
+use App\pengajuan_imta;
+use App\pengajuan_d_k_p;
+use App\pengajuan_kitab;
+use App\pengajuan_naturalisasi;
+use App\pengajuan_rptka;
+use App\pengajuan_vvt;
+use App\pengukuran_kiblat;
+use App\permohonan_pajak;
+use App\permohonan_slipgaji;
+use App\pindah_madrasah;
+use App\rekom_bantuan_masjid;
+use App\rekom_haji;
+use App\rekom_pendirian_ri;
+use App\rekom_sln;
+use App\rekom_umroh;
 
 class DetailController extends Controller
 {
     public function detail1($id)
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-            ->where('pengajuan_d_k_p.id', '=', $id)
+            ->join('pengukuran_kiblat', 'pengukuran_kiblat.id', '=', 'tracking.kode')
+            ->where('pengukuran_kiblat.id', '=', $id)
             ->get();
-        $judul = "Dana Kompensasi Penggunaan Orang Asing";
-        return view('Admin.admin1detail', ['data' => $data, 'pagetitle' => $judul]);
+        $judul = "Pengukuran Kiblat";
+        return view('Admin.detail1kiblat', ['data' => $data, 'pagetitle' => $judul]);
     }
 
     public function verif1($id)
@@ -30,10 +46,31 @@ class DetailController extends Controller
 
     public function tolak1($id)
     {
-        // $data = Tracking::find($id);
-        // $data->status = "11";
-        // $data->save();
-        // return redirect('/home1');
+        $data = DB::table('tracking')
+            ->where('kode', '=', $id)
+            ->get();
+        return view('Admin.tolak', ['data' => $data]);
+    }
+
+    public function prosestolak1(Request $request)
+    {
+        $tabel = $request->layanan;
+        $id = $request->kode;
+        $data = DB::table($tabel)
+            ->find($id);
+
+        // return view('cek', ['data' => $data]);
+        $details = [
+            'id' => $request->kode,
+            'email' => $data->email,
+            'pesan' => $request->pesan
+        ];
+        Mail::to($data->email)->send(new MailTolak($details));
+
+        $data = Tracking::find($id);
+        $data->status = "11";
+        $data->save();
+        return redirect('/home1');
     }
 
     public function verif2($id)

@@ -31,6 +31,10 @@ Route::get('/Menu', function () {
     return view('menu');
 });
 
+// Route::get('/COBA', function () {
+//     return view('Form.Tolak_notify');
+// });
+
 Route::get('/informasi', function () {
     return view('Informasi');
 });
@@ -279,4 +283,7 @@ Route::get('/mjamaah2', 'Admin2Controller@mjamaah2')->name('mjamaah2');
 
 Route::get('/detail/{id}', 'DetailController@detail1')->name('detail1');
 Route::get('/verif/{id}', 'DetailController@verif1')->name('verif1');
-Route::get('/tolak/{id}', 'DetailController@tolak1')->name('tolak1');
+// Route::get('/tolak/{id}', 'DetailController@tolak1')->name('tolak1');
+
+Route::get('/tolak1/{id}', 'DetailController@tolak1')->name('tolak1');
+Route::post('/subtolak1', 'DetailController@prosestolak1')->name('subtolak1');

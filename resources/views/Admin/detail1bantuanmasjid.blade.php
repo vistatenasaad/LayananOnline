@@ -71,7 +71,11 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
+<<<<<<< HEAD
                             <strong class="card-title">Proposal Permohonan Bantuan</strong>
+=======
+                            <strong class="card-title">Foto Tempat/Lokasi<strong>
+>>>>>>> 45d1dedfd15e5ec9dee09081c7cb975e5b668823
                         </div>
                         <div class="card-body">
                             <iframe src="/{{$d->file_permohonan_bantuan}}" width="100%" style="height:500px"></iframe>
