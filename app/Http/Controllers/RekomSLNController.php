@@ -16,7 +16,7 @@ use App\Tracking;
 class RekomSLNController extends Controller
 {
     public function RekomSLN(){
-		return view('Form.RekomSLN');
+		return view('Form.rekomSLN');
 	}
 
 	public function sukses(){
@@ -86,7 +86,17 @@ class RekomSLNController extends Controller
 		]);
 
 		if($rekom_sln->save()){
-			return redirect('RekomSLN')->with('sukses', 'File Has been uploaded successfully');
+			//return baru
+			return view('Form.rekomSLN_sm', ['details' => $rekom_sln->id])->with('sukses', 'File Has been uploaded successfully');		
 		}
 	}
+
+	public function cetak_pdf($id){
+
+    	$rekom_sln = rekom_sln::find($id);
+
+    	$pdf = PDF::loadview('Form.rekomSLN_pdf',['rekom_sln'=>$rekom_sln]);
+    	 return $pdf->download('Rekom-SLN.pdf');
+		 return view('Form.rekomSLN_sm');
+    }
 }

@@ -10,7 +10,7 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.png" />
     <title>Rekomendasi Pendirian Rumah Ibadah</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -53,7 +53,7 @@
                         <strong>{{ $message }}</strong>
                     </div>
 				@endif
-                    <form enctype="multipart/form-data" action="/RekomPendirianRumahIbadah/upload" method="POST">
+                    <form enctype="multipart/form-data" action="/rekomPendirianRumahIbadah/upload" method="POST">
                     @csrf
                         <div class="form-row">
                         <div class="name">Asal Surat</div>
@@ -143,6 +143,7 @@
                         </div>
                         <div class="card-footer">
                             <p>Catatan: Pastikan isian sudah sesuai sebelum melakukan kirim data</p><br>
+                            <p>         Ketika data berhasil terkirim akan terdapat keterangan sukses</p><br>
                             <button class="bg-button" type="submit">Ajukan</button>
                         </div>
                     </form>

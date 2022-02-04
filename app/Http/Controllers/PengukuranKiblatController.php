@@ -61,7 +61,17 @@ class PengukuranKiblatController extends Controller
 		]);
 
 		if($pengukuran_kiblat->save()){
-			return redirect('PengukuranKiblat')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PengukuranKiblat_sm', ['details' => $pengukuran_kiblat->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+
+	//pdf
+	public function cetak_pdf($id){
+
+    	$pengukuran_kiblat = pengukuran_kiblat::find($id);
+
+    	$pdf = PDF::loadview('Form.PengukuranKiblat_pdf',['pengukuran_kiblat'=>$pengukuran_kiblat]);
+    	 return $pdf->download('PengukuranKiblat.pdf');
+		 return view('Form.PengukuranKiblat_sm');
+    }
 }

@@ -71,7 +71,17 @@ class PindahMadrasahController extends Controller
 		]);
 
 		if($pindah_madrasah->save()){
-			return redirect('PindahMadrasah')->with('sukses', 'File Has been uploaded successfully');
+			return view('Form.PengajuanDKP_sm', ['details' => $pengajuan_d_k_p->id])->with('sukses', 'File Has been uploaded successfully');
 		}
 	}
+
+	//pdf
+	public function cetak_pdf($id){
+
+    	$pindah_madrasah = pindah_madrasah::find($id);
+
+    	$pdf = PDF::loadview('Form.PengajuanDKP_pdf',['pindah_madrasah'=>$pindah_madrasah]);
+    	 return $pdf->download('Pengajuan-DKP.pdf');
+		 return view('Form.PengajuanDKP_sm');
+    }
 }
