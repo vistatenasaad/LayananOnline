@@ -47,28 +47,64 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">File Akta</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_akta}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">File Statistik jamaah/peserta didiki</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_statistik}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Legalitas</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_legalitas}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Nama Orang Asing dan Pendamping</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_orsing_pendamping}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Penunjukan Pendamping Orang Asing</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_surat_pendamping}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-body">
+                        <<div class="card-body">
+                        @if(auth()->user()->role == 'admin1')
                             <a href="{{route('verif1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
                             <a href="{{route('tolak1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
+                            @endif
+                            @if(auth()->user()->role == 'admin2')
+                            <a href="{{route('verif2', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
+                            <a href="{{route('tolak2', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
+                            @endif
                         </div>
                     </div>
                 </div>

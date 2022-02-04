@@ -19,8 +19,8 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Asal Surat :</th>
-                                        <th scope="col">{{$d->asal_surat}}</th>
+                                        <th scope="col">Nama :</th>
+                                        <th scope="col">{{$d->nama}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -47,60 +47,100 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan Rekomendasi</strong>
+                            <strong class="card-title">File Legalitas</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_legalitas}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Susunan pengurus rumah ibadah/takmir</strong>
+                            <strong class="card-title">File DRH</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_susunan_pengurus}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_drh}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Keterangan Kepemilikan Tanah/Status Tanah</strong>
+                            <strong class="card-title">File Ijazah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_tanah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Keterangan Domisili dari Desa/Kelurahan</strong>
+                            <strong class="card-title">File RPTKA dan IMTA</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_domisili}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_rptka_imta}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Daftar Nama dan KTP Pengguna Rumah Ibadah</strong>
+                            <strong class="card-title">File Statistik jamaah/peserta didik</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_nama_ktp}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_statistik}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Dukungan Masyarakat Setempat</strong>
+                            <strong class="card-title">Paspor dan KITAS</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_dukungan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_paspor_kitas}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Polis Asuransi</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_polis_asuransi}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Foto</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_foto}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File SKKB/SKCK</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_skkb_skck}}" width="100%" style="height:500px"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong class="card-title">File Surat Persetujuan Sebelumnya</strong>
+                        </div>
+                        <div class="card-body">
+                            <iframe src="/{{$d->file_persetujuan_sebelumnya}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

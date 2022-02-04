@@ -47,28 +47,34 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Surat Permohonan</strong>
+                            <strong class="card-title">Scan KTP</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_ktp}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title">Foto Tempat/ Lokasi/strong>
+                            <strong class="card-title">Surat Permohonan dari Penyelenggara Umroh(PPIU)</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/{{$d->file_ppiu}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-body">
+                    <div class="card-body">
+                        @if(auth()->user()->role == 'admin1')
                             <a href="{{route('verif1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
                             <a href="{{route('tolak1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
+                            @endif
+                            @if(auth()->user()->role == 'admin2')
+                            <a href="{{route('verif2', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
+                            <a href="{{route('tolak2', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
+                            @endif
                         </div>
                     </div>
                 </div>

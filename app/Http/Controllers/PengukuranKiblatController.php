@@ -47,13 +47,13 @@ class PengukuranKiblatController extends Controller
 			'email' => $request->email
         ];
 		
-		request()->validate([
-			'g-recaptcha-response' => 'required|captcha',
-		]);
+		// request()->validate([
+		// 	'g-recaptcha-response' => 'required|captcha',
+		// ]);
 		//notif email
-        Mail::to($request->email)->send(new MailNotify($details));
-		Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
-		Mail::to("irmarista16@gmail.com")->send(new MailNotify_admin($details));
+        // Mail::to($request->email)->send(new MailNotify($details));
+		// Mail::to("ratnaindah0124@gmail.com")->send(new MailNotify_admin($details));
+		// Mail::to("irmarista16@gmail.com")->send(new MailNotify_admin($details));
 
 		Tracking::create([
 			'kode' => $pengukuran_kiblat->id,

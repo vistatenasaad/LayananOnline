@@ -291,5 +291,11 @@ Route::get('/verif2/{id}', 'DetailController@verif2')->name('verif2');
 
 Route::get('/tolak1/{id}', 'DetailController@tolak1')->name('tolak1');
 Route::post('/subtolak1', 'DetailController@prosestolak1')->name('subtolak1');
+<<<<<<< HEAD
+
+Route::get('change-password', 'ChangePasswordController@index')->name('change-password');
+Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
+=======
 Route::post('/tracking/search', 'DetailController@tracking')->name('trackingfind');
 // Route::get('/tracking/{id}', 'DetailController@tolak1')->name('tolak1');
+>>>>>>> 5a7cdad3998fb8547c45c32588b16ff52bccdb66
