@@ -60,7 +60,7 @@ class Admin1Controller extends Controller
             ->get();
         $judul = "Pengukuran Kiblat";
         $subjudul = "Informasi";
-        return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function slipgaji1()
     {
@@ -130,7 +130,7 @@ class Admin1Controller extends Controller
         //     ->where('tracking.status', '=', '1')
         // ->get();
         // $judul = "Ikrar Masuk Islam";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function sertifhalal1()
     {
@@ -139,7 +139,7 @@ class Admin1Controller extends Controller
         //     ->where('tracking.status', '=', '1')
         // ->get();
         // $judul = "Sertifikasi Halal";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function limpahanporsihaji1()
     {
@@ -148,7 +148,7 @@ class Admin1Controller extends Controller
         //     ->where('tracking.status', '=', '1')
         // ->get();
         // $judul = "Pelimpahan Porsi Haji";
-        // return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
+        // return view('admin1', ['data' => $data, 'pagetitle' => $judul, 'subtitle' => $subjudul]);
     }
     public function limpahanporsihajisakit1()
     {
