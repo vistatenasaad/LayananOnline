@@ -59,6 +59,7 @@ class Admin1Controller extends Controller
             ->where('tracking.status', '=', '1')
             ->get();
         $judul = "Pengukuran Kiblat";
+        $subjudul = "Informasi";
         return view('admin1', ['data' => $data, 'pagetitle' => $judul]);
     }
     public function slipgaji1()

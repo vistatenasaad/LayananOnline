@@ -11,21 +11,27 @@
 
     <!-- Title Page-->
     <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
-    <title>Tracking</title>
+    <title>Form Pengajuan DKP Orang Asing</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
- 
+
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
 
     <!-- Main CSS-->
     <link href="{!! asset('assets/css/main.css') !!}" rel="stylesheet" media="all">
     <style type="text/css">
-         html,body{height: 100%;}
-         .bg-utama{
+        html,
+        body {
+            height: 100%;
+        }
+
+        .bg-utama {
             background-color: #1ca223
-         }
-         .bg-button{
-            background-color: #1ca223; /* Hijau */
+        }
+
+        .bg-button {
+            background-color: #1ca223;
+            /* Hijau */
             border: none;
             color: white;
             padding: 15px 32px;
@@ -36,7 +42,7 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-      </style>
+    </style>
 </head>
 
 <body>
@@ -48,31 +54,37 @@
                     <h2 class="title">Tracking</h2>
                 </div>
                 <div class="card-body">
-                @if ($message = Session::get('sukses'))
-				<div class="alert alert-success alert-block">
-					<strong>{{ $message }}</strong>
-				</div>
-				@endif
+                    @if ($message = Session::get('sukses'))
+                    <div class="alert alert-success alert-block">
+                        <strong>{{ $message }}</strong>
+                    </div>
+                    @endif
                     @csrf
-                        <div class="form-row">
-                        <h3>Untuk melacak status pengajuan, masukkan Kode Tracking Pengajuan yang telah dikirmkan melalui email / Whatsapp.</h3>
+                    <div class="form-row">
+                        <h3>Pelacakan status pengajuan.</h3>
+                    </div>
+                    <div class="form-row">
+                        <div>Untuk melacak status pengajuan, masukkan Kode Tracking Pengajuan yang telah dikirmkan melalui email / Whatsapp.
                         </div>
-                        <!-- <div class="form-row">
-                            <div>Masukkan kode tracking Anda yang telah dikirmkan melalui email / Whatsapp!
-                            </div>
-                        </div> -->
-                        <div class="form-row">
-                        <div class="name">Kode Tracking</div>
-                            <div class="value">
-                                <div class="input-group">
-                                    <input class="input--style-6" type="text" name="nama_lembaga" required placeholder="Masukkan Kode Tracking">
+                    </div>
+                    <div class="card-footer">
+                        <form enctype="multipart/form-data" action="/PengajuanIMTA/upload" method="POST">
+                            @csrf
+                            <div class="form-row">
+                                <div class="name">Nama Lembaga Asal</div>
+                                <div class="value">
+                                    <div class="input-group">
+                                        <input class="input--style-6" type="text" name="nama_lembaga" required placeholder="Masukkan Nama Anda">
+                                    </div>
+                                    <div class="label--desc">Lembaga Pendidikan atau Lembaga Keagamaan</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card-footer">
-                             <!-- tambah detail-->
-                            <a href="/PengajuanDKP_sm" class="bg-button" type="submit">Lacak</a>
-                        </div>
+                        </form>
+                    </div>
+                    <div class="form-row">
+                        <a href="/PengajuanDKP_sm/" class="bg-button" type="submit">Lacak</a>
+                    </div>
+                    <br><br><br><br>
                 </div>
             </div>
         </div>
