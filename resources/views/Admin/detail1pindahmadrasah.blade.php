@@ -58,7 +58,7 @@
                             <strong class="card-title">Surat Permohonan Rekomendasi Pindah Sekolah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan_rekomendasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_permohonan_rekomendasi}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             <strong class="card-title">Surat Keterangan Pindah Sekolah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_pindah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_sk_pindah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -77,7 +77,7 @@
                             <strong class="card-title">Surat Keterangan Diterima</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_diterima}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_sk_diterima}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -86,7 +86,7 @@
                             <strong class="card-title">Raport Siswa</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_rapot_siswa}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_rapot_siswa}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

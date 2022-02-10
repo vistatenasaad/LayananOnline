@@ -50,7 +50,7 @@
                             <strong class="card-title">Surat Permohonan Rekomendasi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <strong class="card-title">Susunan pengurus rumah ibadah/takmir</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_susunan_pengurus}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_susunan_pengurus}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                             <strong class="card-title">Surat Keterangan Kepemilikan Tanah/Status Tanah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_tanah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_sk_tanah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             <strong class="card-title">Surat Keterangan Domisili dari Desa/Kelurahan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_domisili}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_sk_domisili}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                             <strong class="card-title">Daftar Nama dan KTP Pengguna Rumah Ibadah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_nama_ktp}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_nama_ktp}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <strong class="card-title">Dukungan Masyarakat Setempat</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_dukungan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_dukungan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

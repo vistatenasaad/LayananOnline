@@ -54,7 +54,7 @@
                             <strong class="card-title">Surat Permohonan Rekomendasi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan_rekom}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_permohonan_rekom}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             <strong class="card-title">Surat Keterangan Terdaftar dari KUA</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_terdaftar}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_sk_terdaftar}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
                             <strong class="card-title">Proposal Permohonan Bantuan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan_bantuan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_permohonan_bantuan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

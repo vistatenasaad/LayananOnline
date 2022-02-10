@@ -50,7 +50,7 @@
                             <strong class="card-title">File Persetujuan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_persetujuan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_persetujuan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <strong class="card-title">File Akte Kelahiran</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_akte_kelahiran}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_akte_kelahiran}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                             <strong class="card-title">File Pernyataan Bahasa</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_pernyataan_bahasa}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_pernyataan_bahasa}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             <strong class="card-title">File SKKB/SKCK</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_skkb_skck}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_skkb_skck}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                             <strong class="card-title">File Kitab</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_kitab}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_kitab}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <strong class="card-title">File Ijazah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                             <strong class="card-title">File Jaminan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_jaminan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_jaminan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             <strong class="card-title">File Foto</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_foto}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_foto}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

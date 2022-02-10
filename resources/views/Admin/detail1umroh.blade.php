@@ -50,7 +50,7 @@
                             <strong class="card-title">Scan KTP</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_ktp}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_ktp}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <strong class="card-title">Surat Permohonan dari Penyelenggara Umroh(PPIU)</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_ppiu}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_ppiu}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

@@ -54,7 +54,7 @@
                             <strong class="card-title">Surat Permohonan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                             <strong class="card-title">Foto Tempat/ Lokasi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_lokasi}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

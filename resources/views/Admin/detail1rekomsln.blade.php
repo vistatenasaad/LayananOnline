@@ -58,7 +58,7 @@
                             <strong class="card-title">Surat Permohonan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_surat_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_surat_permohonan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@
                             <strong class="card-title">Surat Keterangan Diterima</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_sk_diterima}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_sk_diterima}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                             <strong class="card-title">Surat Jaminan</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_surat_jaminan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_surat_jaminan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                             <strong class="card-title">Legalisir Ijazah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_legalisir_ijazah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_legalisir_ijazah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             <strong class="card-title">Scan Paspor</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_scan_paspor}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_scan_paspor}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                             <strong class="card-title">Biodata Pemohon</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_biodata}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_biodata}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -118,7 +118,7 @@
                             <strong class="card-title">Pakta Integritas</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_pakta_integritas}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_pakta_integritas}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                             <strong class="card-title">Surat Pernyataan Kebenaran Dokumen</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_pernyataan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_pernyataan}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

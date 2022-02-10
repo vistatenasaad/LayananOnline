@@ -50,7 +50,7 @@
                             <strong class="card-title">File Legalitas</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_legalitas}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_legalitas}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -60,7 +60,7 @@
                             <strong class="card-title">File DRH</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_drh}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_drh}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
                             <strong class="card-title">File Ijazah</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_ijazah}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                             <strong class="card-title">File RPTKA dan IMTA</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_rptka_imta}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_rptka_imta}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@
                             <strong class="card-title">File Statistik jamaah/peserta didik</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_statistik}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_statistik}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                             <strong class="card-title">Paspor dan KITAS</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_paspor_kitas}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_paspor_kitas}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@
                             <strong class="card-title">File Polis Asuransi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_polis_asuransi}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_polis_asuransi}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                             <strong class="card-title">File Foto</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_foto}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_foto}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                             <strong class="card-title">File SKKB/SKCK</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_skkb_skck}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_skkb_skck}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@
                             <strong class="card-title">File Surat Persetujuan Sebelumnya</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/{{$d->file_persetujuan_sebelumnya}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_persetujuan_sebelumnya}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>
