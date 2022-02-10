@@ -36,7 +36,6 @@ class Admin2Controller extends Controller
         // $data = DB::table('tracking')
         //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
         //     ->where('tracking.status', '=', '2')
-        // ->where('tracking.status', '=', '2')
         // ->get();
         // $judul = "Pengecekan Data";
         // $subjudul = "Dashboard";
@@ -55,8 +54,7 @@ class Admin2Controller extends Controller
     public function kiblat2()
     {
         $data = DB::table('tracking')
-            ->join('pengukuran_kiblat', 'pengukuran_kiblat.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengukuran_kiblat', 'pengukuran_kiblat.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Pengukuran Kiblat";
         $subjudul = "Informasi";
@@ -65,8 +63,7 @@ class Admin2Controller extends Controller
     public function slipgaji2()
     {
         $data = DB::table('tracking')
-            ->join('permohonan_slipgaji', 'permohonan_slipgaji.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('permohonan_slipgaji', 'permohonan_slipgaji.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Permohonan Slip Gaji";
         $subjudul = "Informasi";
@@ -75,8 +72,7 @@ class Admin2Controller extends Controller
     public function buktipajak2()
     {
         $data = DB::table('tracking')
-            ->join('permohonan_pajak', 'permohonan_pajak.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('permohonan_pajak', 'permohonan_pajak.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Permohonan Bukti Pajak";
         $subjudul = "Informasi";
@@ -85,8 +81,7 @@ class Admin2Controller extends Controller
     public function konsulsyariah2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Konsultasi Syariah";
         // $subjudul = "Konsultasi";
@@ -95,8 +90,7 @@ class Admin2Controller extends Controller
     public function batalhajireg2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Pembatalan Haji Reg";
         // $subjudul = "Pendaftaran";
@@ -105,8 +99,7 @@ class Admin2Controller extends Controller
     public function batalhajiwft2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Pembatalan Haji Wft";
         // $subjudul = "Pendaftaran";
@@ -115,8 +108,7 @@ class Admin2Controller extends Controller
     public function daftarhaji2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Pendaftaran Haji";
         // $subjudul = "Pendaftaran";
@@ -125,8 +117,7 @@ class Admin2Controller extends Controller
     public function ikrarmi2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Ikrar Masuk Islam";
         // $subjudul = "Pendaftaran";
@@ -135,8 +126,7 @@ class Admin2Controller extends Controller
     public function sertifhalal2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Sertifikasi Halal";
         // $subjudul = "Pendaftaran";
@@ -145,8 +135,7 @@ class Admin2Controller extends Controller
     public function limpahanporsihaji2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Pelimpahan Porsi Haji";
         // $subjudul = "Pendaftaran";
@@ -155,8 +144,7 @@ class Admin2Controller extends Controller
     public function limpahanporsihajisakit2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Pelimpahan Porsi Haji Sakit";
         // $subjudul = "Pendaftaran";
@@ -165,8 +153,7 @@ class Admin2Controller extends Controller
     public function legalisir2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Legalisir Ijazah";
         // $subjudul = "Pengesahan";
@@ -175,8 +162,7 @@ class Admin2Controller extends Controller
     public function ttdsertif2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Tanda Tangan Sertifikat";
         // $subjudul = "Pengesahan";
@@ -185,8 +171,7 @@ class Admin2Controller extends Controller
     public function rptka2()
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_rptka', 'pengajuan_rptka.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengajuan_rptka', 'pengajuan_rptka.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Rencana Penggunaan Tenaga Kerja Asing";
         $subjudul = "Perijinan";
@@ -195,8 +180,7 @@ class Admin2Controller extends Controller
     public function imtka2()
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_imta', 'pengajuan_imta.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengajuan_imta', 'pengajuan_imta.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Izin Menggunakan Tenaga Kerja Asing";
         $subjudul = "Perijinan";
@@ -205,8 +189,7 @@ class Admin2Controller extends Controller
     public function dkpoa2()
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Dana Kompensasi Pengggunaan Orang Asing";
         $subjudul = "Perijinan";
@@ -215,8 +198,7 @@ class Admin2Controller extends Controller
     public function vtt2()
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_vvt', 'pengajuan_vvt.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengajuan_vvt', 'pengajuan_vvt.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Visa Tinggal Terbatas";
         $subjudul = "Perijinan";
@@ -225,8 +207,7 @@ class Admin2Controller extends Controller
     public function kitp2()
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_kitab', 'pengajuan_kitab.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengajuan_kitab', 'pengajuan_kitab.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Kartu Izin Tinggal Tetap";
         $subjudul = "Perijinan";
@@ -235,8 +216,7 @@ class Admin2Controller extends Controller
     public function naturalisasi2()
     {
         $data = DB::table('tracking')
-            ->join('pengajuan_naturalisasi', 'pengajuan_naturalisasi.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pengajuan_naturalisasi', 'pengajuan_naturalisasi.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Naturalisasi";
         $subjudul = "Perijinan";
@@ -245,8 +225,7 @@ class Admin2Controller extends Controller
     public function ijinpm2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Ijin Penelitian Madrasah";
         // $subjudul = "Perizinan";
@@ -255,8 +234,7 @@ class Admin2Controller extends Controller
     public function ijoptpq2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Ijop TPQ";
         // $subjudul = "Perizinan";
@@ -265,8 +243,7 @@ class Admin2Controller extends Controller
     public function ijopm2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Ijop Madin";
         // $subjudul = "Perizinan";
@@ -275,8 +252,7 @@ class Admin2Controller extends Controller
     public function ijopp2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Ijop Pontren";
         // $subjudul = "Perizinan";
@@ -285,8 +261,7 @@ class Admin2Controller extends Controller
     public function propbos2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Proposal BOS";
         // $subjudul = "Persetujuan";
@@ -295,8 +270,7 @@ class Admin2Controller extends Controller
     public function blankokua2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Permohonan Blanko KUA";
         // $subjudul = "Persetujuan";
@@ -305,8 +279,7 @@ class Admin2Controller extends Controller
     public function ripri2()
     {
         $data = DB::table('tracking')
-            ->join('rekom_pendirian_ri', 'rekom_pendirian_ri.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('rekom_pendirian_ri', 'rekom_pendirian_ri.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Rekomendasi Ijin Pendirian Rumah Ibadah";
         $subjudul = "Rekomendasi";
@@ -315,8 +288,7 @@ class Admin2Controller extends Controller
     public function rbm2()
     {
         $data = DB::table('tracking')
-            ->join('rekom_bantuan_masjid', 'rekom_bantuan_masjid.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('rekom_bantuan_masjid', 'rekom_bantuan_masjid.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Rekom Bantuan Masjid";
         $subjudul = "Rekomendasi";
@@ -325,8 +297,7 @@ class Admin2Controller extends Controller
     public function rskmt2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Rekom Surat Keterangan Majelis Taklim";
         // $subjudul = "Rekomendasi";
@@ -335,8 +306,7 @@ class Admin2Controller extends Controller
     public function rpm2()
     {
         $data = DB::table('tracking')
-            ->join('pindah_madrasah', 'pindah_madrasah.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('pindah_madrasah', 'pindah_madrasah.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Rekom Pindah Madrasah";
         $subjudul = "Rekomendasi";
@@ -345,8 +315,7 @@ class Admin2Controller extends Controller
     public function prsln2()
     {
         $data = DB::table('tracking')
-            ->join('rekom_sln', 'rekom_sln.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('rekom_sln', 'rekom_sln.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Pengantar Rekom Studi Luar Negeri";
         $subjudul = "Rekomendasi";
@@ -355,8 +324,7 @@ class Admin2Controller extends Controller
     public function rbponpes2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Rekom Bantuan Ponpes/Madin";
         // $subjudul = "Rekomendasi";
@@ -365,8 +333,7 @@ class Admin2Controller extends Controller
     public function rbmf2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Rekom Bantuan Madrasah Formal";
         // $subjudul = "Rekomendasi";
@@ -375,8 +342,7 @@ class Admin2Controller extends Controller
     public function ritas2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Rekom ITAS";
         // $subjudul = "Rekomendasi";
@@ -385,8 +351,7 @@ class Admin2Controller extends Controller
     public function rpu2()
     {
         $data = DB::table('tracking')
-            ->join('rekom_umroh', 'rekom_umroh.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('rekom_umroh', 'rekom_umroh.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Rekom Paspor Umroh";
         $subjudul = "Rekomendasi";
@@ -395,8 +360,7 @@ class Admin2Controller extends Controller
     public function rph2()
     {
         $data = DB::table('tracking')
-            ->join('rekom_haji', 'rekom_haji.id', '=', 'tracking.kode')
-            ->where('tracking.status', '=', '2')
+            ->join('rekom_haji', 'rekom_haji.id', '=', 'tracking.kode')            
             ->get();
         $judul = "Rekom Paspor Haj";
         $subjudul = "Rekomendasi";
@@ -405,8 +369,7 @@ class Admin2Controller extends Controller
     public function ppm2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Piagam Pendirian Masjid";
         // $subjudul = "Rekomendasi";
@@ -415,8 +378,7 @@ class Admin2Controller extends Controller
     public function sijazah2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Suket Ijazah";
         // $subjudul = "Pelayanan Lain yang Diperlukan";
@@ -425,8 +387,7 @@ class Admin2Controller extends Controller
     public function mjamaah2()
     {
         // $data = DB::table('tracking')
-        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')
-        //     ->where('tracking.status', '=', '2')
+        //     ->join('pengajuan_d_k_p', 'pengajuan_d_k_p.id', '=', 'tracking.kode')        
         // ->get();
         // $judul = "Mutasi Jamaah";
         // $subjudul = "Pelayanan Yang diperlukan";

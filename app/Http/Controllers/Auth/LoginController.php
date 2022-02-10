@@ -40,6 +40,9 @@ class LoginController extends Controller
             case 'admin2':
                 return '/home2';
                 break;
+            case 'superadmin':
+                return '/home';
+                break;
             default:
                 return '/login';
                 break;
