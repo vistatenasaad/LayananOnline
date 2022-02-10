@@ -316,3 +316,6 @@ Route::post('/subtolak2', 'DetailController@prosestolak2')->name('subtolak2');
 
 Route::get('change-password', 'ChangePasswordController@index')->name('change-password');
 Route::post('change-password', 'ChangePasswordController@store')->name('change.password');
+
+Route::get('adduser', 'UserController@adduser')->name('adduser')->middleware('auth');;
+Route::post('saveuser', 'UserController@saveuser')->name('saveuser')->middleware('auth');;

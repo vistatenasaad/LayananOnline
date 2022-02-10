@@ -45,9 +45,9 @@
                 <a class="navbar-brand" href="./">@yield('nama_user') </a>
                 <a class="navbar-brand hidden" href="./">A</a>
             </div>
-            
+
             @if(auth()->user()->role == 'superadmin')
-            <!-- MENU ADMIN 1 -->
+            <!-- MENU SUPER ADMIN -->
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
@@ -55,9 +55,9 @@
                     </li>
                 </ul>
             </div>
-            <!-- END OF MENU ADMIN 1 -->
+            <!-- END OF MENU SUPER ADMIN -->
             @endif
-            
+
             @if(auth()->user()->role == 'admin1')
             <!-- MENU ADMIN 1 -->
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -81,9 +81,15 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Informasi</a>
                         <ul class="sub-menu children dropdown-menu">
+                            @if(auth()->user()->kiblat == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kiblat1')}}">Pengukuran Kiblat</a></li>
+                            @endif
+                            @if(auth()->user()->slipgaji == '1')
                             <li><i class="fa fa-id-badge"></i><a href="{{route('slipgaji1')}}">Permohonan Slip Gaji</a></li>
+                            @endif
+                            @if(auth()->user()->pajak == '1')
                             <li><i class="fa fa-bars"></i><a href="{{route('buktipajak1')}}">Permohonan Bukti Pajak</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -115,12 +121,24 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perijinan</a>
                         <ul class="sub-menu children dropdown-menu">
+                            @if(auth()->user()->rptka == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rptka1')}}">Rencana Penggunaan Tenaga Kerja Asing</a></li>
+                            @endif
+                            @if(auth()->user()->imtka == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('imtka1')}}">Izin Menggunakan Tenaga Kerja Asing</a></li>
+                            @endif
+                            @if(auth()->user()->dkp == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('dkpoa1')}}">Dana Kompensasi Pengggunaan Orang Asing</a></li>
+                            @endif
+                            @if(auth()->user()->vtt == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('vtt1')}}">Visa Tinggal Terbatas</a></li>
+                            @endif
+                            @if(auth()->user()->kitab == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kitp1')}}">Kartu Izin Tinggal Tetap</a></li>
+                            @endif
+                            @if(auth()->user()->naturalisasi == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('naturalisasi1')}}">Naturalisasi</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -142,16 +160,28 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Rekomendasi</a>
                         <ul class="sub-menu children dropdown-menu">
+                            @if(auth()->user()->pendirianri == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ripri1')}}">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li>
+                            @endif
+                            @if(auth()->user()->bmasjid == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbm1')}}">Rekom Bantuan Masjid</a></li>
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rskmt1')}}">Rekom Surat Keterangan Majelis Taklim</a></li>  -->
+                            @endif
+                            @if(auth()->user()->madrasah == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpm1')}}">Rekom Pindah Madrasah</a></li>
+                            @endif
+                            @if(auth()->user()->sln == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('prsln1')}}">Pengantar Rekom Studi Luar Negeri</a></li>
+                            @endif
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbponpes1')}}">Rekom Bantuan Ponpes/Madin</a></li>  -->
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbmf1')}}">Rekom Bantuan Madrasah Formal </a></li>  -->
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ritas1')}}">Rekom ITAS</a></li>  -->
+                            @if(auth()->user()->umroh == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpu1')}}">Rekom Paspor Umroh</a></li>
+                            @endif
+                            @if(auth()->user()->haji == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rph1')}}">Rekom Paspor Haji</a></li>
+                            @endif
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ppm1')}}">Piagam Pendirian Masjid</a></li>  -->
                         </ul>
                     </li>
@@ -195,9 +225,15 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Informasi</a>
                         <ul class="sub-menu children dropdown-menu">
+                            @if(auth()->user()->kiblat == '1')
                             <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kiblat2')}}">Pengukuran Kiblat</a></li>
+                            @endif
+                            @if(auth()->user()->slipgaji == '1')
                             <li><i class="fa fa-id-badge"></i><a href="{{route('slipgaji2')}}">Permohonan Slip Gaji</a></li>
+                            @endif
+                            @if(auth()->user()->pajak == '1')
                             <li><i class="fa fa-bars"></i><a href="{{route('buktipajak2')}}">Permohonan Bukti Pajak</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -229,12 +265,24 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Perijinan</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rptka2')}}">Rencana Penggunaan Tenaga Kerja Asing</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('imtka2')}}">Izin Menggunakan Tenaga Kerja Asing</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('dkpoa2')}}">Dana Kompensasi Pengggunaan Orang Asing</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('vtt2')}}">Visa Tinggal Terbatas</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kitp2')}}">Kartu Izin Tinggal Tetap</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('naturalisasi2')}}">Naturalisasi</a></li> 
+                            @if(auth()->user()->rptka == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rptka2')}}">Rencana Penggunaan Tenaga Kerja Asing</a></li>
+                            @endif
+                            @if(auth()->user()->imtka == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('imtka2')}}">Izin Menggunakan Tenaga Kerja Asing</a></li>
+                            @endif
+                            @if(auth()->user()->dkp == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('dkpoa2')}}">Dana Kompensasi Pengggunaan Orang Asing</a></li>
+                            @endif
+                            @if(auth()->user()->vtt == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('vtt2')}}">Visa Tinggal Terbatas</a></li>
+                            @endif
+                            @if(auth()->user()->kitab == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('kitp2')}}">Kartu Izin Tinggal Tetap</a></li>
+                            @endif
+                            @if(auth()->user()->naturalisasi == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('naturalisasi2')}}">Naturalisasi</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
@@ -256,16 +304,28 @@
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Rekomendasi</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ripri2')}}">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbm2')}}">Rekom Bantuan Masjid</a></li> 
+                            @if(auth()->user()->pendirianri == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ripri2')}}">Rekomendasi Ijin Pendirian Rumah Ibadah</a></li>
+                            @endif
+                            @if(auth()->user()->bmasjid == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbm2')}}">Rekom Bantuan Masjid</a></li>
+                            @endif
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rskmt2')}}">Rekom Surat Keterangan Majelis Taklim</a></li>  -->
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpm2')}}">Rekom Pindah Madrasah</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('prsln2')}}">Pengantar Rekom Studi Luar Negeri</a></li> 
+                            @if(auth()->user()->madrasah == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpm2')}}">Rekom Pindah Madrasah</a></li>
+                            @endif
+                            @if(auth()->user()->sln == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('prsln2')}}">Pengantar Rekom Studi Luar Negeri</a></li>
+                            @endif
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbponpes2')}}">Rekom Bantuan Ponpes/Madin</a></li>  -->
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rbmf2')}}">Rekom Bantuan Madrasah Formal </a></li>  -->
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ritas2')}}">Rekom ITAS</a></li>  -->
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpu2')}}">Rekom Paspor Umroh</a></li> 
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rph2')}}">Rekom Paspor Haji</a></li> 
+                            @if(auth()->user()->umroh == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rpu2')}}">Rekom Paspor Umroh</a></li>
+                            @endif
+                            @if(auth()->user()->haji == '1')
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{route('rph2')}}">Rekom Paspor Haji</a></li>
+                            @endif
                             <!-- <li><i class="fa fa-puzzle-piece"></i><a href="{{route('ppm2')}}">Piagam Pendirian Masjid</a></li>  -->
                         </ul>
                     </li>

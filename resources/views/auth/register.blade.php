@@ -43,7 +43,7 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('saveuser') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -116,22 +116,82 @@
                         </div>
 
                         <div class="row form-group">
-                            <div class="col col-md-4"><label class=" form-control-label">Checkboxes</label></div>
+                            <div class="col col-md-4"><label class=" form-control-label">Layanan</label></div>
                             <div class="col col-md-6">
                                 <div class="form-check">
                                     <div class="checkbox">
                                         <label for="checkbox1" class="form-check-label ">
-                                            <input type="checkbox" id="checkbox1" name="checkbox1" value="option1" class="form-check-input">Option 1
+                                            <input type="checkbox" id="checkbox1" name="kiblat" value="1" class="form-check-input">Pengukuran Kiblat
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label for="checkbox2" class="form-check-label ">
-                                            <input type="checkbox" id="checkbox2" name="checkbox2" value="option2" class="form-check-input"> Option 2
+                                            <input type="checkbox" id="checkbox2" name="slipgaji" value="1" class="form-check-input"> Permohonan Slip Gaji
                                         </label>
                                     </div>
                                     <div class="checkbox">
                                         <label for="checkbox3" class="form-check-label ">
-                                            <input type="checkbox" id="checkbox3" name="checkbox3" value="option3" class="form-check-input"> Option 3
+                                            <input type="checkbox" id="checkbox3" name="pajak" value="1" class="form-check-input"> Permohonan Bukti Pajak
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox4" name="rptka" value="1" class="form-check-input"> Rencana Penggunaan Tenaga Kerja Asing
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox5" name="imta" value="1" class="form-check-input"> Izin Menggunakan Tenaga Kerja Asing
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox6" name="dkp" value="1" class="form-check-input"> Dana Kompensasi Penggunaan Orang Asing
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox7" name="vtt" value="1" class="form-check-input"> Visa Tinggal Terbatas
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox9" name="kitab" value="1" class="form-check-input"> Kartu Izin Tinggal Tetap
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox8" name="naturalisasi" value="1" class="form-check-input"> Naturalisasi
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox10" name="pendirianri" value="1" class="form-check-input"> Rekomendasi Ijin Pendirian Rumah Ibadah
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox11" name="bmasjid" value="1" class="form-check-input"> Rekom Bantuan Masji
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox12" name="madrasah" value="1" class="form-check-input"> Rekom Pindah Madrasah
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox13" name="sln" value="1" class="form-check-input"> Pengantar Rekom Studi Luar Negeri
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox14" name="umroh" value="1" class="form-check-input"> Rekom Paspor Umroh
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label for="checkbox3" class="form-check-label ">
+                                            <input type="checkbox" id="checkbox15" name="haji" value="1" class="form-check-input"> Rekom Paspor Haji
                                         </label>
                                     </div>
                                 </div>
