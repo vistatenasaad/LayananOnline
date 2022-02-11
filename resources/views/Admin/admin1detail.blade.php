@@ -94,6 +94,7 @@
                         </div>
                     </div>
                 </div>
+                @if(auth()->user()->$d->layanan == '1')
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
@@ -102,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-
+                @endif
                 @endforeach
 
             </div>

@@ -34,7 +34,7 @@
                                     <td>{{$d->layanan}}</td>
                                     <td>{{$d->status}}</td>
                                     <td>                                       
-                                        <a href="/detail/{{$d->layanan}}/{{$d->kode}}"><button type="button" class="btn btn-warning btn-sm">Lihat detail</button></a>
+                                        <a href="/histori/{{$d->layanan}}/{{$d->kode}}"><button type="button" class="btn btn-warning btn-sm">Lihat detail</button></a>
                                     </td>
                                 </tr>
                                 @endforeach

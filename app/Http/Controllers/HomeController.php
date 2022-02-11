@@ -28,12 +28,14 @@ class HomeController extends Controller
         $jml1 = User::all()->count();
         $jml2 = User::where('role', '=', 'admin1')->count();
         $jml3 = User::where('role', '=', 'admin2')->count();
+        $user = User::all()->where('role', '!=', 'superadmin');
         return view(
             'superadminhome',
             [
                 'jml1' => $jml1,
                 'jml2' => $jml2,
                 'jml3' => $jml3,
+                'user' => $user
             ]
         );
     }

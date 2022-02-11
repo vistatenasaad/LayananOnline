@@ -43,5 +43,40 @@
     </div>
     <!--/.col-->
 </div> <!-- .content -->
-
+<div class="card">
+    <div class="card-header">
+        <strong class="card-title">Tabel User</strong>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php $no = 1; ?>
+                @foreach($user as $u)
+                <tr>
+                    <th scope="row">{{$no}}</th>
+                    <td>{{$u->id}}</td>
+                    <td>{{$u->email}}</td>
+                    <td>{{$u->name}}</td>
+                    <td>{{$u->role}}</td>
+                    <td>
+                        <a href="/edituser/{{$u->id}}"><button type="button" class="btn btn-warning btn-sm">Edit</button></a>
+                        <a href="/delete/{{$u->id}}"><button type="button" class="btn btn-danger btn-sm">Hapus</button></a>
+                    </td>
+                </tr>
+                <?php $no++; ?>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
 @endsection
