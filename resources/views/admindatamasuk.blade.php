@@ -26,6 +26,8 @@
                             </thead>
                             <tbody>
                                 @foreach($data as $d)
+                                <?php $lay =$d->layanan; ?>
+                                @if(auth()->user()->$lay == '1')
                                 <tr>
                                     <td>{{$d->kode}}</td>
                                     <td>{{$d->layanan}}</td>
@@ -34,6 +36,7 @@
                                         <a href="/detail/{{$d->layanan}}/{{$d->kode}}"><button type="button" class="btn btn-warning btn-sm">Lihat detail</button></a>
                                     </td>
                                 </tr>
+                                @endif
                                 @endforeach
                             </tbody>
                         </table>

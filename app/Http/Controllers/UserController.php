@@ -60,7 +60,6 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->role = $request->role;
-        $user->password = Hash::make($request->password);
         $user->pengajuan_d_k_p = $request->pengajuan_d_k_p;
         $user->pengajuan_imta = $request->pengajuan_imta;
         $user->pengajuan_kitab = $request->pengajuan_kitab;

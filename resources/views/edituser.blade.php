@@ -67,7 +67,7 @@
                                 <select id="role" name="role" class="form-control">
                                     <option value="admin1" <?php if($data->role == 'admin1') echo 'selected'; ?>>Admin Front Office</option>
                                     <option value="admin2" <?php if($data->role == 'admin2') echo 'selected'; ?>>Admin Back Office</option>
-                                    <option value="superadmin"<?php if($data->role == 'superadmin') echo 'selected'; ?>Super Admin</option>
+                                    <option value="superadmin"<?php if($data->role == 'superadmin') echo 'selected'; ?>>Super Admin</option>
                                 </select>
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">

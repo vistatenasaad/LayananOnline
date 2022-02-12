@@ -29,11 +29,11 @@
                                 @foreach($data as $d)
                                 <tr>
                                     <td>{{$d->kode}}</td>
-                                    
+
                                     <td>{{$d->email}}</td>
                                     <td>{{$d->layanan}}</td>
                                     <td>{{$d->status}}</td>
-                                    <td>                                       
+                                    <td>
                                         <a href="/detail/{{$d->layanan}}/{{$d->kode}}"><button type="button" class="btn btn-warning btn-sm">Lihat detail</button></a>
                                     </td>
                                 </tr>
