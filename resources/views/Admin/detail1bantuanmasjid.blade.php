@@ -81,7 +81,6 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-body">
-                            @if(auth()->user()->$d->layanan == '1')
                             @if(auth()->user()->role == 'admin1')
                             <a href="{{route('verif1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
                             <a href="{{route('tolak1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
@@ -89,7 +88,6 @@
                             @if(auth()->user()->role == 'admin2')
                             <a href="{{route('verif2', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
                             <a href="{{route('tolak2', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
-                            @endif
                             @endif
                         </div>
                     </div>

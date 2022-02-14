@@ -50,7 +50,7 @@
                             <strong class="card-title">Surat Permohonan Rekomendasi</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/public/{{$d->file_permohonan}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_permohonan_rekom}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

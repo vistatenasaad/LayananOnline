@@ -20,7 +20,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama :</th>
-                                        <th scope="col">{{$d->nama}}</th>
+                                        <th scope="col">{{$d->nama_lembaga}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -96,8 +96,8 @@
                 </div>
                 <div class="col-md-12">
                     <div class="card">
-                        <<div class="card-body">
-                        @if(auth()->user()->role == 'admin1')
+                        <div class="card-body">
+                            @if(auth()->user()->role == 'admin1')
                             <a href="{{route('verif1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
                             <a href="{{route('tolak1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
                             @endif

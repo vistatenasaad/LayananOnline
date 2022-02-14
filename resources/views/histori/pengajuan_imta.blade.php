@@ -65,7 +65,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama :</th>
-                                        <th scope="col">{{$d->nama}}</th>
+                                        <th scope="col">{{$d->nama_lembaga}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -95,7 +95,7 @@
                             <strong class="card-title">File RPTKA dan IMTA</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/public/{{$d->file_rptka_imta}}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_rptka}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

@@ -20,7 +20,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama :</th>
-                                        <th scope="col">{{$d->nama}}</th>
+                                        <th scope="col">{{$d->nama_lembaga}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>
@@ -100,7 +100,7 @@
                             <strong class="card-title">Paspor dan KITAS</strong>
                         </div>
                         <div class="card-body">
-                            <iframe src="/public/{{$d->file_paspor_kitas}" width="100%" style="height:500px"></iframe>
+                            <iframe src="/public/{{$d->file_paspor_kitas}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
                 </div>

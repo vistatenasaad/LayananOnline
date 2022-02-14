@@ -65,7 +65,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Nama :</th>
-                                        <th scope="col">{{$d->nama}}</th>
+                                        <th scope="col">{{$d->nama_lembaga}}</th>
                                     </tr>
                                     <tr>
                                         <th scope="col">Email :</th>

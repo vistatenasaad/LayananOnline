@@ -263,13 +263,13 @@ class DetailController extends Controller
     public function detail1umroh($id)
     {
         if (auth()->user()->rekom_umroh == '1') {
-        } else {
             $data = DB::table('tracking')
                 ->join('rekom_umroh', 'rekom_umroh.id', '=', 'tracking.kode')
                 ->where('rekom_umroh.id', '=', $id)
                 ->get();
             $judul = "Rekom Paspor Umroh";
             return view('Admin.detail1umroh', ['data' => $data, 'pagetitle' => $judul]);
+        } else {
             return back();
         }
     }

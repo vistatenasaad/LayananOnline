@@ -73,7 +73,8 @@
                             <iframe src="/public/{{$d->file_kk}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                </div>
+                <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
                             <strong class="card-title">Dokumen Pendukung</strong>
@@ -82,10 +83,11 @@
                             <iframe src="/public/{{$d->file_pendukung}}" width="100%" style="height:500px"></iframe>
                         </div>
                     </div>
+                </div>
                 <div class="col-md-12">
                     <div class="card">
-                    <div class="card-body">
-                        @if(auth()->user()->role == 'admin1')
+                        <div class="card-body">
+                            @if(auth()->user()->role == 'admin1')
                             <a href="{{route('verif1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-success btn-sm">Verifikasi</button></a>
                             <a href="{{route('tolak1', ['id'=>$d->kode])}}"><button type="button" class="btn btn-danger btn-sm">Tolak</button></a>
                             @endif
