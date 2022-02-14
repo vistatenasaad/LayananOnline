@@ -61,7 +61,7 @@ class DetailController extends Controller
             $data1 = User::find($data->admin_selesai);
             $data->admin_selesai = $data1->name;
         }
-        return view('histori', ['d' => $data, 'pagetitle' => $judul]);
+        return view('histori.'.$layanan, ['d' => $data, 'pagetitle' => $judul]);
     }
 
     public function detail1($id)
