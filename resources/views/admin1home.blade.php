@@ -11,7 +11,7 @@
                 <h4 class="mb-0">
                     <span class="count">{{$jml1}}</span>
                 </h4>
-                <p class="text-light">Data Masuk</p>
+                <p class="text-light">Data Masuk Seluruhnya</p>
             </div>
 
         </div>
@@ -24,7 +24,7 @@
                 <h4 class="mb-0">
                     <span class="count">{{$jml2}}</span>
                 </h4>
-                <p class="text-light">Belum Diperiksa</p>
+                <p class="text-light">Belum Diperiksa Admin Front Office</p>
 
             </div>
         </div>
@@ -37,7 +37,7 @@
                 <h4 class="mb-0">
                     <span class="count">{{$jml3}}</span>
                 </h4>
-                <p class="text-light">Selesai</p>
+                <p class="text-light">Belum Diperiksa Admin Front Office</p>
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
                 <h4 class="mb-0">
                     <span class="count">{{$jml4}}</span>
                 </h4>
-                <p class="text-light">Belum Lengkap</p>
+                <p class="text-light">Pengajuan ditolak Admin Front Office</p>
 
             </div>
         </div>
