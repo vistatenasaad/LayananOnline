@@ -33,12 +33,16 @@ class DetailController extends Controller
     {
         $id = $request->id;
         $datafind = Tracking::find($id);
+        if($datafind != null){
         $tabel = $datafind->layanan;
         $data = DB::table('tracking')
             ->join($tabel, $tabel . '.id', '=', 'tracking.kode')
             ->where($tabel . '.id', '=', $id)
             ->get();
         return view('Tracking', ['data' => $data]);
+        }else{
+            return redirect('/tracking')->withErrors(['msg' => 'Data Tidak Ditemukan!']);   
+        }
     }
 
     public function histori($layanan, $id)

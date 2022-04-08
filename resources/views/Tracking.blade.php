@@ -82,6 +82,13 @@
                                 </div>
                             </div>
                         </form>
+                        
+                        @if($errors->any())
+                        <div class="form-row">
+                            <p>{{$errors->first()}}</p>
+                        </div>
+                            <h4></h4>
+                        @endif
 
                         @if($data != null)
                         @foreach($data as $d)
